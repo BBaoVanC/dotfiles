@@ -1,20 +1,9 @@
 # bbaovanc's dotfiles setup
 
-## vim-plug
-
-[Installation Instructions](https://github.com/junegunn/vim-plug#unix)
-
-Follow the above installation instructions, and then run `:PlugInstall` inside (Neo)vim.
-
-## powerlevel10k
-
-[Full Installation Instructions](https://github.com/romkatv/powerlevel10k#manual)
-
-Run `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k` in your $HOME
-
-## zsh plugins
+Setup:
 
 ```shell
-$ cd ~/.zsh_plugins
-$ ./clone.zsh
+$ curl -fsSL https://git.bbaovanc.com/bbaovanc/dotfiles-util/raw/branch/master/dotfiles-setup.zsh | zsh
 ```
+
+You can switch between a few different zsh styles I included by running the script named `p10k-switch-style.zsh` located in `$HOME`.
