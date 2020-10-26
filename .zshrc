@@ -5,7 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/usr/local/sbin:$PATH"
+if [[ "$(hostname)" == "bbaobook" ]]; then
+    export PATH="/usr/local/sbin:$PATH"
+fi
 
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
