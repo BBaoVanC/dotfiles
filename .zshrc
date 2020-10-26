@@ -49,7 +49,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
 # ========== Environment ==========
-source ~/.profile
+source ~/.zprofile
 HISTFILE=~/.zsh_history
 SAVEHIST=500
 source ~/.zshrc_nosync
