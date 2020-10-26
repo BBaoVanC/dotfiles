@@ -9,6 +9,12 @@ if [[ "$(hostname)" == "bbaobook" ]]; then
     export PATH="/usr/local/sbin:$PATH"
 fi
 
+if [[ "$(uname -s)" == "Darwin" ]]; then  # macOS
+    alias ls="ls -G"
+elif [[ "$(uname -s)" == "Linux" ]]; then  # Linux
+    alias ls="ls --color"
+fi
+
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
