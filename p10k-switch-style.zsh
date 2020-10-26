@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+cd ~
+
 currlink=$(readlink .p10k.zsh)
 
 if [[ -z "$currlink" ]]; then
