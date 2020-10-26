@@ -2,9 +2,9 @@
 
 ## vim-plug
 
-My vimrc should automatically install vim-plug. All you need to do is run `:PlugInstall` afterwards inside (Neo)vim.
-
 [Installation Instructions](https://github.com/junegunn/vim-plug#unix)
+
+Follow the above installation instructions, and then run `:PlugInstall` inside (Neo)vim.
 
 ## powerlevel10k
 
