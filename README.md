@@ -8,7 +8,9 @@ Follow the above installation instructions, and then run `:PlugInstall` inside (
 
 ## powerlevel10k
 
-[Installation Instructions](https://github.com/romkatv/powerlevel10k#manual)
+[Full Installation Instructions](https://github.com/romkatv/powerlevel10k#manual)
+
+Run `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k` in your $HOME
 
 ## zsh plugins
 
