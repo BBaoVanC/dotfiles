@@ -12,8 +12,10 @@ fi
 if [[ "$(uname -s)" == "Darwin" ]]; then  # macOS
     alias ls="ls -G"
 elif [[ "$(uname -s)" == "Linux" ]]; then  # Linux
-    alias ls="ls --color"
+    alias ls="ls --color=auto"
 fi
+
+alias grep="grep --color=auto"
 
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
