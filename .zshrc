@@ -13,6 +13,7 @@ elif [[ "$(uname -s)" == "Linux" ]]; then  # Linux
     alias ls="ls --color=auto"
 fi
 
+
 # ========== Add color to grep ==========
 alias grep="grep --color=auto"
 
