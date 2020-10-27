@@ -6,6 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
+# ========== Environment ==========
+source ~/.zprofile
+HISTFILE=~/.zsh_history
+SAVEHIST=500
+source ~/.zshrc_nosync
+
+
 # ========== Add color to ls ==========
 if [[ "$(uname -s)" == "Darwin" ]]; then  # macOS
     alias ls="ls -G"
@@ -47,13 +54,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-# ========== Environment ==========
-source ~/.zprofile
-HISTFILE=~/.zsh_history
-SAVEHIST=500
-source ~/.zshrc_nosync
 
 
 # ========== Enable syntax highlighting ==========
