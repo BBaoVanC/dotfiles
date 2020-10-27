@@ -9,7 +9,7 @@
   - [Styles](#styles)
     - [Lean (`.p10k.zsh.style.lean`)](#lean-p10kzshstylelean)
     - [Oneline (`.p10k.zsh.style.oneline`)](#oneline-p10kzshstyleoneline)
-    - [Twoline (`.p10k.zsh.style.twoline`)](#twoline-p10kzshstyletwoline)
+    - [Twoline Concise (`.p10k.zsh.style.twoline_concise`)](#twoline-concise-p10kzshstyletwoline_concise)
 
 ## Requirements
 
@@ -26,7 +26,7 @@ $ zsh <(curl -fsSL https://git.bbaovanc.com/bbaovanc/dotfiles-util/raw/branch/ma
 ```
 
 Near the end of the script, it will ask you to choose from the powerlevel10k styles I included.
-I personally use `twoline`. Please see the [images](#styles) of each style.
+Please see the [images](#styles) of each style.
 
 You can switch between a few different zsh styles I included by running the script named `p10k-switch-style.zsh` located in `$HOME`.
 
@@ -44,6 +44,6 @@ $ ~/p10k-switch-style.zsh
 
 ![Oneline image](https://media.bbaovanc.com/dotfiles-example/oneline.png)
 
-### Twoline (`.p10k.zsh.style.twoline`)
+### Twoline Concise (`.p10k.zsh.style.twoline_concise`)
 
-![Twoline image](https://media.bbaovanc.com/dotfiles-example/twoline.png)
+![Twoline image](https://media.bbaovanc.com/dotfiles-example/twoline_concise.png)
