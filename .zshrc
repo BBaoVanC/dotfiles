@@ -21,8 +21,9 @@ elif [[ "$(uname -s)" == "Linux" ]]; then  # Linux
 fi
 
 
-# ========== Add color to grep ==========
+# ========== Miscellaneous aliases ==========
 alias grep="grep --color=auto"
+alias dragon="dragon-drag-and-drop -a -x"
 
 
 # ========== Vi mode ========== https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
