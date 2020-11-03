@@ -1,0 +1,7 @@
+[Default Applications]
+
+inode/directory=ranger.desktop
+text/x-shellscript=nvim.desktop;
+text/plain=nvim.desktop;
+application/postscript=mupdf.desktop;
+application/pdf=mupdf.desktop;
