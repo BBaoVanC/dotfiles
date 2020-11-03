@@ -6,10 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Installation](#installation)
-  - [Styles](#styles)
-    - [Lean (`.p10k.zsh.style.lean`)](#lean-p10kzshstylelean)
-    - [Oneline (`.p10k.zsh.style.oneline`)](#oneline-p10kzshstyleoneline)
-    - [Twoline Concise (`.p10k.zsh.style.twoline_concise`)](#twoline-concise-p10kzshstyletwoline_concise)
+  - [Images](#images)
 
 ## Requirements
 
@@ -34,16 +31,6 @@ You can switch between a few different zsh styles I included by running the scri
 $ ~/p10k-switch-style.zsh
 ```
 
-## Styles
+## Images
 
-### Lean (`.p10k.zsh.style.lean`)
-
-![Lean image](https://media.bbaovanc.com/dotfiles-example/lean.png)
-
-### Oneline (`.p10k.zsh.style.oneline`)
-
-![Oneline image](https://media.bbaovanc.com/dotfiles-example/oneline.png)
-
-### Twoline Concise (`.p10k.zsh.style.twoline_concise`)
-
-![Twoline image](https://media.bbaovanc.com/dotfiles-example/twoline_concise.png)
+![macOS Terminal with Blur](https://media.bbaovanc.com/dotfiles-example/macosterm1.png)
