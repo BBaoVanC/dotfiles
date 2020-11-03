@@ -25,6 +25,8 @@ fi
 
 # ========== Miscellaneous aliases ==========
 alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias mntdrv="sudo mount -o uid=bbaovanc"
 alias dragon="dragon-drag-and-drop -a -x"
 
 
