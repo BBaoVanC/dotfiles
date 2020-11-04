@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Firefox Nightly
+Comment=Web Browser
+Exec=/opt/firefox-nightly/firefox %u
