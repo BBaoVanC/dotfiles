@@ -23,7 +23,7 @@ $ zsh <(curl -fsSL https://git.bbaovanc.com/bbaovanc/dotfiles-util/raw/branch/ma
 ```
 
 Near the end of the script, it will ask you to choose from the powerlevel10k styles I included.
-Please see the [images](#styles) of each style.
+Please see the [images](#images) section.
 
 You can switch between a few different zsh styles I included by running the script named `p10k-switch-style.zsh` located in `$HOME`.
 
