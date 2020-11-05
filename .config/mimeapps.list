@@ -7,3 +7,4 @@ application/postscript=mupdf.desktop;
 application/pdf=mupdf.desktop;
 application/xml=nvim.desktop;
 text/xml=nvim.desktop;
+image/gif=mpv-loop.desktop
