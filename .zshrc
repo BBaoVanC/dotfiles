@@ -28,6 +28,7 @@ fi
 alias grep="grep --color=auto"
 alias mntdrv="sudo mount -o uid=bbaovanc"
 alias dragon="dragon-drag-and-drop -a -x"
+alias srsync="rsync -atzvP"
 
 
 # ========== Vi mode ========== https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
