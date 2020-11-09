@@ -1,0 +1,20 @@
+#!/bin/sh
+
+key=$(jq -r ".uploadKey" ~/.config/imupc.json)
+url=$(jq -r ".url" ~/.config/imupc.json)
+
+path=$(dragon-drag-and-drop -t -x -p)
+
+if [ -f "$path" ]; then
+    response=$(curl -X POST -F uploadKey="$key" -F imageUpload="@$path" -v "$url")
+    url=$(echo $response | jq -r ".url")
+
+    if [ $url == "null" ]; then
+        notify-send "The server did not respond with a URL." "$response"
+    else
+        echo -n $url | xclip -selection c
+        notify-send "Uploaded: $url"
+    fi
+else
+    notify-send "Image does not exist."
+fi
