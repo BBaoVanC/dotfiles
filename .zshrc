@@ -15,16 +15,8 @@ SAVEHIST=500
 source ~/.zshrc_nosync
 
 
-# ========== Add color to ls ==========
-if [[ "$(uname -s)" == "Darwin" ]]; then  # macOS
-    alias ls="ls -G"
-elif [[ "$(uname -s)" == "Linux" ]]; then  # Linux
-    alias ls="ls --color=auto"
-    alias diff="diff --color=auto"
-fi
-
-
 # ========== Miscellaneous aliases ==========
+alias ls="exa --group-directories-first --color=auto --icons"
 alias grep="grep --color=auto"
 alias mntdrv="sudo mount -o uid=bbaovanc"
 alias dragon="dragon-drag-and-drop -a -x"
