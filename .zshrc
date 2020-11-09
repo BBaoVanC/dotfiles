@@ -18,6 +18,7 @@ source ~/.zshrc_nosync
 # ========== Miscellaneous aliases ==========
 alias ls="exa --group-directories-first --color=auto --icons"
 alias grep="grep --color=auto"
+alias diff="diff --color=auto"
 alias mntdrv="sudo mount -o uid=$(whoami)"
 alias dragon="dragon-drag-and-drop -a -x"
 alias rscp="rsync -atzvP"
