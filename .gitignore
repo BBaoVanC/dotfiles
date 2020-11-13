@@ -1,16 +1,1 @@
 *
-!.gitignore
-!README.md
-!.zshrc
-!.zprofile
-!.p10k.zsh
-!.hushlogin
-!.zsh_plugins/clone.zsh
-!.local/share/multimc/instances/
-!.local/share/applications/ranger.desktop
-!.local/share/applications/firefox-nightly.desktop
-!.config/mimeapps.list
-!.config/50-mouse-acceleration.conf
-!.config/ranger/rifile.conf
-!.config/ranger/rc.conf
-!.config/nvim/init.vim
