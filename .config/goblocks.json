@@ -1,0 +1,41 @@
+{
+	"separator": " | ",
+	"actions":
+	[
+		{
+			"prefix": "CPU: ",
+			"updateSignal": "38",
+			"command": "#Cpu",
+			"suffix": "%",
+			"format": "%.2f",
+			"timer": "2s"
+		},
+		{
+			"prefix": "MEM: ",
+			"updateSignal": "37",
+			"command": "echo $(free -h | awk '{print $3}' | head -2 | tail -1)B / $(free -h | awk '{print $2}' | head -2 | tail -1)B",
+			"suffix": "%",
+			"format": "%.2f",
+			"timer": "2s"
+		},
+		{
+			"prefix": "VOL: ",
+			"updateSignal": "36",
+			"command": "volume.block",
+			"timer": "0"
+		},
+                {
+                        "prefix": "KBD: ",
+                        "updateSignal": "39",
+                        "command": "setxkbmap -print | awk -F+ '/xkb_symbols/ {print $2}'",
+                        "timer": "0"
+                },
+		{
+			"updateSignal": "35",
+			"command": "#Date",
+			"format": "Mon 2006-01-02 03:04:05 PM",
+			"timer": "1s"
+		}
+	]
+
+}
