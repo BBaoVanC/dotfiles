@@ -18,6 +18,7 @@ nnoremap <C-a> ggVG
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
