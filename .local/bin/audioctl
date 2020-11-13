@@ -1,0 +1,18 @@
+#!/bin/sh
+
+PULSE=true
+NUM="${2:-5}"
+
+if "$PULSE"; then
+    toggle() { pulsemixer --toggle-mute ;}
+    mute() { pulsemixer --mute ;}
+    up() { pulsemixer --change-volume +"$NUM" ;}
+    down() { pulsemixer --change-volume -"$NUM" ;}
+else
+    toggle() { amixer sset Master toggle ;}
+    mute() { amixer sset Master mute ;}
+    up() { amixer sset Master "$NUM"%+ ;}
+    down() { amixer sset Master "$NUM"%+ ;}
+fi
+
+"$1"
