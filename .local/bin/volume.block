@@ -1,7 +1,18 @@
 #!/bin/sh
 
+vol=$(pamixer --get-volume)
+
 if [ $(pamixer --get-mute) = "true" ]; then
-    echo "MUTED"
+    echo "婢 $vol%"
 else
-    echo "$(pamixer --get-volume)%"
+    volrng="$(expr $vol / 50)"
+    case $volrng in
+        0)
+            [ $vol = 0 ] && volicon="奄" || volicon="奔"
+            ;;
+        *)
+            volicon="墳"
+            ;;
+    esac
+    echo "$volicon $vol%"
 fi
