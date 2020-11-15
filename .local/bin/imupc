@@ -7,12 +7,12 @@ path=$(dragon-drag-and-drop -t -x -p)
 
 if [ -f "$path" ]; then
     response=$(curl -X POST -F uploadKey="$key" -F imageUpload="@$path" -v "$url")
-    url=$(echo $response | jq -r ".url")
+    url=$(echo "$response" | jq -r ".url")
 
-    if [ $url == "null" ]; then
+    if [ "$url" = "null" ]; then
         notify-send "The server did not respond with a URL." "$response"
     else
-        echo -n $url | xclip -selection c
+        echo -n "$url" | xclip -selection c
         notify-send "Uploaded: $url"
     fi
 else
