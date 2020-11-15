@@ -33,4 +33,4 @@ $ ~/p10k-switch-style.zsh
 
 ## Images
 
-![macOS Terminal with Blur](https://media.bbaovanc.com/dotfiles-example/macosterm1.png)
+![My st fork](https://media.bbaovanc.com/dotfiles-example/st1.png)
