@@ -23,3 +23,5 @@ call plug#end()
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'cobalt2'
+
+set mouse=a
