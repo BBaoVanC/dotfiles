@@ -11,3 +11,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+# $HOME cleanup
+export LESSHISTFILE="-"
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
