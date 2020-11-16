@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+# ---> Colors
+alias ls="exa --group-directories-first --color=auto --icons"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ccat="highlight --out-format=xterm256"
+
+# ---> Miscellaneous
+alias mntdrv="sudo mount -o uid=$(whoami)"
+alias dragon="dragon-drag-and-drop -a -x"
+alias rscp="rsync -atzvP"
+alias scpng="scanimage --progress --format=png --output-file"
+alias rmorphans="sudo pacman -Rns $(pacman -Qdtq | xargs)"

@@ -13,18 +13,7 @@ source ~/.zprofile
 HISTFILE=~/.zsh_history
 SAVEHIST=500
 source ~/.zshrc_nosync
-
-
-# ========== Miscellaneous aliases ==========
-alias ls="exa --group-directories-first --color=auto --icons"
-alias grep="grep --color=auto"
-alias diff="diff --color=auto"
-alias mntdrv="sudo mount -o uid=$(whoami)"
-alias dragon="dragon-drag-and-drop -a -x"
-alias rscp="rsync -atzvP"
-alias scpng="scanimage --progress --format=png --output-file"
-alias ccat="highlight --out-format=xterm256"
-alias rmorphans="sudo pacman -Rns $(pacman -Qdtq | xargs)"
+source ~/.config/aliasrc
 
 
 # ========== Vi mode ========== https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
