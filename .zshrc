@@ -24,6 +24,7 @@ alias dragon="dragon-drag-and-drop -a -x"
 alias rscp="rsync -atzvP"
 alias scpng="scanimage --progress --format=png --output-file"
 alias ccat="highlight --out-format=xterm256"
+alias rmorphans="sudo pacman -Rns $(pacman -Qdtq | xargs)"
 
 
 # ========== Vi mode ========== https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
