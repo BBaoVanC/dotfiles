@@ -74,4 +74,4 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 
 # ---> Enable zsh-syntax-highlighting (should be the very last plugin loaded)
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma/fast-syntax-highlighting
