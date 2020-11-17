@@ -18,11 +18,13 @@ nnoremap <C-a> ggVG
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
 call plug#end()
 
+colorscheme nord
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'cobalt2'
+let g:airline_theme = 'nord'
 
 set mouse=a
 
