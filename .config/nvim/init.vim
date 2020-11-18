@@ -18,7 +18,7 @@ nnoremap <C-a> ggVG
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'arcticicestudio/nord-vim'
+Plug 'https://git.bbaovanc.com/bbaovanc/nord-vim.git'
 Plug 'ap/vim-css-color'
 call plug#end()
 
