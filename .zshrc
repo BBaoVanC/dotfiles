@@ -16,6 +16,12 @@ source ~/.zshrc_nosync
 source ~/.config/aliasrc
 
 
+# ========== Enable fzf keybinds ==========
+if command -v fzf &> /dev/null; then
+    source /usr/share/fzf/key-bindings.zsh
+fi
+
+
 # ========== Vi mode ========== https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
 bindkey -v
 # Change cursor shape for different vi modes.
