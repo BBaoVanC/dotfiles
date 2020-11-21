@@ -13,7 +13,6 @@ set autoindent
 set showcmd
 set ruler
 nnoremap <esc> :noh<return><esc>
-nnoremap <C-a> ggVG
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
