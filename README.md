@@ -4,17 +4,43 @@
 
 - [bbaovanc's dotfiles setup](#bbaovancs-dotfiles-setup)
   - [Table of Contents](#table-of-contents)
-  - [Requirements](#requirements)
+  - [Requirements (not including submodules)](#requirements-not-including-submodules)
+    - [Before installation](#before-installation)
+    - [Installed at runtime](#installed-at-runtime)
+    - [Included configs](#included-configs)
   - [Installation](#installation)
   - [Images](#images)
 
-## Requirements
+## Requirements (not including submodules)
 
 OS: macOS or GNU/Linux
 
-- zsh
+### Before installation
+
 - git
+- zsh
 - neovim (cannot be regular vim)
+- fzf (optional)
+
+### Installed at runtime
+
+**Note: If you have manually installed any of these, you should uninstall them**
+
+- Zinit (with plugins)
+  - powerlevel10k (with configs to work with Nord theme)
+  - fast-syntax-highlighting
+
+### Included configs
+
+- zsh
+- powerlevel10k
+- dunst
+- fontconfig
+- neovim
+- ranger
+- goblocks (dwm statusbar)
+- picom (requires symlink `/etc/xdg/picom.conf` -> `~/.config/picom.conf`)
+- disable Xorg mouse acceleration (requires symlink `/etc/X11/xorg.conf.d/50-mouse-acceleration.conf` -> `~/.config/50-mouse-acceleration.conf`)
 
 ## Installation
 
@@ -22,6 +48,9 @@ OS: macOS or GNU/Linux
 $ zsh <(curl -fsSL https://git.bbaovanc.com/bbaovanc/dotfiles-util/raw/branch/master/dotfiles-setup.zsh)
 ```
 
+Next, open neovim and run `:PlugInstall`.
+
 ## Images
 
 ![My st fork](https://media.bbaovanc.com/dotfiles-example/st1.png)
+![Neovim](https://media.bbaovanc.com/dotfiles-example/nvim.png)
