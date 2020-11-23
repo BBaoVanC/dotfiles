@@ -4,6 +4,4 @@ set date_format="%m/%d/%y %I:%M%p"
 set sort=threads
 set sort_aux=reverse-date
 
-set new_mail_command="notify-send --icon='~/.config/mutt/neomutt.png' 'New Email' '%n new messages, %u unread.' &"
-
 bind index c copy-message
