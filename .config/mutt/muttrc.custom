@@ -1,0 +1,5 @@
+# vim: filetype=neomuttrc
+
+set date_format="%m/%d/%y %I:%M%p"
+set sort=threads
+set sort_aux=reverse-date
