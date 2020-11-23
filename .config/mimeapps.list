@@ -1,7 +1,6 @@
 [Default Applications]
 
 inode/directory=ranger.desktop;
-x-scheme-handler/mailto=neomutt.desktop;
 text/html=firefox-nightly.desktop;
 text/x-shellscript=nvim.desktop;
 text/plain=nvim.desktop;
