@@ -17,7 +17,7 @@ source ~/.config/aliasrc
 
 
 # ========== Enable fzf keybinds ==========
-if command -v fzf &> /dev/null; then
+if [ -f "/usr/share/fzf/key-bindings.zsh" ]; then
     source /usr/share/fzf/key-bindings.zsh
 fi
 
