@@ -12,6 +12,7 @@ alias mntdrv="sudo mount -o uid=$(whoami)"
 alias dragon="dragon-drag-and-drop -a -x"
 alias rscp="rsync -atzvP"
 alias scpng="scanimage --progress --format=png --output-file"
+alias syncmail="mbsync -a && notmuch new"
 
 # ---> Arch-specific
 if command -v pacman &> /dev/null; then
