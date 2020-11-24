@@ -1,0 +1,57 @@
+# vim: filetype=neomuttrc
+# Heavy copy from https://github.com/LukeSmithxyz/mutt-wizard
+
+bind index,pager i noop
+bind index,pager g noop
+bind index \Cf noop
+
+# General
+bind index j next-entry
+bind index k previous-entry
+bind attach <return> view-mailcap
+bind attach l view-mailcap
+bind editor <space> noop
+bind index G last-entry
+bind index g noop
+bind index gg first-entry
+bind pager,attach h exit
+bind pager j next-line
+bind pager k previous-line
+bind pager l view-attachments
+bind index D delete-message
+bind index U undelete-message
+bind index L limit
+bind index h noop
+bind index l display-message
+bind index M save-message
+bind index,query <space> tag-entry
+macro browser h '<change-dir><kill-line>..<enter>' "Go to parent folder"
+bind index,pager H view-raw-message
+bind browser l select-entry
+bind pager,browser gg top-page
+bind pager,browser G bottom-page
+bind index,pager,browser d half-down
+bind index,pager,browser u half-up
+bind index,pager S sync-mailbox
+bind index,pager R group-reply
+
+# Mouse wheel
+bind index \031 previous-undeleted
+bind index \005 next-undeleted
+bind pager \031 previous-line
+bind pager \005 next-line
+
+bind editor <Tab> complete-query
+
+macro index,pager a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Mark all messages as read"
+macro index \Cu "T~U<enter><tag-prefix>N<untag-pattern>.<enter>" "Mark all messages as unread"
+macro index A "<limit>all\n" "Show all messages (undo limit)"
+
+# Sidebar
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cp sidebar-prev-new
+bind index,pager \Cn sidebar-next-new
+bind index,pager B sidebar-toggle-visible  # bind B to toggle sidebar
