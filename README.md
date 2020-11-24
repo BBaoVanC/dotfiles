@@ -44,11 +44,7 @@ OS: macOS or GNU/Linux
 
 ## Installation
 
-```shell
-$ zsh <(curl -fsSL https://git.bbaovanc.com/bbaovanc/dotfiles-util/raw/branch/master/dotfiles-setup.zsh)
-```
-
-Next, open neovim and run `:PlugInstall`.
+My dotfiles are in a very early stage, and will change very often. I don't really recommend using them until they are more stable.
 
 ## Images
 
