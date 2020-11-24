@@ -72,7 +72,9 @@ zinit light-mode for \
 
 
 # ---> Enable plugins
+zicompinit; zicdreplay
 zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit light Aloxaf/fzf-tab
 zinit light zdharma/fast-syntax-highlighting
 
 # ---> Load powerlevel10k
