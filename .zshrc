@@ -8,7 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-# ========== Environment ==========
+# ---> Environment
 source ~/.zprofile
 HISTFILE=~/.zsh_history
 SAVEHIST=500
@@ -16,13 +16,13 @@ source ~/.zshrc_nosync
 source ~/.config/aliasrc
 
 
-# ========== Enable fzf keybinds ==========
+# ---> Enable fzf keybin=
 if [ -f "/usr/share/fzf/key-bindings.zsh" ]; then
     source /usr/share/fzf/key-bindings.zsh
 fi
 
 
-# ========== Vi mode ========== https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
+# ---> Vi mode ---> https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
 bindkey -v
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
