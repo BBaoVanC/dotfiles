@@ -3,9 +3,9 @@
 # ---> Colors
 alias ls="exa --group-directories-first --color=auto --icons"
 alias grep="grep --color=auto"
-alias diff="diff --color=auto"
 alias ccat="highlight --out-format=xterm256"
 lsclr() {for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done}
+[ "$(uname -s)" = "Darwin" ] && alias diff="colordiff" || alias diff="diff --color=auto"
 
 # ---> Miscellaneous
 alias mntdrv="sudo mount -o uid=$(whoami)"
