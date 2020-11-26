@@ -31,6 +31,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
+Plug 'mhinz/vim-signify'
 call plug#end()
 
 colorscheme nord
