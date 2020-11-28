@@ -1,13 +1,17 @@
 [Default Applications]
 
 inode/directory=ranger.desktop;
+
 text/html=firefox-nightly.desktop;
+
 text/x-shellscript=nvim.desktop;
 text/plain=nvim.desktop;
 application/xml=nvim.desktop;
 text/xml=nvim.desktop;
+
 application/postscript=mupdf.desktop;
 application/pdf=mupdf.desktop;
+
 image/png=sxiv.desktop;
 image/jpeg=sxiv.desktop;
 image/svg+xml=gimp.desktop;
@@ -15,3 +19,14 @@ image/webp=sxiv.desktop;
 image/bmp=sxiv.desktop;
 image/tiff=sxiv.desktop;
 image/gif=sxiv.desktop;
+
+application/x-7z-compressed=nvim.desktop;
+application/x-bzip=nvim.desktop;
+application/x-bzip2=nvim.desktop;
+application/x-gtar=nvim.desktop;
+application/x-tar=nvim.desktop;
+application/x-gzip=nvim.desktop;
+application/zip=nvim.desktop;
+application/x-zip-compressed=nvim.desktop;
+multipart/x-zip=nvim.desktop;
+application/x-compressed=nvim.desktop;
