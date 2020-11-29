@@ -26,6 +26,7 @@ application/x-bzip2=nvim.desktop;
 application/x-gtar=nvim.desktop;
 application/x-tar=nvim.desktop;
 application/x-gzip=nvim.desktop;
+application/gzip=nvim.desktop;
 application/zip=nvim.desktop;
 application/x-zip-compressed=nvim.desktop;
 multipart/x-zip=nvim.desktop;
