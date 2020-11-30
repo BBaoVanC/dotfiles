@@ -41,4 +41,4 @@ let g:airline_theme = 'nord'
 set mouse=a
 
 command RealTab set shiftwidth=0 | set softtabstop=0 | set noexpandtab | set noautoindent
-command SpaceTab set shiftwidth=4 | set softtabstop=4 | set expandtab | set autoindent
+command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set expandtab | set autoindent
