@@ -14,6 +14,9 @@ set showcmd
 set ruler
 nnoremap <esc> :noh<return><esc>
 
+set mouse=a
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
@@ -38,7 +41,6 @@ colorscheme nord
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'nord'
 
-set mouse=a
 
 command RealTab set shiftwidth=0 | set softtabstop=0 | set noexpandtab | set noautoindent
 command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set expandtab | set autoindent
