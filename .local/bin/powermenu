@@ -1,0 +1,13 @@
+#!/bin/sh
+
+selection=$(echo """襤 Shutdown
+ﰇ Reboot""" | dmenu -i -l 10)
+
+case $selection in
+    "襤 Shutdown")
+        shutdown now
+        ;;
+    "ﰇ Reboot")
+        reboot
+        ;;
+esac
