@@ -17,6 +17,18 @@ nnoremap <esc> :noh<return><esc>
 set mouse=a
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
+" Nerdtree-like netrw settings
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+    autocmd!
+    autocmd VimEnter * :Vexplore
+    autocmd VimEnter * :wincmd l
+augroup END
+
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
