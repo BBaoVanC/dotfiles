@@ -17,9 +17,8 @@ source ~/.config/aliasrc
 
 
 # ---> Enable fzf keybin=
-if [ -f "/usr/share/fzf/key-bindings.zsh" ]; then
-    source /usr/share/fzf/key-bindings.zsh
-fi
+[ -f "/usr/share/fzf/key-bindings.zsh" ] && source "/usr/share/fzf/key-bindings.zsh"
+[ -f "/usr/local/opt/fzf/shell/key-bindings.zsh" ] && source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 
 # ---> Vi mode ---> https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
