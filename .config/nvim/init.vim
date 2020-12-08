@@ -17,18 +17,6 @@ nnoremap <esc> :noh<return><esc>
 set mouse=a
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
-" Nerdtree-like netrw settings
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-augroup ProjectDrawer
-    autocmd!
-    autocmd VimEnter * :Vexplore
-    autocmd VimEnter * :wincmd l
-augroup END
-
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
@@ -47,12 +35,20 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
+Plug 'preservim/nerdtree' |
+    \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+    \ Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
+let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
+let NERDTreeShowHidden=1
 
 colorscheme nord
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'nord'
 
 
+command IDEMode NERDTree
 command RealTab set shiftwidth=0 | set softtabstop=0 | set noexpandtab | set noautoindent
 command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set expandtab | set autoindent
