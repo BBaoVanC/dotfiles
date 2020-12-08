@@ -8,7 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-# ---> Environment
+# ==> Environment
 source ~/.zprofile
 HISTFILE=~/.zsh_history
 SAVEHIST=500
@@ -16,12 +16,12 @@ source ~/.zshrc_nosync
 source ~/.config/aliasrc
 
 
-# ---> Enable fzf keybin=
+# ==> Enable fzf keybin=
 [ -f "/usr/share/fzf/key-bindings.zsh" ] && source "/usr/share/fzf/key-bindings.zsh"
 [ -f "/usr/local/opt/fzf/shell/key-bindings.zsh" ] && source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 
-# ---> Vi mode ---> https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
+# ==> Vi mode :: https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
 bindkey -v
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -70,10 +70,10 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 
-# ---> Enable plugins
+# ==> Enable plugins
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zdharma/fast-syntax-highlighting
 
-# ---> Load powerlevel10k
+# ==> Load powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
