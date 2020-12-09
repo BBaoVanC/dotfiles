@@ -65,7 +65,7 @@ Plug 'preservim/nerdtree' |
     \ Plug 'ryanoasis/vim-devicons'
 
 " Install language servers with
-command LangInstall CocInstall coc-clangd coc-python coc-sh coc-html
+" CocInstall coc-clangd coc-python coc-html
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
