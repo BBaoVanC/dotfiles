@@ -70,9 +70,9 @@ Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'fannheyward/coc-pyright', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'clangd/coc-clangd', { 'do': 'yarn install --frozen-lockfile' }
 
-" Debug
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'idanarye/vim-vebugger'
+" Debug (currently not working)
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Plug 'idanarye/vim-vebugger'
 call plug#end()
 
 
