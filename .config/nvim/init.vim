@@ -77,7 +77,6 @@ call plug#end()
 
 
 " ==> Nerd Tree settings
-let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
 let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
 let NERDTreeShowHidden=1
 
