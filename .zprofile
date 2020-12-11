@@ -20,3 +20,6 @@ export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # ==> pam-gnupg
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+# ==> Fix Ctrl-O keybind on macOS
+[ "$(uname -s)" = "Darwin" ] && stty discard undef &> /dev/null
