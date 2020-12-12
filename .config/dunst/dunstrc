@@ -16,7 +16,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = keyboard
 
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
@@ -160,7 +160,7 @@
     max_icon_size = 64
 
     # Paths to default icons.
-    icon_folders = /home/loki/.icons/
+    #icon_folders = /home/loki/.icons/
 
     ### History ###
 
@@ -174,10 +174,10 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/rofi -p dunst:
+    dmenu = /usr/local/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /home/loki/apps/firefox/firefox -new-tab
+    browser = /usr/bin/firefox-nightly -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -215,27 +215,27 @@
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
 
-[shortcuts]
-
-    # Shortcuts are specified as [modifier+][modifier+]...key
-    # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
-    # "mod3" and "mod4" (windows-key).
-    # Xev might be helpful to find names for keys.
-
-    # Close notification.
-    close = ctrl+space
-
-    # Close all notifications.
-    close_all = ctrl+shift+space
-
-    # Redisplay last message(s).
-    # On the US keyboard layout "grave" is normally above TAB and left
-    # of "1". Make sure this key actually exists on your keyboard layout,
-    # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
-
-    # Context menu.
-    context = ctrl+shift+period
+#[shortcuts]
+#
+#    # Shortcuts are specified as [modifier+][modifier+]...key
+#    # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
+#    # "mod3" and "mod4" (windows-key).
+#    # Xev might be helpful to find names for keys.
+#
+#    # Close notification.
+#    close = ctrl+space
+#
+#    # Close all notifications.
+#    close_all = ctrl+shift+space
+#
+#    # Redisplay last message(s).
+#    # On the US keyboard layout "grave" is normally above TAB and left
+#    # of "1". Make sure this key actually exists on your keyboard layout,
+#    # e.g. check output of 'xmodmap -pke'
+#    history = ctrl+grave
+#
+#    # Context menu.
+#    context = ctrl+shift+period
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
