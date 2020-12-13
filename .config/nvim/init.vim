@@ -65,13 +65,6 @@ Plug 'preservim/nerdtree' |
     \ Plug 'Xuyuanp/nerdtree-git-plugin' |
     \ Plug 'ryanoasis/vim-devicons'
 
-" Install language servers with
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'fannheyward/coc-pyright', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'clangd/coc-clangd', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-
 " Debug (currently not working)
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " Plug 'idanarye/vim-vebugger'
