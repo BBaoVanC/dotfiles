@@ -18,6 +18,7 @@ text/x-shellscript=nvim.desktop;
 text/plain=nvim.desktop;
 application/xml=nvim.desktop;
 text/xml=nvim.desktop;
+text/x-diff=nvim.desktop;
 
 application/postscript=mupdf.desktop;
 application/pdf=mupdf.desktop;
