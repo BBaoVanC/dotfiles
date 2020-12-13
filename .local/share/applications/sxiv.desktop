@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=sxiv
-Comment=Simple X Image Viewer
-Exec=sxiv %u

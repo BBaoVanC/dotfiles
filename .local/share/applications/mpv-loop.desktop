@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=MPV Loop
-Comment=Play with MPV and loop
-Exec=mpv --loop-file=inf %u
