@@ -1,0 +1,5 @@
+#!/bin/sh
+
+st -e htop &
+st -e ranger ~ &
+st -e nvim ~/.dwm/st/config.h &
