@@ -1,7 +1,7 @@
 #!/bin/sh
 
 selection=$(echo """襤 Shutdown
-ﰇ Reboot""" | dmenu -i -l 10)
+ﰇ Reboot""" | dmenu -i -l 10 -p 'power:')
 
 case $selection in
     "襤 Shutdown")
