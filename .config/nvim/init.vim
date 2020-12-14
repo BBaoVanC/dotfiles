@@ -89,6 +89,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " use tab and shift-tab to move between autocomplete options
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+nmap <leader>p <Plug>(coc-format)
+vmap <leader>p <Plug>(coc-format-selected)
 
 
 " ==> Theme settings
