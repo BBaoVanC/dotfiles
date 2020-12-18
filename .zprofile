@@ -18,6 +18,9 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
+# ==> Qt5
+export QT_STYLE_OVERRIDE=kvantum
+
 # ==> pam-gnupg
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
