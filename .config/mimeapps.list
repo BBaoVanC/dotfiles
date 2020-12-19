@@ -14,8 +14,9 @@ application/xhtml+xml=firefox-nightly.desktop;
 application/x-extension-xhtml=firefox-nightly.desktop;
 application/x-extension-xht=firefox-nightly.desktop;
 
-text/x-shellscript=nvim.desktop;
 text/plain=nvim.desktop;
+text/x-shellscript=nvim.desktop;
+text/x-script.python=nvim.desktop;
 application/json=nvim.desktop;
 application/xml=nvim.desktop;
 text/xml=nvim.desktop;
