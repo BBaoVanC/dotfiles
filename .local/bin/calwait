@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cal
+read -t 3 -n 1
