@@ -16,4 +16,4 @@ else
 fi
 
 "$1"
-kill -36 $(pidof goblocks)
+sigdwmblocks 1

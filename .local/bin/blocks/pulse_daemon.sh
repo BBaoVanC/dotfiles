@@ -1,0 +1,1 @@
+../../../.dwm/dwmblocks/daemons/pulse_daemon.sh
