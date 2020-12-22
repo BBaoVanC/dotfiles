@@ -1,3 +1,0 @@
-#!/bin/sh
-
-echo " $(free -h | awk '{print $3}' | head -2 | tail -1)B / $(free -h | awk '{print $2}' | head -2 | tail -1)B"

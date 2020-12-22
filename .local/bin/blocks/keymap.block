@@ -1,3 +1,0 @@
-#!/bin/sh
-
-echo " $(xkblayout-state print '%e')"

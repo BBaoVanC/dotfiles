@@ -11,7 +11,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # ==> PATH
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin/blocks:$PATH"
+export PATH="$HOME/.dwm/dwmblocks/blocks:$PATH"
 
 # ==> $HOME cleanup
 export LESSHISTFILE="-"

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-echo " $(date '+%a %F %r')"
