@@ -12,7 +12,7 @@ if [ -f "$path" ]; then
     if [ "$url" = "null" ]; then
         notify-send "The server did not respond with a URL." "$response"
     else
-        echo -n "$url" | xclip -selection c
+        printf "%s" "$url" | xclip -selection c
         notify-send "Uploaded: $url"
     fi
 else
