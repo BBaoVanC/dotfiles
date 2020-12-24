@@ -13,7 +13,7 @@ if [ -f "$path" ]; then
         notify-send "The server did not respond with a URL." "$response"
     else
         printf "%s" "$url" | xclip -selection c
-        notify-send "Uploaded: $url"
+        notify-send "Uploaded" "$url"
     fi
 else
     notify-send "Image does not exist."
