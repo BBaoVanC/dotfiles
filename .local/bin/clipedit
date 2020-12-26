@@ -16,5 +16,5 @@ if [ "$contents" != "Error: target STRING not available" ]; then
     # remove temporary file
     rm "$tmpfile"
 else
-    dunstify -u normal "Clipboard empty" "Error: target STRING not available in clipboard"
+    notify-send "Clipboard empty" "Error: target STRING not available in clipboard"
 fi
