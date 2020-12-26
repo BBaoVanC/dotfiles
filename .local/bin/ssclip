@@ -1,0 +1,7 @@
+#!/bin/sh
+
+screen() { maim | xclip -sel c -t image/png ;}
+window() { maim -i $(xdotool getactivewindow) | xclip -sel c -t image/png ;}
+select() { maim -s | xclip -sel c -t image/png ;}
+
+"$1"
