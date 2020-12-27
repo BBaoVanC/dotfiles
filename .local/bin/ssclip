@@ -1,17 +1,17 @@
 #!/bin/sh
 
 screen() {
-    maim | xclip -sel c -t image/png
+    maim -u | xclip -sel c -t image/png
     notify-send "Screenshot taken" "Full screen saved to clipboard"
 }
 
 window() {
-    maim -i $(xdotool getactivewindow) | xclip -sel c -t image/png
+    maim -ui $(xdotool getactivewindow) | xclip -sel c -t image/png
     notify-send "Screenshot taken" "Active window saved to clipboard"
 }
 
 select() {
-    maim -s | xclip -sel c -t image/png
+    maim -us | xclip -sel c -t image/png
     notify-send "Screenshot taken" "Selection saved to clipboard"
 }
 
