@@ -65,6 +65,13 @@ Plug 'preservim/nerdtree' |
     \ Plug 'Xuyuanp/nerdtree-git-plugin' |
     \ Plug 'ryanoasis/vim-devicons'
 
+" Temporarily disabled, too bloated, and VSCode is too good
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile' }
+"Plug 'fannheyward/coc-pyright', { 'do': 'yarn install --frozen-lockfile' }
+"Plug 'clangd/coc-clangd', { 'do': 'yarn install --frozen-lockfile' }
+"Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+
 " Debug (currently not working)
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " Plug 'idanarye/vim-vebugger'
@@ -78,10 +85,12 @@ let NERDTreeShowHidden=1
 
 " ==> Completion keybinds
 " use <c-space>for trigger completion
-inoremap <silent><expr> <c-space> coc#refresh()
+"inoremap <silent><expr> <c-space> coc#refresh()
 " use tab and shift-tab to move between autocomplete options
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"nmap <leader>p <Plug>(coc-format)
+"vmap <leader>p <Plug>(coc-format-selected)
 
 
 " ==> Theme settings
