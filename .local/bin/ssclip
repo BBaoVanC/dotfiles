@@ -1,6 +1,6 @@
 #!/bin/sh
 
-screen() {
+full() {
     maim -u | xclip -sel c -t image/png
     notify-send "Screenshot taken" "Full screen saved to clipboard"
 }
