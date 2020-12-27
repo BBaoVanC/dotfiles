@@ -1,6 +1,6 @@
 [submodule ".dwm"]
 	path = .dwm
-	url = git@git.bbaovanc.com:bbaovanc/.dwm.git
+	url = git@github.com:BBaoVanC/.dwm.git
 [submodule ".zinit/bin"]
 	path = .zinit/bin
 	url = https://github.com/zdharma/zinit.git
