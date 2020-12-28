@@ -11,8 +11,8 @@ lsclr() {for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${
 # ==> Miscellaneous
 alias mntdrv="sudo mount -o uid=$(whoami)"
 alias dragon="dragon-drag-and-drop -a -x"
-alias dcp="cp \$(dragon-drag-and-drop -t -x -p)"
-alias dmv="mv \$(dragon-drag-and-drop -t -x -p)"
+alias dcp='cp "$(dragon-drag-and-drop -t -x -p)"'
+alias dmv='mv "$(dragon-drag-and-drop -t -x -p)"'
 alias rscp="rsync -atzvP"
 alias scpng="scanimage --progress --format=png --output-file"
 alias syncmail="mbsync -a && notmuch new"
