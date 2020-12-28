@@ -19,7 +19,7 @@ alias syncmail="mbsync -a && notmuch new"
 
 # ==> Arch-specific
 if command -v pacman &> /dev/null; then
-    alias rmorphans="sudo pacman -Rns $(pacman -Qdtq | xargs)"
+    alias rmorphans="sudo pacman -Rns $(pacman -Qdtq)"
     if command -v fzf &> /dev/null; then
         alias addpkg="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
         alias rmpkg="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
