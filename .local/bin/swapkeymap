@@ -1,0 +1,9 @@
+#!/bin/sh
+
+map=$(setxkbmap -print | awk -F+ '/xkb_symbols/ {print $2}')
+case $map in
+    "us")
+        setxkbmap -layout us -variant altgr-intl ;;
+    "us(altgr-intl)")
+        setxkbmap -layout us ;;
+esac
