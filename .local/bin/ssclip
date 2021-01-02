@@ -6,11 +6,11 @@ full() {
 }
 
 window() {
-    maim -ui $(xdotool getactivewindow) | xclip -sel c -t image/png
+    maim -ui "$(xdotool getactivewindow)" | xclip -sel c -t image/png
     notify-send "Screenshot taken" "Active window saved to clipboard"
 }
 
-select() {
+sel() {
     maim -us | xclip -sel c -t image/png
     notify-send "Screenshot taken" "Selection saved to clipboard"
 }
