@@ -1,0 +1,4 @@
+#!/bin/sh
+
+search="$(printf '' | dmenu -p 'archwiki:')"
+[ -n "$search" ] && $BROWSER "https://wiki.archlinux.org/index.php?search=$search" || echo 'No query'

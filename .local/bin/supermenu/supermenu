@@ -1,0 +1,8 @@
+#!/bin/sh
+
+options="archwikimenu
+dmenu_run
+powermenu"
+
+
+"$(echo "$options" | dmenu -i -l 10 -p 'super:')"
