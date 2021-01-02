@@ -1,0 +1,4 @@
+#!/bin/sh
+
+search="$(printf '' | dmenu -p 'hoogle:')"
+[ -n "$search" ] && $BROWSER "https://hoogle.haskell.org/?hoogle=$search" || echo 'No query'
