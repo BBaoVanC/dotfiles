@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 # ==> Default programs
 export EDITOR="nvim"
@@ -28,4 +28,4 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # ==> Fix Ctrl-O keybind on macOS
-[ "$(uname -s)" = "Darwin" ] && stty discard undef &> /dev/null
+[ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
