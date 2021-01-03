@@ -4,7 +4,6 @@
 #alias ls="exa --group-directories-first --color=auto --icons"
 [ "$(uname -s)" = "Darwin" ] && alias ls="ls -G" || alias ls="ls --color=auto"
 alias grep="grep --color=auto"
-alias ccat="highlight --out-format=xterm256"
 lsclr() {for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done}
 [ "$(uname -s)" = "Darwin" ] && alias diff="colordiff" || alias diff="diff --color=auto"
 
@@ -15,7 +14,6 @@ alias dcp='cp "$(dragon-drag-and-drop -t -x -p)"'
 alias dmv='mv "$(dragon-drag-and-drop -t -x -p)"'
 alias rscp="rsync -atzvP"
 alias scpng="scanimage --progress --format=png --output-file"
-alias syncmail="mbsync -a && notmuch new"
 
 # ==> Arch-specific
 if command -v pacman &> /dev/null; then
