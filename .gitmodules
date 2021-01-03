@@ -10,3 +10,9 @@
 	path = .xmonad
 	url = git@github.com:BBaoVanC/.xmonad.git
 	branch = master
+[submodule "programs/st"]
+	path = programs/st
+	url = git@github.com:BBaoVanC/st.git
+[submodule "programs/dmenu"]
+	path = programs/dmenu
+	url = git@github.com:BBaoVanC/dmenu.git
