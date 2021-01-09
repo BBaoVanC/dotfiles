@@ -4,6 +4,7 @@ options="archwikimenu
 dmenu_run
 emojimenu
 hooglemenu
+passmenu
 powermenu"
 
 
