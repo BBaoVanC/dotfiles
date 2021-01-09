@@ -13,6 +13,8 @@
 [submodule "programs/st"]
 	path = programs/st
 	url = git@github.com:BBaoVanC/st.git
+	branch = master
 [submodule "programs/dmenu"]
 	path = programs/dmenu
 	url = git@github.com:BBaoVanC/dmenu.git
+	branch = master
