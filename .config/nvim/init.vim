@@ -71,6 +71,8 @@ Plug 'fannheyward/coc-pyright', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'clangd/coc-clangd', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 " Debug (currently not working)
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " Plug 'idanarye/vim-vebugger'
