@@ -1,4 +1,5 @@
 #!/bin/sh
+# $1 should be `url` or `utf8_url`
 
 key=$(jq -r ".uploadKey" ~/.config/imupc.json)
 url=$(jq -r ".url" ~/.config/imupc.json)
@@ -7,7 +8,7 @@ image=$(dragon-drag-and-drop -t -x -p)
 
 if identify "$image"; then
     response=$(curl -X POST -F uploadKey="$key" -F imageUpload="@$image" -v "$url")
-    url=$(echo "$response" | jq -r ".url")
+    url=$(echo "$response" | jq -r ".$1")
 
     if [ "$url" = "null" ]; then
         notify-send "The server did not respond with a URL." "$response"
