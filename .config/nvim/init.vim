@@ -1,6 +1,3 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-
 " Set colors to dark mode
 set background=dark
 " Show line numbers
@@ -8,17 +5,19 @@ set number
 " Enable syntax highlighting
 syntax enable
 
-" Set tabs to four spaces
+" Set tabs to default to four spaces
+" This will be overridden by vim-sleuth and editorconfig
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 set autoindent
 
-set showcmd
-set ruler
-
 " Map escape to clear search highlighting
 nnoremap <esc> :noh<return><esc>
+
+" Highlight current line number and line
+" Makes it easier to find where the cursor is
+set cursorline
 
 " Enable mouse support
 set mouse=a
@@ -53,7 +52,7 @@ vnoremap <silent> # :<C-U>
 
 
 " ==> Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
