@@ -1,0 +1,14 @@
+#!/bin/sh
+
+image="$(mktemp -p /tmp clipgimpXXXXXXXX.png)"
+xclip -selection clipboard -t image/png -out > "$image"
+
+if identify "$image"; then
+    gimp --new-instance "$image"
+    xclip -selection clipboard -t image/png -i < "$image"
+    notify-send "Edited image" "Saved to clipboard"
+    rm "$image"
+else
+    notify-send "Invalid image" "Clipboard did not contain a valid image"
+    rm "$image"
+fi
