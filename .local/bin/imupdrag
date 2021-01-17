@@ -3,10 +3,10 @@
 key=$(jq -r ".uploadKey" ~/.config/imupc.json)
 url=$(jq -r ".url" ~/.config/imupc.json)
 
-path=$(dragon-drag-and-drop -t -x -p)
+image=$(dragon-drag-and-drop -t -x -p)
 
-if [ -f "$path" ]; then
-    response=$(curl -X POST -F uploadKey="$key" -F imageUpload="@$path" -v "$url")
+if identify "$image"; then
+    response=$(curl -X POST -F uploadKey="$key" -F imageUpload="@$image" -v "$url")
     url=$(echo "$response" | jq -r ".url")
 
     if [ "$url" = "null" ]; then
@@ -16,5 +16,5 @@ if [ -f "$path" ]; then
         notify-send "Uploaded" "$url"
     fi
 else
-    notify-send "Image does not exist."
+    notify-send "File is not a valid image."
 fi

@@ -6,7 +6,7 @@ url=$(jq -r ".url" ~/.config/imupc.json)
 image="/tmp/imupp_image.png"
 xclip -selection clipboard -t image/png -out > "$image"
 
-if identify $image; then
+if identify "$image"; then
     response=$(curl -X POST -F uploadKey="$key" -F imageUpload="@$image" -v "$url")
     url=$(echo "$response" | jq -r ".url")
 
