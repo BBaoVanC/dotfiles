@@ -4,6 +4,8 @@ set background=dark
 set number
 " Enable syntax highlighting
 syntax enable
+" Case insensitive searching
+set ignorecase
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
