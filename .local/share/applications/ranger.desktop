@@ -2,4 +2,4 @@
 Type=Application
 Name=Ranger
 Comment=File Manager
-Exec=/usr/local/bin/st -e ranger %u
+Exec=st -e ranger %u
