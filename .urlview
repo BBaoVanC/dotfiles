@@ -1,1 +1,1 @@
-COMMAND firefox-nightly
+COMMAND firefox-nightly --new-window
