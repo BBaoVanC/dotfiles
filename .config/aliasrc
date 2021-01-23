@@ -14,8 +14,8 @@ alias svenv="source venv/bin/activate"
 # ==> Miscellaneous
 alias mntdrv="sudo mount -o uid=$(whoami)"
 alias dragon="dragon-drag-and-drop -a -x"
-alias dcp='cp "$(dragon-drag-and-drop -t -x -p)"'
-alias dmv='mv "$(dragon-drag-and-drop -t -x -p)"'
+alias dcp='cp -v "$(dragon-drag-and-drop -t -x -p)"'
+alias dmv='mv -v "$(dragon-drag-and-drop -t -x -p)"'
 alias rscp="rsync -atzvP"
 alias scpng="scanimage --progress --format=png --output-file"
 
