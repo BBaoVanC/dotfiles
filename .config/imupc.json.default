@@ -1,4 +1,7 @@
 {
+    "url": "127.0.0.1:5000/upload",
     "uploadKey": "123",
-    "url": "127.0.0.1:5000/upload"
+    "args": {
+        "uploadKey": "123"
+    }
 }
