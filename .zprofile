@@ -1,8 +1,7 @@
-#!/bin/zsh
+#!/bin/sh
 
 # ==> Default programs
 export EDITOR="nvim"
-export BROWSER="firefox-nightly"
 
 # ==> XDG
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -22,4 +21,4 @@ export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # ==> Fix Ctrl-O keybind on macOS
-[ "$(uname -s)" = "Darwin" ] && stty discard undef &> /dev/null
+[ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1

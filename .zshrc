@@ -45,6 +45,11 @@ echo -ne '\e[6 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[6 q' ;} # Use beam shape cursor for each new prompt
 
 
+# ==> Fix delete key in st
+bindkey "^[[P"  delete-char
+bindkey "^[[3~" delete-char
+
+
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
