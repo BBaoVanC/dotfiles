@@ -6,6 +6,8 @@ set number
 syntax enable
 " Case insensitive searching
 set ignorecase
+" Relative line numbers
+set relativenumber
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
