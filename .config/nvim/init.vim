@@ -62,6 +62,7 @@ Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-sleuth'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'preservim/nerdtree' |
     \ Plug 'Xuyuanp/nerdtree-git-plugin' |
     \ Plug 'ryanoasis/vim-devicons'
