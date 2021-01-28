@@ -11,11 +11,12 @@ lsclr() {for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${
 alias senv="source env/bin/activate"
 alias svenv="source venv/bin/activate"
 
-# ==> Miscellaneous
-alias mntdrv="sudo mount -o uid=$(whoami)"
+# ==> Dragon drag and drop
 alias dragon="dragon-drag-and-drop -a -x"
 alias dcp='cp -v $(dragon-drag-and-drop -t -x -p)'
 alias dmv='mv -v $(dragon-drag-and-drop -t -x -p)'
+
+# ==> Miscellaneous
 alias rscp="rsync -atzvP"
 alias scpng="scanimage --progress --format=png --output-file"
 
