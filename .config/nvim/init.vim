@@ -6,6 +6,10 @@ set number
 syntax enable
 " Case insensitive searching
 set ignorecase
+" Relative line numbers
+set relativenumber
+" Use system clipboard by default
+set clipboard=unnamed
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
@@ -62,6 +66,7 @@ Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-sleuth'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'preservim/nerdtree' |
     \ Plug 'Xuyuanp/nerdtree-git-plugin' |
     \ Plug 'ryanoasis/vim-devicons'
