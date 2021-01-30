@@ -8,8 +8,8 @@ syntax enable
 set ignorecase
 " Relative line numbers
 set relativenumber
-" Use system clipboard by default
-set clipboard+=unnamedplus
+"" Use system clipboard by default
+"set clipboard+=unnamedplus
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
