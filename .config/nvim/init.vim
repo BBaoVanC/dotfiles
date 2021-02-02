@@ -66,9 +66,6 @@ Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'preservim/nerdtree' |
-    \ Plug 'Xuyuanp/nerdtree-git-plugin' |
-    \ Plug 'ryanoasis/vim-devicons'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile' }
