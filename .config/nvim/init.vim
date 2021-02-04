@@ -66,6 +66,7 @@ Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile' }
