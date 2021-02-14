@@ -2,4 +2,4 @@
 Type=Application
 Name=Firefox Nightly
 Comment=Web Browser
-Exec=firefox-nightly --new-window %u
+Exec=firefox-nightly %u
