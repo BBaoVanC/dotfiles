@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Transmission Add
+Exec=transadd %u

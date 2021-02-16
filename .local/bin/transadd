@@ -1,0 +1,12 @@
+#!/bin/sh
+# Adapted from https://github.com/LukeSmithxyz/voidrice/blob/219ea40fe99d3b64d32532ef826cb6c2ce12feac/.local/bin/transadd
+
+options="Yes
+No"
+selection=$(echo "$options" | dmenu -i -l 2 -p 'add torrent?')
+
+if [ "$selection" = "Yes" ]; then
+    transmission-remote -a "$@" && notify-send " Torrent added."
+else
+    notify-send "Torrent not added."
+fi

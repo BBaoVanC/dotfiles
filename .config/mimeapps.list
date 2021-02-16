@@ -44,3 +44,6 @@ application/zip=nvim.desktop;
 application/x-zip-compressed=nvim.desktop;
 multipart/x-zip=nvim.desktop;
 application/x-compressed=nvim.desktop;
+
+x-scheme-handler/magnet=transadd.desktop;
+application/x-bittorrent=transadd.desktop;
