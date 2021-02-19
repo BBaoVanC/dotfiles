@@ -1,6 +1,8 @@
 #!/bin/sh
 # Adapted from https://github.com/LukeSmithxyz/voidrice/blob/219ea40fe99d3b64d32532ef826cb6c2ce12feac/.local/bin/transadd
 
+pidof transmission-daemon >/dev/null || (transd && notify-send "Starting transmission daemon..." && sleep 3
+
 options="Yes
 No"
 selection=$(echo "$options" | dmenu -i -l 2 -p 'add torrent?')

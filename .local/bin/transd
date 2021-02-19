@@ -1,0 +1,3 @@
+#!/bin/sh
+
+transmission-daemon -w ~/downloads --global-seedratio 1
