@@ -29,7 +29,12 @@ export TASKRC="$XDG_CONFIG_HOME"/task/taskrc
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # ssh-agent
-[ -z "$SSH_AUTH_SOCK" ] && eval 'eval $(ssh-agent -s)'
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 24h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" > /dev/null
+fi
 
 # ==> Fix Ctrl-O keybind on macOS
 [ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
