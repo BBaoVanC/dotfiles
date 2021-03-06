@@ -10,7 +10,7 @@ fi
 
 # ==> Environment
 source ~/.zprofile
-HISTFILE=~/.zsh_history
+HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
 SAVEHIST=500
 source ~/.zshrc_nosync
 source ~/.config/aliasrc

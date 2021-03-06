@@ -8,8 +8,8 @@ syntax enable
 set ignorecase
 " Relative line numbers
 set relativenumber
-" Use system clipboard by default
-set clipboard=unnamed
+"" Use system clipboard by default
+"set clipboard+=unnamedplus
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
@@ -64,12 +64,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
-Plug 'easymotion/vim-easymotion'
+Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'preservim/nerdtree' |
-    \ Plug 'Xuyuanp/nerdtree-git-plugin' |
-    \ Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -98,6 +96,7 @@ vmap <leader>p <Plug>(coc-format-selected)
 colorscheme nord
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'nord'
+let g:airline#extensions#tabline#enabled = 1
 
 
 " ==> Tab setting keybinds
