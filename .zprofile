@@ -16,6 +16,15 @@ export PATH="$HOME/.local/bin/supermenu:$PATH"
 export PATH="$HOME/.dwm/dwmblocks/blocks:$PATH"
 export PATH="$HOME/.dwm/dwmblocks/daemons:$PATH"
 
+# ==> Colors in less
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[0;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[47;30m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[0;4;36m'
+export LESS_TERMCAP_ue=$'\e[0m'
+
 # ==> $HOME cleanup
 export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
@@ -28,7 +37,7 @@ export TASKRC="$XDG_CONFIG_HOME"/task/taskrc
 # ==> Qt5
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
-# ssh-agent
+# ==> ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 24h > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
