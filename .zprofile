@@ -47,3 +47,6 @@ fi
 
 # ==> Fix Ctrl-O keybind on macOS
 [ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
+
+# ==> https://wiki.archlinux.org/index.php/Dwm#Fixing_misbehaving_Java_applications
+export _JAVA_AWT_WM_NONREPARENTING=1
