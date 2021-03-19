@@ -18,7 +18,3 @@
 	path = programs/dmenu
 	url = git@github.com:BBaoVanC/dmenu.git
 	branch = master
-[submodule ".config/qtile"]
-	path = .config/qtile
-	url = git@github.com:BBaoVanC/qtile.git
-	branch = master
