@@ -14,7 +14,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/supermenu:$PATH"
 export PATH="$HOME/.dwm/dwmblocks/blocks:$PATH"
-export PATH="$HOME/.dwm/dwmblocks/daemons:$PATH"
+export PATH="$HOME/.dwm/dwmblocks/tools:$PATH"
 
 # ==> Colors in less
 export LESS_TERMCAP_mb=$'\e[1;32m'
