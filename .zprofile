@@ -16,14 +16,8 @@ export PATH="$HOME/.local/bin/supermenu:$PATH"
 export PATH="$HOME/.dwm/dwmblocks/blocks:$PATH"
 export PATH="$HOME/.dwm/dwmblocks/tools:$PATH"
 
-# ==> Colors in less
-export LESS_TERMCAP_mb=$'\e[1;32m'
-export LESS_TERMCAP_md=$'\e[0;32m'
-export LESS_TERMCAP_me=$'\e[0m'
-export LESS_TERMCAP_so=$'\e[47;30m'
-export LESS_TERMCAP_se=$'\e[0m'
-export LESS_TERMCAP_us=$'\e[0;4;36m'
-export LESS_TERMCAP_ue=$'\e[0m'
+# ==> Use nvim for man pager
+export MANPAGER='nvim +Man!'
 
 # ==> $HOME cleanup
 export LESSHISTFILE="-"
