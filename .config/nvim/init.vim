@@ -91,6 +91,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nmap <leader>p <Plug>(coc-format)
 vmap <leader>p <Plug>(coc-format-selected)
 
+" Undo tree
+nnoremap <F5> :UndotreeToggle<CR>
+
 
 " ==> Theme settings
 colorscheme nord
@@ -102,3 +105,6 @@ let g:airline#extensions#tabline#enabled = 1
 " ==> Tab setting keybinds
 command RealTab set shiftwidth=0 | set softtabstop=0 | set noexpandtab | set noautoindent
 command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set expandtab | set autoindent
+
+" Italicize comments
+highlight Comment cterm=italic
