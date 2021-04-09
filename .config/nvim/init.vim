@@ -96,9 +96,18 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 
 " ==> Theme settings
-colorscheme nord
+try
+    colorscheme nord
+catch
+    echo "warning: Could not enable nord colorscheme, is nord-vim installed?"
+endtry
+
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'nord'
+try
+    let g:airline_theme = 'nord'
+catch
+    echo "warning: Could not enable nord colorscheme, is nord-vim installed?"
+endtry
 let g:airline#extensions#tabline#enabled = 1
 
 
