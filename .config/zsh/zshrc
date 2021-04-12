@@ -15,6 +15,9 @@ SAVEHIST=500
 source ~/.config/zsh/zshrc_nosync
 source ~/.config/zsh/aliasrc
 
+# ==> Fix Ctrl-O keybind on macOS
+[ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
+
 
 # ==> Enable fzf keybin=
 [ -f "/usr/share/fzf/key-bindings.zsh" ] && source "/usr/share/fzf/key-bindings.zsh"
