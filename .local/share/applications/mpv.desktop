@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=MPV Loop
-Comment=Play with MPV
-Exec=mpv %u

@@ -33,6 +33,14 @@ image/bmp=sxiv.desktop;
 image/tiff=sxiv.desktop;
 image/gif=sxiv.desktop;
 
+video/avi=mpv.desktop;
+video/x-msvideo=mpv.desktop;
+video/x-ms-wmv=mpv.desktop;
+video/mpeg=mpv.desktop;
+video/quicktime=mpv.desktop;
+video/x-mpeg=mpv.desktop;
+video/mp4=mpv.desktop;
+
 application/x-7z-compressed=nvim.desktop;
 application/x-bzip=nvim.desktop;
 application/x-bzip2=nvim.desktop;
