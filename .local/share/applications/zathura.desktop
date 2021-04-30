@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Zathura
+Comment=Document viewer
+Exec=zathura %u

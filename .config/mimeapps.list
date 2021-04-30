@@ -22,8 +22,8 @@ application/xml=nvim.desktop;
 text/xml=nvim.desktop;
 text/x-diff=nvim.desktop;
 
-application/postscript=mupdf.desktop;
-application/pdf=mupdf.desktop;
+application/postscript=zathura.desktop;
+application/pdf=zathura.desktop;
 
 image/png=sxiv.desktop;
 image/jpeg=sxiv.desktop;
