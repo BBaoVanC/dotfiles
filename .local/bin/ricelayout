@@ -1,5 +1,0 @@
-#!/bin/sh
-
-st -e htop &
-st -e ranger ~ &
-st -e nvim ~/programs/st/config.h &
