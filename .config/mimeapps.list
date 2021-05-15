@@ -32,6 +32,7 @@ image/webp=sxiv.desktop;
 image/bmp=sxiv.desktop;
 image/tiff=sxiv.desktop;
 image/gif=sxiv.desktop;
+image/vnd.microsoft.icon=sxiv.desktop;
 
 video/avi=mpv.desktop;
 video/x-msvideo=mpv.desktop;
