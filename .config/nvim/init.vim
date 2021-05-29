@@ -18,6 +18,12 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 
+
+" ==> Disable vim-polyglot's:
+"   - 'vim-sleuth' feature
+"   - vim-sensible (maybe enable later but not now)
+let g:polyglot_disabled = ['autoindent', 'sensible']
+
 " Map escape to clear search highlighting
 nnoremap <esc> :noh<return><esc>
 
