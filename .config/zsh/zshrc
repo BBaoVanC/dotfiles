@@ -19,11 +19,6 @@ source ~/.config/zsh/aliasrc
 [ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
 
 
-# ==> Enable fzf keybin=
-[ -f "/usr/share/fzf/key-bindings.zsh" ] && source "/usr/share/fzf/key-bindings.zsh"
-[ -f "/usr/local/opt/fzf/shell/key-bindings.zsh" ] && source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-
-
 # ==> Vi mode :: https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
 bindkey -v
 # Change cursor shape for different vi modes.

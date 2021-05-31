@@ -18,6 +18,12 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 
+
+" ==> Disable vim-polyglot's:
+"   - 'vim-sleuth' feature
+"   - vim-sensible (maybe enable later but not now)
+let g:polyglot_disabled = ['autoindent', 'sensible']
+
 " Map escape to clear search highlighting
 nnoremap <esc> :noh<return><esc>
 
@@ -68,6 +74,7 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'sheerun/vim-polyglot'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
