@@ -3,7 +3,7 @@
 # ==> Default programs
 export EDITOR="nvim"
 export BROWSER="firefox-nightly"
-export TERMINAL="st"
+export TERMINAL="kitty"
 
 # ==> XDG
 export XDG_CONFIG_HOME="$HOME/.config"
