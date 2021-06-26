@@ -48,6 +48,12 @@ bindkey "^[[P"  delete-char
 bindkey "^[[3~" delete-char
 
 
+# ==> Automatically set window title to "zsh"
+function precmd () {
+  window_title="\033]0;zsh\007"
+  echo -ne "$window_title"
+}
+
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
