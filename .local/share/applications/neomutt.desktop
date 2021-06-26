@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=neomutt
-Comment=A mail client that sucks less
-Exec=neomutt %u

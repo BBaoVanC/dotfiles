@@ -2,4 +2,4 @@
 Type=Application
 Name=Ranger
 Comment=File Manager
-Exec=st -e ranger %u
+Exec=kitty ranger %u
