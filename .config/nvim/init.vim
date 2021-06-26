@@ -81,6 +81,7 @@ Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'fannheyward/coc-pyright', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'clangd/coc-clangd', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
