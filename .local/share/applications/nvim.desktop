@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Neovim
+Comment=Text Editor
+Exec=kitty nvim %u
