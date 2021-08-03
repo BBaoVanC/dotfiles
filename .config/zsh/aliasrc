@@ -34,3 +34,8 @@ if command -v pacman &> /dev/null; then
         fi
     fi
 fi
+
+# ==> Server
+if command -v caddy &> /dev/null; then
+    alias caddycfg="caddy adapt | python -m json.tool | sed 's/    /  /g'"
+fi
