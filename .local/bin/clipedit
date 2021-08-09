@@ -8,7 +8,7 @@ if [ "$contents" != "Error: target STRING not available" ]; then
     # save the contents
     echo "$contents" > "$tmpfile"
     # open editor
-    st -t "Clipboard Editor" -e "$EDITOR" "$tmpfile"
+    kitty --title "Clipboard Editor" -e "$EDITOR" "$tmpfile"
     # remove the last character (newline)
     truncate -s $(($(stat -c '%s' "$tmpfile")-1)) "$tmpfile"
     # save to clipboard
