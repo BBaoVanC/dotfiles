@@ -6,8 +6,6 @@ set number
 syntax enable
 " Case insensitive searching
 set ignorecase
-" Relative line numbers
-set relativenumber
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
 
@@ -21,6 +19,9 @@ set autoindent
 " use j/k to move screen lines *useful for soft wrapping)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" wrap at word boundaries
+set linebreak
 
 " ==> Disable vim-polyglot's:
 "   - 'vim-sleuth' feature
@@ -78,6 +79,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/goyo.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile' }
@@ -135,3 +137,19 @@ command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set e
 
 " Italicize comments
 highlight Comment cterm=italic
+
+" Goyo
+function! s:goyo_enter()
+  set number
+endfunction
+
+function! s:goyo_leave()
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" Fix `<` syntax highlighting in markdown
+" https://github.com/plasticboy/vim-markdown/issues/138
+"syn clear htmlTag
+"syn region htmlTag start=+<[^/]+ end=+>+ fold oneline contains=htmlTagN,htmlString,htmlArg,htmlValue,htmlTagError,htmlEvent,htmlCssDefinition,@htmlPreproc,@htmlArgCluster
