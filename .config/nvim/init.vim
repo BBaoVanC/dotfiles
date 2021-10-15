@@ -18,6 +18,9 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 
+" use j/k to move screen lines *useful for soft wrapping)
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " ==> Disable vim-polyglot's:
 "   - 'vim-sleuth' feature
