@@ -1,10 +1,6 @@
-" Set colors to dark mode
 set background=dark
-" Show line numbers
 set number
-" Enable syntax highlighting
 syntax enable
-" Case insensitive searching
 set ignorecase
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
@@ -47,11 +43,34 @@ set splitbelow
 set splitright
 
 
+" Italicize comments
+highlight Comment cterm=italic
+
+
+" Hidden mode (simplifies the interface)
+set laststatus=1
+
+let s:hidden_mode = 0
+function! ToggleHiddenMode()
+  if s:hidden_mode == 0
+    let s:hidden_mode = 1
+    set laststatus=2
+  else
+    let s:hidden_mode = 0
+    set laststatus=1
+  endif
+endfunction
+nnoremap <C-h> :call ToggleHiddenMode()<CR>
+
+
+set scrolloff=5
+
+
 " ==> Make navigation between splits easier
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 
 
 " ==> Keybinds to search for selected text, forwards or backwards using * and #
@@ -69,8 +88,6 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
@@ -90,16 +107,7 @@ Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
-" Debug (currently not working)
-" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-" Plug 'idanarye/vim-vebugger'
 call plug#end()
-
-
-" ==> Nerd Tree settings
-let g:NERDTreeGitStatusShowIgnored = 1 " a heavy feature may cost much more time. default: 0
-let NERDTreeShowHidden=1
 
 
 " ==> Completion keybinds
@@ -122,32 +130,10 @@ catch
     echo "warning: Could not enable nord colorscheme, is nord-vim installed?"
 endtry
 
-let g:airline_powerline_fonts = 1
-try
-    let g:airline_theme = 'nord'
-catch
-    echo "warning: Could not enable nord colorscheme, is nord-vim installed?"
-endtry
-let g:airline#extensions#tabline#enabled = 1
-
 
 " ==> Tab setting keybinds
 command RealTab set shiftwidth=0 | set softtabstop=0 | set noexpandtab | set noautoindent
 command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set expandtab | set autoindent
-
-" Italicize comments
-highlight Comment cterm=italic
-
-" Goyo
-function! s:goyo_enter()
-  set number
-endfunction
-
-function! s:goyo_leave()
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Fix `<` syntax highlighting in markdown
 " https://github.com/plasticboy/vim-markdown/issues/138
