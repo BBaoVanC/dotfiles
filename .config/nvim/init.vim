@@ -114,7 +114,8 @@ catch
     echo "warning: Could not enable nord colorscheme, is nord-vim installed?"
 endtry
 
-hi StatusLine ctermbg=none
+"hi StatusLine ctermbg=none
+set laststatus=1
 
 
 " ==> Tab setting keybinds
