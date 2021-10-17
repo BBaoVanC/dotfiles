@@ -47,22 +47,6 @@ set splitright
 highlight Comment cterm=italic
 
 
-" Hidden mode (simplifies the interface)
-set laststatus=1
-
-let s:hidden_mode = 0
-function! ToggleHiddenMode()
-  if s:hidden_mode == 0
-    let s:hidden_mode = 1
-    set laststatus=2
-  else
-    let s:hidden_mode = 0
-    set laststatus=1
-  endif
-endfunction
-nnoremap <C-h> :call ToggleHiddenMode()<CR>
-
-
 set scrolloff=5
 
 
@@ -129,6 +113,8 @@ try
 catch
     echo "warning: Could not enable nord colorscheme, is nord-vim installed?"
 endtry
+
+hi StatusLine ctermbg=none
 
 
 " ==> Tab setting keybinds
