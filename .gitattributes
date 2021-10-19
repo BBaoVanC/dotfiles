@@ -1,0 +1,2 @@
+** linguist-detectable=true
+.local/share/nvim/site/autoload/plug.vim linguist-detectable=false
