@@ -43,10 +43,6 @@ set splitbelow
 set splitright
 
 
-" Italicize comments
-highlight Comment cterm=italic
-
-
 set scrolloff=5
 
 
@@ -126,3 +122,13 @@ command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set e
 " https://github.com/plasticboy/vim-markdown/issues/138
 "syn clear htmlTag
 "syn region htmlTag start=+<[^/]+ end=+>+ fold oneline contains=htmlTagN,htmlString,htmlArg,htmlValue,htmlTagError,htmlEvent,htmlCssDefinition,@htmlPreproc,@htmlArgCluster
+
+
+" Italicize comments
+highlight Comment cterm=italic
+
+
+" Front matter
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_yaml_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
