@@ -77,6 +77,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile' }
@@ -128,7 +130,7 @@ command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set e
 highlight Comment cterm=italic
 
 
-" Front matter
+" markdown settings
+let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_yaml_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
