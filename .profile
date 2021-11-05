@@ -10,6 +10,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # ==> PATH
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin/antibody:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 
 # ==> Use nvim for man pager

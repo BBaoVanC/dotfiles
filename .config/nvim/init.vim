@@ -77,6 +77,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
@@ -120,7 +122,7 @@ command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set e
 highlight Comment cterm=italic
 
 
-" Front matter
+" markdown settings
+let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_yaml_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
