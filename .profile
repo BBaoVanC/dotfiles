@@ -12,6 +12,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # ==> PATH
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin/antibody:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 export PATH="$HOME/.local/bin/supermenu:$PATH"
 export PATH="$HOME/.dwm/dwmblocks/blocks:$PATH"
