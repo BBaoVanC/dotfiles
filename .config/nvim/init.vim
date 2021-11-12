@@ -113,7 +113,7 @@ catch
 endtry
 
 "hi StatusLine ctermbg=none
-set laststatus=1
+"set laststatus=1
 
 
 " ==> Tab setting keybinds
