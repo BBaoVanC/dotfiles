@@ -14,6 +14,7 @@ HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
 SAVEHIST=500
 source ~/.config/zsh/zshrc_nosync
 source ~/.config/zsh/aliasrc
+command -v podman &> /dev/null && export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/podman/podman.sock"
 
 # ==> Fix Ctrl-O keybind on macOS
 [ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
