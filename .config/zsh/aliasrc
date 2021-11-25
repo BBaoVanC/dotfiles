@@ -17,7 +17,7 @@ alias dcp='cp -v $(dragon-drag-and-drop -t -x -p)'
 alias dmv='mv -v $(dragon-drag-and-drop -t -x -p)'
 
 # ==> Miscellaneous
-alias rscp="rsync -atvP" # add -z to compress
+alias rscp="rsync -avPc" # add -z to compress
 alias scpng="scanimage --progress --format=png --output-file"
 alias mk="make -j$(($(nproc)+1))"
 alias eat_newline="perl -pi -e 'chomp if eof'"
