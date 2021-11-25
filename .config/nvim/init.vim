@@ -17,7 +17,7 @@ noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " wrap at word boundaries
-set linebreak
+"set linebreak
 
 " ==> Disable vim-polyglot's:
 "   - 'vim-sleuth' feature
