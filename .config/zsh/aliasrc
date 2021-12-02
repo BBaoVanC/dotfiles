@@ -13,8 +13,6 @@ alias svenv="source venv/bin/activate"
 
 # ==> Dragon drag and drop
 alias dragon="dragon-drag-and-drop -a -x"
-alias dcp='cp -v $(dragon-drag-and-drop -t -x -p)'
-alias dmv='mv -v $(dragon-drag-and-drop -t -x -p)'
 
 # ==> Miscellaneous
 alias rscp="rsync -avPc" # add -z to compress
