@@ -28,7 +28,7 @@ case $time_choice in
         ;;
 esac
 
-output="$(linx-client -e "$time" "$file")"
+output="$(linx-client -r -e "$time" "$file")"
 
 if [ $? != 0 ]; then
     notify-send -u critical "Upload failed" "$output"
