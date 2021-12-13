@@ -3,7 +3,8 @@
 file="/tmp/linxclip_file"
 xclip -selection clipboard -out > "$file"
 
-time_choices="1 day
+time_choices="1 week
+1 day
 12 hours
 8 hours
 4 hours
