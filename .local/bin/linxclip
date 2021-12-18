@@ -2,7 +2,7 @@
 
 file="/tmp/linxclip_file"
 
-target_choice=$(xclip -sel c -t TARGETS -o | tail -n +2 | dmenu -i -l 10 -p "Target:")
+target_choice=$(xclip -sel c -t TARGETS -o | dmenu -i -l 10 -p "Target:")
 if [ $? -gt 0 ]; then
     notify-send "Invalid target" "Invalid target chosen."
     exit 1
