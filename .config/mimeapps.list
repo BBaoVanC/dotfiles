@@ -27,6 +27,7 @@ application/pdf=zathura.desktop;
 
 image/png=sxiv.desktop;
 image/jpeg=sxiv.desktop;
+image/jpg=sxiv.desktop;
 image/svg+xml=gimp.desktop;
 image/webp=sxiv.desktop;
 image/bmp=sxiv.desktop;
@@ -41,6 +42,7 @@ video/mpeg=mpv.desktop;
 video/quicktime=mpv.desktop;
 video/x-mpeg=mpv.desktop;
 video/mp4=mpv.desktop;
+video/x-flv=mpv.desktop;
 
 application/x-7z-compressed=nvim.desktop;
 application/x-bzip=nvim.desktop;

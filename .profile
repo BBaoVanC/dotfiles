@@ -2,7 +2,7 @@
 
 # ==> Default programs
 export EDITOR="nvim"
-export BROWSER="firefox-nightly"
+export BROWSER="firefox-developer-edition"
 export TERMINAL="kitty"
 
 # ==> XDG
