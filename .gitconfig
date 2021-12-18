@@ -25,3 +25,7 @@
 	insteadOf = https://git.bbaovanc.com/
 [url "ssh://git@git.boba.best/"]
 	insteadOf = https://git.boba.best/
+[web]
+	browser = firefox-developer-edition
+[browser "firefox-developer-edition"]
+	cmd = firefox-developer-edition
