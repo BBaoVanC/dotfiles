@@ -18,9 +18,6 @@ export PATH="$HOME/.local/bin/supermenu:$PATH"
 export PATH="$HOME/.dwm/dwmblocks/blocks:$PATH"
 export PATH="$HOME/.dwm/dwmblocks/tools:$PATH"
 
-# ==> Use nvim for man pager
-export MANPAGER='nvim +Man!'
-
 # ==> $HOME cleanup
 export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
