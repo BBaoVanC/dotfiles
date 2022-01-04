@@ -2,6 +2,7 @@ set background=dark
 set number
 syntax enable
 set ignorecase
+set incsearch
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
 
@@ -25,7 +26,7 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 let g:polyglot_disabled = ['autoindent', 'sensible']
 
 " Map escape to clear search highlighting
-nnoremap <esc> :noh<return><esc>
+nnoremap <esc> :noh<return>
 
 " Highlight current line number and line
 " Makes it easier to find where the cursor is
