@@ -92,11 +92,17 @@ function precmd () {
 }
 
 
+# ==> Automatically install Antibody
+[ ! -d ~/.local/bin/antibody/ ] && mkdir -p ~/.local/bin/antibody/
+[ ! -f ~/.local/bin/antibody/antibody ] && curl -sfL git.io/antibody | sh -s - -b ~/.local/bin/antibody
+
+
 # ==> Antibody
 source <(antibody init)
 antibody bundle < ~/.config/zsh/plugins.txt
 # because of zsh-completions
 autoload -U compinit && compinit
+
 
 # ==> Load powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
