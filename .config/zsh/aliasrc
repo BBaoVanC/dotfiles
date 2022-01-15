@@ -13,14 +13,18 @@ alias svenv="source venv/bin/activate"
 
 # ==> Dragon drag and drop
 alias dragon="dragon-drag-and-drop -a -x"
-alias dcp='cp -v $(dragon-drag-and-drop -t -x -p)'
-alias dmv='mv -v $(dragon-drag-and-drop -t -x -p)'
 
 # ==> Miscellaneous
 alias rscp="rsync -avPc" # add -z to compress
 alias scpng="scanimage --progress --format=png --output-file"
 alias mk="make -j$(($(nproc)+1))"
 alias eat_newline="perl -pi -e 'chomp if eof'"
+
+winepref() {
+    WINEPREFIX="$HOME/.local/share/wineprefixes/$1"
+    shift
+    $@
+}
 
 # ==> Arch-specific
 if command -v pacman &> /dev/null; then

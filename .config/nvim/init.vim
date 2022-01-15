@@ -2,6 +2,7 @@ set background=dark
 set number
 syntax enable
 set ignorecase
+set incsearch
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
 
@@ -25,7 +26,7 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 let g:polyglot_disabled = ['autoindent', 'sensible']
 
 " Map escape to clear search highlighting
-nnoremap <esc> :noh<return><esc>
+nnoremap <esc> :noh<return>
 
 " Highlight current line number and line
 " Makes it easier to find where the cursor is
@@ -83,15 +84,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
-
-" ==> Completion keybinds
-" use <c-space>for trigger completion
-inoremap <silent><expr> <c-space> coc#refresh()
-" use tab and shift-tab to move between autocomplete options
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-nmap <leader>p <Plug>(coc-format)
-vmap <leader>p <Plug>(coc-format-selected)
 
 " Undo tree
 nnoremap <F5> :UndotreeToggle<CR>

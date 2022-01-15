@@ -13,9 +13,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/antibody:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 
-# ==> Use nvim for man pager
-export MANPAGER='nvim +Man!'
-
 # ==> $HOME cleanup
 export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"

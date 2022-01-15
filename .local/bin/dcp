@@ -1,0 +1,9 @@
+#!/bin/bash
+
+args=()
+
+while read line; do
+  args+=( "$line" )
+done <<< "$(dragon-drag-and-drop -t -x -p)"
+
+cp -v "${args[@]}" $@

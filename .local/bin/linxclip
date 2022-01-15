@@ -1,0 +1,52 @@
+#!/bin/sh
+
+file="/tmp/linxclip_file"
+
+target_choice=$(xclip -sel c -t TARGETS -o | tac | dmenu -i -l 10 -p "Target:")
+if [ $? -gt 0 ]; then
+    notify-send "Invalid target" "Invalid target chosen."
+    exit 1
+fi
+
+xclip -selection clipboard -t "$target_choice" -out > "$file"
+if [ $? -gt 0 ]; then
+    notify-send "Upload failed" "Could not read clipboard"
+    exit 1
+fi
+
+time_choices="4 weeks
+1 week
+1 day
+12 hours
+8 hours
+4 hours
+2 hours
+1 hour
+5 minutes
+1 minute"
+
+time_choice=$(printf "$time_choices\n" | dmenu -i -l 10 -p "Expiry time:")
+case $time_choice in
+    "1 minute") time=60 ;;
+    "5 minutes") time=300 ;;
+    "1 hour") time=3600 ;;
+    "2 hours") time=7200 ;;
+    "4 hours") time=14400 ;;
+    "8 hours") time=28800 ;;
+    "12 hours") time=43200 ;;
+    "1 day") time=86400 ;;
+    "1 week") time=604800 ;;
+    "4 weeks") time=2419200 ;;
+    *)
+        notify-send "Invalid time" "Invalid time chosen."
+        exit 1
+        ;;
+esac
+
+output="$(linx-client -r -e "$time" "$file")"
+
+if [ $? != 0 ]; then
+    notify-send -u critical "Upload failed" "$output"
+else
+    notify-send "Uploaded" "$output"
+fi
