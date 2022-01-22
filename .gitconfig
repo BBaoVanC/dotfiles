@@ -29,3 +29,5 @@
 	browser = firefox-developer-edition
 [browser "firefox-developer-edition"]
 	cmd = firefox-developer-edition
+[tag]
+	gpgSign = true
