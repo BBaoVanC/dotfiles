@@ -1,8 +1,0 @@
-#!/bin/bash
-
-p() {
-  echo "$1" $(ping -w 5 -c 5 "$1" | sed -En 's/.*time=//g;s/ ms/ms/g;2,6p')
-}
-export -f p
-
-parallel --jobs=0 p {} ::: $@ | sort | column --table -N "DOMAIN,1,2,3,4,5"
