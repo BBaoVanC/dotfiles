@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Ranger
-Comment=File Manager
-Exec=kitty ranger %u
