@@ -9,7 +9,7 @@ fi
 
 
 # ==> Environment
-source ~/.profile
+source ~/.config/environment.d/variables.conf
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
 SAVEHIST=500
 source ~/.config/zsh/aliasrc
