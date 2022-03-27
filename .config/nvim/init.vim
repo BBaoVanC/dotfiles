@@ -69,7 +69,7 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'BBaoVanC/onehalf', { 'rtp': 'vim', 'branch': 'diff-highlighting' }
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
