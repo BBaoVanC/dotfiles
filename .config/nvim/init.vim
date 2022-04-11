@@ -80,6 +80,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'sbdchd/neoformat'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
