@@ -14,9 +14,9 @@ alias svenv="source venv/bin/activate"
 # ==> Java
 javaver() {
     # https://wiki.archlinux.org/title/Java#Launching_an_application_with_the_non-default_java_version
-    local PATH="/usr/lib/jvm/java-$1-openjdk/bin/:$PATH"
+    version="$1"
     shift
-    $@
+    PATH="/usr/lib/jvm/java-$version-openjdk/bin/:$PATH" $@
 }
 
 # ==> Dragon drag and drop
