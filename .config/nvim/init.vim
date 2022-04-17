@@ -5,6 +5,7 @@ set ignorecase
 set incsearch
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
+set indentkeys=""
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
@@ -69,7 +70,7 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'BBaoVanC/onehalf', { 'rtp': 'vim', 'branch': 'diff-highlighting' }
+Plug 'BBaoVanC/onehalf', { 'rtp': 'vim', 'branch': 'bbaovanc' }
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
@@ -80,6 +81,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'sbdchd/neoformat'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
