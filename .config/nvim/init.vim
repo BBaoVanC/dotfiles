@@ -5,6 +5,7 @@ set ignorecase
 set incsearch
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
+set indentkeys=""
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
