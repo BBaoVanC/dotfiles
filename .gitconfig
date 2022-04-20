@@ -16,6 +16,7 @@
 	conflictstyle = diff3
 [alias]
 	graph = log --oneline --graph
+	isolog = log --date=iso-strict
 [pull]
 	ff = only
 
