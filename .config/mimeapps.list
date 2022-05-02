@@ -1,10 +1,13 @@
 [Added Associations]
+application/json=nvim.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;nvim.desktop;
 application/x-extension-shtml=firefox.desktop;nvim.desktop;
 application/x-extension-xht=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;nvim.desktop;
 application/xhtml+xml=firefox.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;gimp.desktop;krita_svg.desktop;nvim.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;firefox.desktop;chromium.desktop;firefox-developer-edition.desktop;wine-extension-xml.desktop;visual-studio-code.desktop;wine-extension-txt.desktop;
+image/vnd.microsoft.icon=org.kde.gwenview.desktop;sxiv.desktop;krita_qimageio.desktop;gimp.desktop;okularApplication_kimgio.desktop;
 inode/directory=org.kde.dolphin.desktop;nnn.desktop;
 text/html=firefox.desktop;
 text/markdown=nvim.desktop;
@@ -25,7 +28,8 @@ application/x-extension-xht=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/xml=nvim.desktop;
-image/vnd.microsoft.icon=sxiv.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;
+image/vnd.microsoft.icon=org.kde.gwenview.desktop;
 inode/directory=org.kde.dolphin.desktop;
 text/html=firefox.desktop
 text/markdown=nvim.desktop;
