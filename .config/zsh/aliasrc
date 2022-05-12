@@ -11,6 +11,14 @@ lsclr() {for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${
 alias senv="source env/bin/activate"
 alias svenv="source venv/bin/activate"
 
+# ==> Java
+javaver() {
+    # https://wiki.archlinux.org/title/Java#Launching_an_application_with_the_non-default_java_version
+    version="$1"
+    shift
+    PATH="/usr/lib/jvm/java-$version-openjdk/bin/:$PATH" $@
+}
+
 # ==> Dragon drag and drop
 alias dragon="dragon-drag-and-drop -a -x"
 
