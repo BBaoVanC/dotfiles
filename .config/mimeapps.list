@@ -6,6 +6,8 @@ application/x-extension-shtml=firefox.desktop;nvim.desktop;
 application/x-extension-xht=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;nvim.desktop;
 application/xhtml+xml=firefox.desktop;
+image/gif=org.kde.gwenview.desktop;chromium.desktop;sxiv.desktop;gimp.desktop;krita_gif.desktop;okularApplication_kimgio.desktop;
+image/jpeg=org.kde.gwenview.desktop;chromium.desktop;krita_jpeg.desktop;sxiv.desktop;gimp.desktop;okularApplication_kimgio.desktop;
 image/png=org.kde.gwenview.desktop;okularApplication_kimgio.desktop;chromium.desktop;gimp.desktop;krita_png.desktop;sxiv.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop;gimp.desktop;krita_svg.desktop;nvim.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;firefox.desktop;chromium.desktop;firefox-developer-edition.desktop;wine-extension-xml.desktop;visual-studio-code.desktop;wine-extension-txt.desktop;
 image/vnd.microsoft.icon=org.kde.gwenview.desktop;sxiv.desktop;krita_qimageio.desktop;gimp.desktop;okularApplication_kimgio.desktop;
@@ -29,6 +31,8 @@ application/x-extension-xht=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/xml=nvim.desktop;
+image/gif=org.kde.gwenview.desktop;
+image/jpeg=org.kde.gwenview.desktop;
 image/png=org.kde.gwenview.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop;
 image/vnd.microsoft.icon=org.kde.gwenview.desktop;
@@ -51,4 +55,6 @@ x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 
 [Removed Associations]
 application/x-extension-html=wine-extension-html.desktop;
+image/gif=wine-extension-gif.desktop;
+image/jpeg=wine-extension-jpe.desktop;wine-extension-jfif.desktop;
 image/png=wine-extension-png.desktop;
