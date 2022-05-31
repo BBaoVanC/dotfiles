@@ -158,6 +158,15 @@ inoremap <expr> <down> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <up> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " use enter to accept completion
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 " use \p to format text
 nmap <leader>p <Plug>(coc-format)
 vmap <leader>p <Plug>(coc-format-selected)
