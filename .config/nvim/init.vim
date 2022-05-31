@@ -156,6 +156,8 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <down> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <up> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" use enter to accept completion
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " use \p to format text
 nmap <leader>p <Plug>(coc-format)
 vmap <leader>p <Plug>(coc-format-selected)
