@@ -148,7 +148,7 @@ let g:vim_markdown_strikethrough = 1
 
 
 " ==> coc.nvim
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-rls', 'coc-go', 'coc-clangd']
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-rust-analyzer', 'coc-go', 'coc-clangd']
 " use <c-space>for trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
 " use tab to move between autocomplete options
