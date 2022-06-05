@@ -21,11 +21,6 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 " wrap at word boundaries
 "set linebreak
 
-" ==> Disable vim-polyglot's:
-"   - 'vim-sleuth' feature
-"   - vim-sensible (maybe enable later but not now)
-let g:polyglot_disabled = ['autoindent', 'sensible']
-
 " Map escape to clear search highlighting
 nnoremap <esc> :noh<return>
 
@@ -77,7 +72,6 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
