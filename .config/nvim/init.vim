@@ -21,11 +21,6 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 " wrap at word boundaries
 "set linebreak
 
-" ==> Disable vim-polyglot's:
-"   - 'vim-sleuth' feature
-"   - vim-sensible (maybe enable later but not now)
-let g:polyglot_disabled = ['autoindent', 'sensible']
-
 " Map escape to clear search highlighting
 nnoremap <esc> :noh<return>
 
@@ -77,13 +72,14 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'sbdchd/neoformat'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
@@ -143,3 +139,26 @@ let g:vim_markdown_auto_insert_bullets = 0
 " keep it here just in case
 " let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_strikethrough = 1
+
+
+" use <c-space>for trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+" use tab to move between autocomplete options
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <down> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <up> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" use enter to accept completion
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+" use \p to format text
+nmap <leader>p <Plug>(coc-format)
+vmap <leader>p <Plug>(coc-format-selected)
