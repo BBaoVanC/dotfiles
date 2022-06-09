@@ -9,8 +9,8 @@ fi
 
 
 # ==> Environment
-source ~/.config/zsh/profile
-sed 's/^export //' ~/.config/zsh/profile > ~/.config/environment.d/variables.conf
+source ~/.profile
+sed 's/^export //' ~/.profile > ~/.config/environment.d/variables.conf
 chmod +x ~/.config/environment.d/variables.conf
 
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
