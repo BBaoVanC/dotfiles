@@ -10,8 +10,6 @@ fi
 
 # ==> Environment
 source ~/.profile
-sed 's/^export //' ~/.profile > ~/.config/environment.d/variables.conf
-chmod +x ~/.config/environment.d/variables.conf
 
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
 SAVEHIST=500
