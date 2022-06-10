@@ -76,6 +76,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'sbdchd/neoformat'
+Plug 'whiteinge/diffconflicts'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
