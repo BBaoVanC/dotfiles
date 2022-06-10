@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=xset r rate 300 50
+Name=xset-rate
+Type=Application
