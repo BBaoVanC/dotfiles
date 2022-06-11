@@ -95,6 +95,8 @@ catch
     echo "warning: Could not enable colorscheme, is it installed?"
 endtry
 
+let g:onedark_terminal_italics = 1 " make comments italic
+
 "hi StatusLine ctermbg=none
 "set laststatus=1
 
