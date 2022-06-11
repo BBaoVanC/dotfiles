@@ -65,7 +65,7 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'BBaoVanC/onehalf', { 'rtp': 'vim', 'branch': 'bbaovanc' }
+Plug 'joshdick/onedark.vim'
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
@@ -90,7 +90,7 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 " ==> Theme settings
 try
-    autocmd vimenter * ++nested colorscheme onehalfdark
+    autocmd vimenter * ++nested colorscheme onedark
 catch
     echo "warning: Could not enable colorscheme, is it installed?"
 endtry
