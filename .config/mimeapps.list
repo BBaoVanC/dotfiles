@@ -62,6 +62,7 @@ x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/mailto=thunderbird.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
+x-scheme-handler/exodus=Exodus.desktop
 
 [Removed Associations]
 application/pdf=libreoffice-draw.desktop;firefox-developer-edition.desktop;gimp.desktop;chromium.desktop;wine-extension-pdf.desktop;org.inkscape.Inkscape.desktop;krita_pdf.desktop;
