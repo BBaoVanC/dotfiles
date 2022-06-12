@@ -70,7 +70,6 @@ Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
@@ -165,3 +164,8 @@ endfunction
 " use \p to format text
 nmap <leader>p <Plug>(coc-format)
 vmap <leader>p <Plug>(coc-format-selected)
+
+
+" ==> Disable automatic indentation
+let g:sleuth_no_filetype_indent_on = 1
+filetype indent off
