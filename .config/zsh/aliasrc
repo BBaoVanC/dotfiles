@@ -38,9 +38,9 @@ winepref() {
 if command -v pacman &> /dev/null; then
     alias rmorphans="sudo pacman -Rns \$(pacman -Qdtq | xargs)"
     if command -v fzf &> /dev/null; then
-        if command -v paru &> /dev/null; then
-            alias addpkg="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro sudo paru -S"
-            alias rmpkg="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro sudo paru -Rns"
+        if command -v yay &> /dev/null; then
+            alias addpkg="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro sudo yay -S"
+            alias rmpkg="yay -Qq | fzf --multi --preview 'yay -Qi {1}' | xargs -ro sudo yay -Rns"
         else
             alias addpkg="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
             alias rmpkg="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"

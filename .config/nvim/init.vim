@@ -65,17 +65,17 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'BBaoVanC/onehalf', { 'rtp': 'vim', 'branch': 'bbaovanc' }
+Plug 'joshdick/onedark.vim'
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'sbdchd/neoformat'
+Plug 'whiteinge/diffconflicts'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
@@ -87,10 +87,12 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 " ==> Theme settings
 try
-    autocmd vimenter * ++nested colorscheme onehalfdark
+    colorscheme onedark
 catch
     echo "warning: Could not enable colorscheme, is it installed?"
 endtry
+
+let g:onedark_terminal_italics = 1 " make comments italic
 
 "hi StatusLine ctermbg=none
 "set laststatus=1
