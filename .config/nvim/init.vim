@@ -89,7 +89,7 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 " ==> Theme settings
 try
-    autocmd vimenter * ++nested colorscheme onedark
+    colorscheme onedark
 catch
     echo "warning: Could not enable colorscheme, is it installed?"
 endtry
