@@ -14,6 +14,12 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 
+
+" Italicize comments
+highlight Comment cterm=italic
+let g:onedark_terminal_italics = 1
+
+
 " use j/k to move screen lines *useful for soft wrapping)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
@@ -94,8 +100,6 @@ catch
     echo "warning: Could not enable colorscheme, is it installed?"
 endtry
 
-let g:onedark_terminal_italics = 1 " make comments italic
-
 "hi StatusLine ctermbg=none
 "set laststatus=1
 
@@ -126,10 +130,6 @@ command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set e
 " https://github.com/plasticboy/vim-markdown/issues/138
 "syn clear htmlTag
 "syn region htmlTag start=+<[^/]+ end=+>+ fold oneline contains=htmlTagN,htmlString,htmlArg,htmlValue,htmlTagError,htmlEvent,htmlCssDefinition,@htmlPreproc,@htmlArgCluster
-
-
-" Italicize comments
-highlight Comment cterm=italic
 
 
 " markdown settings
