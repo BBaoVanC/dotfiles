@@ -15,11 +15,6 @@ set softtabstop=4
 set autoindent
 
 
-" Italicize comments
-highlight Comment cterm=italic
-let g:onedark_terminal_italics = 1
-
-
 " use j/k to move screen lines *useful for soft wrapping)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
@@ -71,7 +66,7 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'joshdick/onedark.vim'
+Plug 'BBaoVanC/bobascheme', { 'rtp': 'vim' }
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
@@ -94,11 +89,7 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 
 " ==> Theme settings
-try
-    colorscheme onedark
-catch
-    echo "warning: Could not enable colorscheme, is it installed?"
-endtry
+colorscheme bobaschemedark
 
 "hi StatusLine ctermbg=none
 "set laststatus=1
@@ -169,3 +160,7 @@ vmap <leader>p <Plug>(coc-format-selected)
 " ==> Disable automatic indentation
 let g:sleuth_no_filetype_indent_on = 1
 filetype indent off
+
+
+" Italicize comments
+highlight Comment cterm=italic
