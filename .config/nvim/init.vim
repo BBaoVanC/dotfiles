@@ -14,6 +14,7 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 
+
 " use j/k to move screen lines *useful for soft wrapping)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
@@ -65,7 +66,7 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'joshdick/onedark.vim'
+Plug 'BBaoVanC/bobascheme', { 'rtp': 'vim' }
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
@@ -86,13 +87,7 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 
 " ==> Theme settings
-try
-    colorscheme onedark
-catch
-    echo "warning: Could not enable colorscheme, is it installed?"
-endtry
-
-let g:onedark_terminal_italics = 1 " make comments italic
+colorscheme bobaschemedark
 
 "hi StatusLine ctermbg=none
 "set laststatus=1
@@ -126,10 +121,6 @@ command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set e
 "syn region htmlTag start=+<[^/]+ end=+>+ fold oneline contains=htmlTagN,htmlString,htmlArg,htmlValue,htmlTagError,htmlEvent,htmlCssDefinition,@htmlPreproc,@htmlArgCluster
 
 
-" Italicize comments
-highlight Comment cterm=italic
-
-
 " markdown settings
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
@@ -139,3 +130,18 @@ let g:vim_markdown_auto_insert_bullets = 0
 " keep it here just in case
 " let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_strikethrough = 1
+
+
+" ==> Disable automatic indentation
+let g:sleuth_no_filetype_indent_on = 1
+filetype indent off
+
+
+" Italicize comments
+highlight Comment cterm=italic
+
+
+" F10 to see highlight group under cursor
+nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
