@@ -157,6 +157,10 @@ nmap <leader>p <Plug>(coc-format)
 vmap <leader>p <Plug>(coc-format-selected)
 
 
+" ==> Don't start coc.nvim automatically
+let g:coc_start_at_startup = 0
+
+
 " ==> Disable automatic indentation
 let g:sleuth_no_filetype_indent_on = 1
 filetype indent off
