@@ -1,0 +1,3 @@
+[submodule ".local/share/bobascheme"]
+	path = .local/share/bobascheme
+	url = https://github.com/BBaoVanC/bobascheme.git
