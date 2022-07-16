@@ -44,4 +44,5 @@ nnoremap <esc> :noh<return>
 "  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
 "  \gVzv:call setreg('"', old_reg, old_regtype)<CR>
 
+set nooldundo
 
