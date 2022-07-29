@@ -20,7 +20,7 @@ javaver() {
 }
 
 # ==> Dragon drag and drop
-alias dragon="dragon-drag-and-drop -a -x"
+alias dragon="dragon-drop -a -x"
 
 # ==> Miscellaneous
 alias rscp="rsync -avPc" # add -z to compress
