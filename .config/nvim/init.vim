@@ -87,7 +87,11 @@ nnoremap <F5> :UndotreeToggle<CR>
 
 
 " ==> Theme settings
-colorscheme bobaschemedark
+try
+  colorscheme bobaschemedark
+catch
+  echo "Error loading color scheme: " . v:exception
+endtry
 
 "hi StatusLine ctermbg=none
 "set laststatus=1

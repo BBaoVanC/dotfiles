@@ -45,3 +45,5 @@ nnoremap <esc> :noh<return>
 "  \gVzv:call setreg('"', old_reg, old_regtype)<CR>
 
 
+set nooldundo
+set ideajoin
