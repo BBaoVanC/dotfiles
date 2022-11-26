@@ -1,0 +1,2 @@
+#!/bin/sh
+WLR_NO_HARDWARE_CURSORS=1 exec $@

@@ -30,7 +30,3 @@ export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 export QT_QPA_PLATFORM=wayland
 #export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_QPA_PLATFORMTHEME=qt5ct
-
-# ==> KWallet SSH
-#export SSH_ASKPASS="/usr/bin/ksshaskpass"
-#export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
