@@ -3,8 +3,7 @@
 ### Variables
 #
 # Mod4 = Super; Mod1 = Alt
-set $mod Mod1
-set $submod Mod4
+set $mod Mod4
 
 # Arrows
 set $left h
@@ -21,6 +20,8 @@ set $menu wofi --show drun | xargs swaymsg exec --
 ### Startup
 # make sure that WAYLAND_DISPLAY is set, so xdg-desktop-portal starts successfully
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec nm-applet --indicator
+exec dunst
 
 ### Monitor layout & setup
 # computer-specific monitor config
@@ -40,16 +41,22 @@ exec swayidle -w \
     before-sleep 'swaylock -f -c 000000'
 
 ### Input configuration
-# Read `man 5 sway-input` for more information about this section.
-input * {
-    xkb_layout us
-    xkb_variant altgr-intl
-    xkb_numlock true
+# `man 5 sway-input`
+input {
+    type:keyboard {
+        xkb_layout us
+        xkb_variant altgr-intl
+        # https://bugzilla.mozilla.org/show_bug.cgi?id=1652820
+        # this causes a firefox crash on reload
+        xkb_numlock true
 
-    repeat_delay 300
-    repeat_rate 50
+        repeat_delay 300
+        repeat_rate 50
+    }
 
-    accel_profile flat
+    type:pointer {
+        accel_profile flat
+    }
 }
 
 ### Aesthetics
@@ -66,7 +73,8 @@ output * bg ~/wallpaper fill
 #
 # Status Bar
 #
-# Read `man 5 sway-bar` for more information about this section.
+# `man 5 sway-bar`
+# `man 5 waybar`
 bar {
     swaybar_command waybar
 }
@@ -98,10 +106,10 @@ bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-bindsym $mod+$submod+Shift+e exec swaymsg exit
+bindsym Mod1+Mod4+Shift+e exec swaymsg exit
 
 # Lock screen
-bindsym $submod+shift+l exec swaylock -f -c 000000
+bindsym Mod1+Mod4+l exec swaylock -f -c 000000
 
 #
 # Moving around
@@ -166,6 +174,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 # respectively.
 bindsym $mod+b splith
 bindsym $mod+v splitv
+bindsym $mod+n split none
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
@@ -183,6 +192,24 @@ bindsym $mod+space focus mode_toggle
 
 # Move focus to the parent container
 bindsym $mod+a focus parent
+
+# Toggle waybar
+bindsym $mod+Shift+b exec killall -SIGUSR1 waybar
+# Reload waybar
+bindsym Mod1+Mod4+b exec killall -SIGUSR2 waybar
+
+#
+# Notifications
+#
+
+# Close last notification
+bindsym $mod+escape exec dunstctl close
+# Close all notifications
+bindsym $mod+Shift+escape exec dunstctl close-all
+# Go through notification history
+bindsym $mod+grave exec dunstctl history-pop
+# Open notification context menu
+bindsym $mod+period exec dunstctl context
 
 #
 # Scratchpad
@@ -225,12 +252,37 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #
-# Passthrough mode (for programs that conflict with my keybinds)
-# 
-mode "passthrough" {
+# Move all workspace windows
+#
+
+set $mode_move_all_workspace_windows "Move all workspace windows to [0-9]?"
+mode $mode_move_all_workspace_windows {
+    bindsym 1 [workspace=".*"] move to workspace 1; workspace number 1, mode "default"
+    bindsym 2 [workspace=".*"] move to workspace 2; workspace number 2, mode "default"
+    bindsym 3 [workspace=".*"] move to workspace 3; workspace number 3, mode "default"
+    bindsym 4 [workspace=".*"] move to workspace 4; workspace number 4, mode "default"
+    bindsym 5 [workspace=".*"] move to workspace 5; workspace number 5, mode "default"
+    bindsym 6 [workspace=".*"] move to workspace 6; workspace number 6, mode "default"
+    bindsym 7 [workspace=".*"] move to workspace 7; workspace number 7, mode "default"
+    bindsym 8 [workspace=".*"] move to workspace 8; workspace number 8, mode "default"
+    bindsym 9 [workspace=".*"] move to workspace 9; workspace number 9, mode "default"
+    bindsym 0 [workspace=".*"] move to workspace 10; workspace number 10, mode "default"
+    # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+p mode "passthrough"
+bindsym $mod+shift+ctrl+m mode $mode_move_all_workspace_windows
+
+#
+# Passthrough mode (for programs that conflict with WM keybinds)
+# 
+
+bindsym $mod+p shortcuts_inhibitor true
+bindsym --inhibited $mod+p shortcuts_inhibitor false
+#mode "passthrough" {
+#    bindsym $mod+Shift+p mode "default"
+#    bindsym Escape mode "default"
+#}
+#bindsym $mod+p mode "passthrough"
 
 include /etc/sway/config.d/*
