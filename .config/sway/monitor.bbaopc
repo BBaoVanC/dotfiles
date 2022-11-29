@@ -1,0 +1,7 @@
+# vim: ft=swayconfig
+
+# main 4k monitor (DP-2?)
+# TODO: adaptive_sync not working
+output "Goldstar Company Ltd LG HDR 4K 0x00003F69" adaptive_sync on scale 1.5 pos 1920 0
+# second (left) 1080p monitor (HDMI-A-1?)
+output "Dell Inc. DELL ST2410 X175R08G1TGU" pos 0 275
