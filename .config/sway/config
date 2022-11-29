@@ -61,7 +61,7 @@ gaps inner 8
 # Wallpaper
 #
 # TODO: find a new one instead of recycling the same one from last year
-output * bg ~/wallpapers/kieran-white-SBdmQcW8qag-unsplash.jpg fill
+output * bg ~/wallpaper fill
 
 #
 # Status Bar
