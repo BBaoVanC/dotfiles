@@ -93,6 +93,19 @@ function precmd () {
 }
 
 
+# ==> ssh-agent (for macos)
+if [ "$(hostname)" = "bbaobook" ]; then
+  unset SSH_AUTH_SOCK
+  unset SSH_ASKPASS
+  if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 24h > "$XDG_CACHE_HOME/ssh-agent.env"
+  fi
+  if [ -z "$SSH_AUTH_SOCK" ]; then
+    source "$XDG_CACHE_HOME/ssh-agent.env" > /dev/null
+  fi
+fi
+
+
 # ==> Automatically install Antibody
 [ ! -d ~/.local/bin/antibody/ ] && mkdir -p ~/.local/bin/antibody/
 [ ! -f ~/.local/bin/antibody/antibody ] && curl -sfL git.io/antibody | sh -s - -b ~/.local/bin/antibody
