@@ -54,8 +54,8 @@ input * {
 
 ### Aesthetics
 
-gaps outer 20
-gaps inner 10
+#gaps outer 8
+gaps inner 8
 
 # 
 # Wallpaper
