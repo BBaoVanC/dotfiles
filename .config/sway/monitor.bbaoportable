@@ -1,0 +1,6 @@
+# vim: ft=swayconfig
+
+# main monitor
+output "Hewlett Packard HP W2072a CNC217SP4S" pos 0 70
+# second (right) monitor
+output "Dell Inc. DELL 1907FPV CC388742ABGX" pos 1600 0

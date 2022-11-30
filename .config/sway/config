@@ -1,7 +1,7 @@
 # `man 5 sway`
 
 ### Variables
-#
+
 # Mod4 = Super; Mod1 = Alt
 set $mod Mod4
 
@@ -18,19 +18,26 @@ set $term kitty
 set $menu wofi --show drun | xargs swaymsg exec --
 
 ### Startup
+
 # make sure that WAYLAND_DISPLAY is set, so xdg-desktop-portal starts successfully
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec nm-applet --indicator
 exec dunst
+# https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
+exec_always import-gsettings
+
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
 ### Monitor layout & setup
+
 # computer-specific monitor config
 #   it has a single `include` command in the file which loads one of my configs
 #   this is so I can have my configs in the repo without conflicting between pcs
 include ~/.config/sway/monitor
 
 ### Idle configuration
-#
+
 # Example configuration
 #   This will lock your screen after 300 seconds of inactivity, then turn off
 #   your displays after another 300 seconds, and turn your screens back on when
@@ -41,6 +48,7 @@ exec swayidle -w \
     before-sleep 'swaylock -f -c 000000'
 
 ### Input configuration
+
 # `man 5 sway-input`
 input {
     type:keyboard {
@@ -61,7 +69,6 @@ input {
 
 ### Aesthetics
 
-#gaps outer 8
 gaps inner 8
 
 # 
@@ -141,6 +148,8 @@ bindsym $mod+Shift+Right move right
 # Workspaces
 #
 
+# TODO: https://github.com/milgra/sov
+
 # Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -211,6 +220,37 @@ bindsym $mod+grave exec dunstctl history-pop
 # Open notification context menu
 bindsym $mod+period exec dunstctl context
 
+# TODO: https://wiki.archlinux.org/title/sway#Control_swaynag_with_the_keyboard
+
+#
+# Media keys
+#
+
+# Volume +/-
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1| awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
+# Mute
+bindsym XF86AudioMute exec pamixer --toggle-mute && ( [ "$(pamixer --get-mute)" = "true" ] && echo 0 > $WOBSOCK ) || pamixer --get-volume > $WOBSOCK
+
+# Brightness TODO
+#bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+#bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+
+# Player
+bindsym --locked XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Search (who even has this)
+bindsym XF86Search exec $menu
+
+#
+# Clipboard
+#
+
+# TODO: https://github.com/yory8/clipman
+# https://wiki.archlinux.org/title/sway#Clipboard
+
 #
 # Scratchpad
 #
@@ -277,12 +317,9 @@ bindsym $mod+shift+ctrl+m mode $mode_move_all_workspace_windows
 # Passthrough mode (for programs that conflict with WM keybinds)
 # 
 
-bindsym $mod+p shortcuts_inhibitor true
-bindsym --inhibited $mod+p shortcuts_inhibitor false
-#mode "passthrough" {
-#    bindsym $mod+Shift+p mode "default"
-#    bindsym Escape mode "default"
-#}
-#bindsym $mod+p mode "passthrough"
+mode "passthrough" {
+    bindsym $mod+Shift+p mode "default"
+}
+bindsym $mod+p mode "passthrough"
 
 include /etc/sway/config.d/*
