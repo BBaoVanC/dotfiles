@@ -1,0 +1,22 @@
+allow_images=true
+layer=overlay
+
+# Keybinds
+
+key_up=Control_L-k
+key_down=Control_L-j
+key_left=Control_L-h
+key_right=Control_L-l
+key_pgup=Control_L-b
+key_pgdn=Control_L-f
+
+key_expand=Tab
+key_copy=Control_L-c
+
+# NOTE FOR LATER:
+# wofi uses GIO to launch apps, and GIO has the terminals hardcoded.
+# 2.75 isnt out yet, but it adds `xdg-terminal-exec` as a valid terminal
+# https://todo.sr.ht/~scoopta/wofi/176
+# https://todo.sr.ht/~scoopta/wofi/73
+# https://gitlab.gnome.org/GNOME/glib/-/blob/ae65753b16edb34eef71b377abb158c74069ce72/gio/gdesktopappinfo.c#L2639
+# https://gitlab.gnome.org/GNOME/glib/-/blob/2.74.2/gio/gdesktopappinfo.c#L2657

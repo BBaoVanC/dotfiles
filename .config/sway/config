@@ -22,7 +22,8 @@ set $menu wofi --show drun | xargs swaymsg exec --
 # make sure that WAYLAND_DISPLAY is set, so xdg-desktop-portal starts successfully
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec nm-applet --indicator
-exec dunst
+# dunst is started by systemd automatically when a notification is first sent
+# ---
 # https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
 # TODO: cursor is blurry in gtk apps
 exec_always import-gsettings
@@ -218,6 +219,8 @@ bindsym $mod+escape exec dunstctl close
 bindsym $mod+Shift+escape exec dunstctl close-all
 # Go through notification history
 bindsym $mod+grave exec dunstctl history-pop
+# Click notification (perform action)
+bindsym $mod+comma exec dunstctl action
 # Open notification context menu
 bindsym $mod+period exec dunstctl context
 
