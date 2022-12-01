@@ -9,10 +9,10 @@
   "MINIMIZE_TO_TRAY": false,
   "OPEN_ON_STARTUP": false,
   "WINDOW_BOUNDS": {
-    "x": 0,
-    "y": 0,
+    "x": 2513,
+    "y": 349,
     "width": 940,
-    "height": 1366
+    "height": 705
   },
   "DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true
 }
