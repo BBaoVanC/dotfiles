@@ -1,1 +1,3 @@
-/usr/bin/kitty
+#!/bin/sh
+
+exec kitty $@
