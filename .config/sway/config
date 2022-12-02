@@ -73,6 +73,8 @@ input {
 
 gaps inner 8
 
+seat seat0 xcursor_theme Vimix-white-cursors 24
+
 # 
 # Wallpaper
 #

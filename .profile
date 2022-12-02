@@ -29,10 +29,11 @@ export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
 
 # ==> Wayland
 [ "$XDG_SESSION_TYPE" = "wayland" ] && export MOZ_ENABLE_WAYLAND=1
+[ "$XDG_SESSION_TYPE" = "wayland" ] && export WLR_RENDERER=vulkan
 
 # ==> GNOME Keyring
 export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 
 # ==> Qt
-[ "$XDG_SESSION_TYPE" = "wayland" ] && export QT_QPA_PLATFORM=wayland
+#[ "$XDG_SESSION_TYPE" = "wayland" ] && export QT_QPA_PLATFORM=wayland
 [ "$XDG_CURRENT_DESKTOP" != "KDE" ] && export QT_QPA_PLATFORMTHEME=qt5ct
