@@ -259,10 +259,10 @@ bindsym XF86Search exec $menu
 # Screenshot
 #
 
-bindsym Print exec grimshot copy area
-bindsym ctrl+Print exec grimshot copy active
-bindsym Shift+Print exec grimshot copy output
-bindsym ctrl+Shift+Print exec grimshot copy screen
+bindsym Print exec grimshot copy area && notify-send "Screenshot copied" "Copied selected area to clipboard"
+bindsym ctrl+Print exec grimshot copy active && notify-send "Screenshot copied" "Copied current window to clipboard"
+bindsym Shift+Print exec grimshot copy output && notify-send "Screenshot copied" "Copied current monitor to clipboard"
+bindsym ctrl+Shift+Print exec grimshot copy screen && notify-send "Screenshot copied" "Copied all monitors to clipboard"
 
 #
 # Scratchpad
