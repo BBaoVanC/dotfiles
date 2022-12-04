@@ -1,0 +1,9 @@
+indicator-caps-lock
+show-keyboard-layout
+show-failed-attempts
+
+color=000000
+# TODO: change colors to use bobascheme
+
+image=~/wallpaper
+scaling=fill

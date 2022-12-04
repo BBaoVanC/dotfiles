@@ -32,6 +32,7 @@ export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
 [ "$XDG_SESSION_TYPE" = "wayland" ] && export WLR_RENDERER=vulkan
 [ "$XDG_SESSION_TYPE" = "wayland" ] && export SDL_VIDEODRIVER=wayland
 #[ "$XDG_SESSION_TYPE" = "wayland" ] && export _JAVA_AWT_WM_NONREPARENTING=1
+echo $DESKTOP_SESSION | grep sway > /dev/null && export XDG_CURRENT_DESKTOP=sway
 
 # ==> GNOME Keyring
 export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
