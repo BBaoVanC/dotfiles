@@ -22,6 +22,7 @@ set $menu wofi --show drun | xargs swaymsg exec --
 # make sure that WAYLAND_DISPLAY is set, so xdg-desktop-portal starts successfully
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec nm-applet --indicator
+exec polkit-dumb-agent
 # dunst is started by systemd automatically when a notification is first sent
 # ---
 # https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
