@@ -25,13 +25,14 @@ export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
 
 # ==> Nvidia wayland stuff
 [ "$HOSTNAME" = "bbaoportable" ] && export GBM_BACKEND=nvidia-drm
+[ "$HOSTNAME" = "bbaoportable" ] && export __GLX_VENDOR_LIBRARY_NAME=nvidia
 [ "$HOSTNAME" = "bbaoportable" ] && export WLR_NO_HARDWARE_CURSORS=1
 
 # ==> Wayland
 [ "$XDG_SESSION_TYPE" = "wayland" ] && export MOZ_ENABLE_WAYLAND=1
 [ "$XDG_SESSION_TYPE" = "wayland" ] && export WLR_RENDERER=vulkan
 [ "$XDG_SESSION_TYPE" = "wayland" ] && export SDL_VIDEODRIVER=wayland
-#[ "$XDG_SESSION_TYPE" = "wayland" ] && export _JAVA_AWT_WM_NONREPARENTING=1
+[ "$XDG_SESSION_TYPE" = "wayland" ] && export _JAVA_AWT_WM_NONREPARENTING=1
 echo $DESKTOP_SESSION | grep sway > /dev/null && export XDG_CURRENT_DESKTOP=sway
 
 # ==> GNOME Keyring

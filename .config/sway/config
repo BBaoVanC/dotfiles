@@ -100,6 +100,11 @@ bar {
     swaybar_command waybar
 }
 
+### Window Rules
+
+# help identify XWayland windows
+for_window [shell=".*"] title_format "%title :: %shell"
+
 ### Key bindings
 
 #
@@ -131,7 +136,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 bindsym Mod1+Mod4+Shift+e exec swaymsg exit
 
 # Lock screen
-bindsym Mod1+Mod4+l exec swaylock -f -c 000000
+bindsym Mod1+Mod4+l exec swaylock -f
 
 #
 # Moving around
