@@ -12,7 +12,7 @@ _k_friendly_name=Keyboard Layout Switcher
 
 [bismuth]
 _k_friendly_name=Window Tiling
-decrease_master_size=none,,Decrease Master Area Size
+decrease_master_size=Meta+H,,Decrease Master Area Size
 decrease_master_win_count=Meta+D,Meta+[,Decrease Master Area Window Count
 decrease_window_height=Meta+Ctrl+K,Meta+Ctrl+K,Decrease Window Height
 decrease_window_width=Meta+Ctrl+H,Meta+Ctrl+H,Decrease Window Width
@@ -22,7 +22,7 @@ focus_next_window=Meta+J,,Focus Next Window
 focus_prev_window=Meta+K,,Focus Previous Window
 focus_right_window=none,Meta+L,Focus Right Window
 focus_upper_window=none,Meta+K,Focus Upper Window
-increase_master_size=none,,Increase Master Area Size
+increase_master_size=Meta+L,,Increase Master Area Size
 increase_master_win_count=Meta+I,Meta+],Increase Master Area Window Count
 increase_window_height=Meta+Ctrl+J,Meta+Ctrl+J,Increase Window Height
 increase_window_width=Meta+Ctrl+L,Meta+Ctrl+L,Increase Window Width
