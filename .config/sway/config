@@ -112,7 +112,7 @@ for_window [shell=".*"] title_format "%title :: %shell"
 #
 
 # Start a terminal
-bindsym $mod+Shift+Return exec $term
+bindsym $mod+Return exec $term
 
 # Kill focused window
 bindsym $mod+Shift+c kill
