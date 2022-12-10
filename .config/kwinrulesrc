@@ -1,0 +1,33 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[0a79c2c3-eea7-4ce6-8a63-031776cf2dd6]
+Description=Window settings for kitty
+clientmachine=localhost
+title=nvim
+titlematch=1
+types=1
+wmclass=kitty
+wmclassmatch=1
+
+[1]
+Description=New window settings
+minsize=1,1
+minsizerule=2
+types=1
+
+[89225dbe-c3b4-4ceb-bc2f-7ef5681f42b5]
+Description=New window settings
+minsizerule=2
+types=1
+
+[General]
+count=1
+rules=1
+
+[c9c01fd0-2c8f-4b05-9dec-68d81e12b71e]
+Description=Application settings for java
+blockcompositing=true
+blockcompositingrule=2
+wmclass=java
+wmclassmatch=1

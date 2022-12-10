@@ -112,7 +112,7 @@ for_window [shell=".*"] title_format "%title :: %shell"
 #
 
 # Start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec $term
 
 # Kill focused window
 bindsym $mod+Shift+c kill
@@ -133,7 +133,7 @@ bindsym $mod+q reload
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-bindsym Mod1+Mod4+Shift+q exec swaymsg exit
+bindsym $mod+ctrl+Shift+q exec swaymsg exit
 
 # Lock screen
 bindsym Mod1+Mod4+l exec swaylock -f
@@ -216,7 +216,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Make the current focus fullscreen
-bindsym $mod+f fullscreen
+bindsym $mod+y fullscreen
 
 # Toggle the current focus between tiling and floating mode
 bindsym $mod+Shift+space floating toggle
