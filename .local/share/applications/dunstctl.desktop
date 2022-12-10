@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=dunstctl close
+Name=dunstctl close
+NoDisplay=true
+Type=Application

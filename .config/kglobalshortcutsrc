@@ -48,6 +48,26 @@ toggle_three_column_layout=none,,Toggle Three Column Layout
 toggle_tile_layout=none,Meta+T,Toggle Tile Layout
 toggle_window_floating=Meta+Shift+Space,Meta+F,Toggle Active Window Floating
 
+[dunstctl-2.desktop]
+_k_friendly_name=dunstctl history-pop
+_launch=Meta+`,none,dunstctl history-pop
+
+[dunstctl-3.desktop]
+_k_friendly_name=dunstctl close-all
+_launch=Meta+Shift+Esc,none,dunstctl close-all
+
+[dunstctl-4.desktop]
+_k_friendly_name=dunstctl action
+_launch=Meta+Ctrl+\\,,none,dunstctl action
+
+[dunstctl-5.desktop]
+_k_friendly_name=dunstctl context
+_launch=Meta+Ctrl+.,none,dunstctl context
+
+[dunstctl.desktop]
+_k_friendly_name=dunstctl close
+_launch=Meta+Esc,none,dunstctl close
+
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility

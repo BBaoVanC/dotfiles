@@ -243,9 +243,9 @@ bindsym $mod+Shift+escape exec dunstctl close-all
 # Go through notification history
 bindsym $mod+grave exec dunstctl history-pop
 # Click notification (perform action)
-bindsym $mod+comma exec dunstctl action
+bindsym $mod+ctrl+comma exec dunstctl action
 # Open notification context menu
-bindsym $mod+period exec dunstctl context
+bindsym $mod+ctrl+period exec dunstctl context
 
 # TODO: https://wiki.archlinux.org/title/sway#Control_swaynag_with_the_keyboard
 
