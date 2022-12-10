@@ -115,7 +115,7 @@ for_window [shell=".*"] title_format "%title :: %shell"
 bindsym $mod+Return exec $term
 
 # Kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c kill
 
 # Start your launcher
 bindsym $mod+d exec $menu-app
@@ -129,11 +129,11 @@ bindsym $mod+Shift+d exec $menu-command
 floating_modifier $mod normal
 
 # Reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+q reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-bindsym Mod1+Mod4+Shift+e exec swaymsg exit
+bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym Mod1+Mod4+Shift+q exec swaymsg exit
 
 # Lock screen
 bindsym Mod1+Mod4+l exec swaylock -f
