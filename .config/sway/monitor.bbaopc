@@ -7,3 +7,5 @@ set $disp2 "Dell Inc. DELL ST2410 X175R08G1TGU"
 output $disp1 adaptive_sync on scale 1.5 pos 1920 0
 # second (left) 1080p monitor (HDMI-A-1?)
 output $disp2 pos 0 275
+
+exec_always 'xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2'
