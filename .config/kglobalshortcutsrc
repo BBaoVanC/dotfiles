@@ -52,7 +52,7 @@ _k_friendly_name=Custom Shortcuts Service
 
 [kitty.desktop]
 _k_friendly_name=kitty
-_launch=Meta+Shift+Return,none,kitty
+_launch=Meta+Return,none,kitty
 
 [kmix]
 _k_friendly_name=Audio Volume
