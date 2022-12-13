@@ -9,4 +9,4 @@ output $disp1 pos 0 70
 output $disp2 pos 1600 0
 
 workspace 1 output $disp1 $disp2
-workspace 2 output $disp2 $disk1
+workspace 2 output $disp2 $disp1
