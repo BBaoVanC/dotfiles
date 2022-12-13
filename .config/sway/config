@@ -15,9 +15,7 @@ set $right l
 set $term kitty
 # NOTE: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu-app wofi --show drun | xargs swaymsg exec --
-# TODO: figure out a way to allow typing in command manually and running it
-set $menu-command wofi --show run | xargs swaymsg exec --
+set $menu $term --class=launcher sway-launcher-desktop
 
 ### Startup
 
@@ -105,6 +103,9 @@ bar {
 # help identify XWayland windows
 for_window [shell=".*"] title_format "%title :: %shell"
 
+# sway-launcher-desktop
+for_window [app_id="^launcher$"] floating enable, sticky enable
+
 ### Key bindings
 
 #
@@ -118,8 +119,8 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+c kill
 
 # Start your launcher
-bindsym $mod+d exec $menu-app
-bindsym $mod+Shift+d exec $menu-command
+bindsym $mod+d exec $menu
+bindsym $mod+Shift+d exec wofi --show run
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
