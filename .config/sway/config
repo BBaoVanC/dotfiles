@@ -77,6 +77,10 @@ input {
     }
 }
 
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1717305
+# also causes an error on reload due to it not supporting hot reloads (even if it was already disabled)
+#primary_selection disabled
+
 ### Aesthetics
 
 gaps inner 8
