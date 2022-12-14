@@ -110,6 +110,9 @@ for_window [shell=".*"] title_format "%title :: %shell"
 # sway-launcher-desktop
 for_window [app_id="^launcher$"] floating enable, sticky enable
 
+# does not behave well in tiling
+for_window [class="^battle.net.exe$"] floating enable
+
 ### Key bindings
 
 #
