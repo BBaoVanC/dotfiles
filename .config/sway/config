@@ -20,7 +20,7 @@ set $menu $term --class=launcher sway-launcher-desktop
 ### Startup
 
 # make sure that WAYLAND_DISPLAY is set, so xdg-desktop-portal starts successfully
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec nm-applet --indicator
 exec polkit-dumb-agent
 exec kdeconnect-indicator

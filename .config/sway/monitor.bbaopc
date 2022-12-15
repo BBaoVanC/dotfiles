@@ -11,4 +11,4 @@ output $disp2 pos 0 275
 workspace 1 output $disp1 $disp2
 workspace 2 output $disp2 $disp1
 
-exec_always 'xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2'
+#exec_always 'xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 1'
