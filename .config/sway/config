@@ -119,6 +119,9 @@ for_window [class="^battle.net.exe$"] floating enable
 # Basics
 #
 
+# TODO: remove this
+bindsym $mod+Shift+w exec wine explorer.exe
+
 # Start a terminal
 bindsym $mod+Return exec $term
 
