@@ -290,6 +290,9 @@ bindsym XF86Search exec $menu
 # TODO: https://github.com/yory8/clipman
 # https://wiki.archlinux.org/title/sway#Clipboard
 
+# Use swappy to edit image in clipboard
+bindsym $mod+g exec wl-paste | swappy -f - -o - | wl-copy
+
 #
 # Screenshot
 #
