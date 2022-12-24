@@ -30,10 +30,11 @@ exec kdeconnect-indicator
 # TODO: cursor is blurry in gtk apps
 exec_always import-gsettings
 
+# sov has a memory leak or something, caught it using 700 MiB of ram
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-set $SOVSOCK $XDG_RUNTIME_DIR/sov.sock
+#set $SOVSOCK $XDG_RUNTIME_DIR/sov.sock
 exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
-exec rm -f $SOVSOCK && mkfifo $SOVSOCK && tail -f $SOVSOCK | sov
+#exec rm -f $SOVSOCK && mkfifo $SOVSOCK && tail -f $SOVSOCK | sov
 
 ### Monitor layout & setup
 
@@ -181,8 +182,8 @@ bindsym $mod+Shift+Right move right
 #
 
 # Overview
-bindsym --no-repeat $mod+F1 exec echo 1 > $SOVSOCK
-bindsym --release $mod+F1 exec echo 0 > $SOVSOCK
+#bindsym --no-repeat $mod+F1 exec echo 1 > $SOVSOCK
+#bindsym --release $mod+F1 exec echo 0 > $SOVSOCK
 
 # Switch to workspace
 bindsym $mod+1 workspace number 1
