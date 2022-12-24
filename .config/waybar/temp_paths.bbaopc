@@ -1,0 +1,8 @@
+// vim: ft=jsonc
+{
+    "temperature#cpu": {
+    },
+    "temperature#gpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
+    },
+}
