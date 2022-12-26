@@ -86,13 +86,6 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 
-# ==> Automatically set window title to "zsh"
-function precmd () {
-  window_title="\033]0;zsh\007"
-  echo -ne "$window_title"
-}
-
-
 # ==> ssh-agent (for macos)
 if [ "$(hostname)" = "bbaobook" ]; then
   unset SSH_AUTH_SOCK
