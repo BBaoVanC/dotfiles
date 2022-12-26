@@ -20,3 +20,6 @@ key_copy=Control_L-c
 # https://todo.sr.ht/~scoopta/wofi/73
 # https://gitlab.gnome.org/GNOME/glib/-/blob/ae65753b16edb34eef71b377abb158c74069ce72/gio/gdesktopappinfo.c#L2639
 # https://gitlab.gnome.org/GNOME/glib/-/blob/2.74.2/gio/gdesktopappinfo.c#L2657
+
+# don't set DRI_PRIME=1 because the non default GPU is the iGPU
+drun-disable_prime=true
