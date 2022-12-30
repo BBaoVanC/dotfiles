@@ -17,10 +17,10 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "custom/updates",
-        "cpu",
+        // "custom/updates",
+        // "cpu",
         // "memory",
-        "custom/memory",
+        // "custom/memory",
         // "temperature#cpu",
         // "temperature#gpu",
         // "backlight",
@@ -90,31 +90,31 @@
         // for some reason these speeds are not accurate
         // "tooltip-format": " {bandwidthDownBytes}  {bandwidthUpBytes}"
     },
-    "custom/updates": {
-        "interval": 3600,
-        "format": " {} updates",
-        // don't show if 0 updates
-        "exec": "update_count=\"$(checkupdates | wc -l)\"; [ \"$update_count\" = \"0\" ] || echo \"$update_count\"",
-        "exec-if": "exit 0"
-    },
-    "cpu": {
-        "interval": 2,
-        "on-click": "swaymsg 'exec kitty htop -s PERCENT_CPU'",
-        // "states": [],
-        "format": " {usage}%"
-    },
+    // "custom/updates": {
+    //     "interval": 3600,
+    //     "format": " {} updates",
+    //     // don't show if 0 updates
+    //     "exec": "update_count=\"$(checkupdates | wc -l)\"; [ \"$update_count\" = \"0\" ] || echo \"$update_count\"",
+    //     "exec-if": "exit 0"
+    // },
+    // "cpu": {
+    //     "interval": 2,
+    //     "on-click": "swaymsg 'exec kitty htop -s PERCENT_CPU'",
+    //     // "states": [],
+    //     "format": " {usage}%"
+    // },
     // "memory": {
     //     "interval": 10,
     //     "on-click": "swaymsg 'exec kitty htop -s PERCENT_MEM'",
     //     // TODO: the used is wrong, see https://github.com/aristocratos/btop/issues/161
     //     "format": " {used:0.1f}G/{total:0.1f}G"
     // },
-    "custom/memory": {
-        "interval": 10,
-        "on-click": "swaymsg 'exec kitty htop -s PERCENT_MEM'",
-        "format": " {}",
-        "exec": "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g"
-    },
+    // "custom/memory": {
+    //     "interval": 10,
+    //     "on-click": "swaymsg 'exec kitty htop -s PERCENT_MEM'",
+    //     "format": " {}",
+    //     "exec": "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g"
+    // },
     // "temperature#cpu": {
     //     "format": " {temperatureC}°C"
     // },
