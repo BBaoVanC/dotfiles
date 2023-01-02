@@ -3,7 +3,7 @@ export HOSTNAME="$(hostname)"
 
 # ==> Default programs
 export EDITOR="nvim"
-export TERMINAL="kitty"
+export TERMINAL="foot"
 
 # ==> XDG
 export XDG_CONFIG_HOME="$HOME/.config"

@@ -12,7 +12,7 @@ set $up k
 set $right l
 
 # Preferred programs
-set $term kitty
+set $term foot
 # NOTE: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu-wofi wofi --show drun
