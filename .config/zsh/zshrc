@@ -86,6 +86,26 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 
+# ==> OSC 7 so foot can open in working directory
+# https://codeberg.org/dnkl/foot/wiki#user-content-spawning-new-terminal-instances-in-the-current-working-directory
+function osc7 {
+    local LC_ALL=C
+    export LC_ALL
+
+    setopt localoptions extendedglob
+    input=( ${(s::)PWD} )
+    uri=${(j::)input/(#b)([^A-Za-z0-9_.\!~*\'\(\)-\/])/%${(l:2::0:)$(([##16]#match))}}
+    print -n "\e]7;file://${HOSTNAME}${uri}\e\\"
+}
+add-zsh-hook -Uz chpwd osc7
+
+
+precmd() {
+    # ==> https://codeberg.org/dnkl/foot/wiki#jumping-between-prompts
+    print -Pn "\e]133;A\e\\"
+}
+
+
 # ==> ssh-agent (for macos)
 if [ "$(hostname)" = "bbaobook" ]; then
   unset SSH_AUTH_SOCK
