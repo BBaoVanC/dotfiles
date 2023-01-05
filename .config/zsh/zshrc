@@ -1,32 +1,32 @@
 #!/bin/zsh
+# vim: foldmethod=marker
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel10k instant prompt {{{
+# Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+# }}}
 
-
-# ==> Environment
+# Environment {{{
 source ~/.zprofile
-
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
 SAVEHIST=500
 source ~/.config/zsh/aliasrc
 [ -f ~/.config/zsh/zshrc_nosync ] && source ~/.config/zsh/zshrc_nosync
-command -v podman &> /dev/null && export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/podman/podman.sock"
+# }}}
 
-# ==> Fix Ctrl-O keybind on macOS
-[ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
+# Keybinds {{{
 
-
-# ==> Use emacs (default) keybinds instead of vi mode
+# Use emacs (default) keybinds instead of vi mode {{{
 # vim automatically guesses you want vi mode based on $EDITOR
 bindkey -e
+# }}}
 
-
-# ==> Fix keys using terminfo :: https://wiki.archlinux.org/title/Zsh#Key_bindings
+# Fix keys using terminfo {{{
+# https://wiki.archlinux.org/title/Zsh#Key_bindings
 typeset -g -A key
 
 key[Home]="${terminfo[khome]}"
@@ -59,15 +59,19 @@ key[Shift-Tab]="${terminfo[kcbt]}"
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
 if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
-	autoload -Uz add-zle-hook-widget
-	function zle_application_mode_start { echoti smkx }
-	function zle_application_mode_stop { echoti rmkx }
-	add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
-	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
+    autoload -Uz add-zle-hook-widget
+    function zle_application_mode_start { echoti smkx }
+    function zle_application_mode_stop { echoti rmkx }
+    add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
+    add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
+# }}}
 
+# }}}
 
-# ==> OSC 7 so foot can open in working directory
+# Terminal integrations {{{
+
+# OSC 7 so foot can open in working directory {{{
 # https://codeberg.org/dnkl/foot/wiki#user-content-spawning-new-terminal-instances-in-the-current-working-directory
 function osc7 {
     local LC_ALL=C
@@ -79,46 +83,65 @@ function osc7 {
     print -n "\e]7;file://${HOSTNAME}${uri}\e\\"
 }
 add-zsh-hook -Uz chpwd osc7
+# }}}
 
+# precmd and preexec (and some terminal integrations) {{{
 
 # runs before prompt
 function precmd {
-    # ==> https://codeberg.org/dnkl/foot/wiki#jumping-between-prompts
+    # https://codeberg.org/dnkl/foot/wiki#jumping-between-prompts
     print -Pn "\e]133;A\e\\"
+
     echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;") — $TERM\a"
 }
-
 # runs before command (after enter)
 function preexec {
     echo -ne "\033]0;$1 — $TERM\a"
 }
 
+# }}}
 
-# ==> ssh-agent (for macos)
+# }}}
+
+# Misc patches {{{
+
+# ssh-agent (for macos) {{{
 if [ "$(hostname)" = "bbaobook" ]; then
-  unset SSH_AUTH_SOCK
-  unset SSH_ASKPASS
-  if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent -t 24h > "$XDG_CACHE_HOME/ssh-agent.env"
-  fi
-  if [ -z "$SSH_AUTH_SOCK" ]; then
-    source "$XDG_CACHE_HOME/ssh-agent.env" > /dev/null
-  fi
+    unset SSH_AUTH_SOCK
+    unset SSH_ASKPASS
+    if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+        ssh-agent -t 24h > "$XDG_CACHE_HOME/ssh-agent.env"
+    fi
+    if [ -z "$SSH_AUTH_SOCK" ]; then
+        source "$XDG_CACHE_HOME/ssh-agent.env" > /dev/null
+    fi
 fi
+#}}}
 
+# Fix Ctrl-O keybind on macOS {{{
+[ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
+# }}}
 
-# ==> Automatically install Antibody
+# }}}
+
+# Antibody {{{
+
+# Automatically install Antibody {{{
 [ ! -d ~/.local/bin/antibody/ ] && mkdir -p ~/.local/bin/antibody/
 [ ! -f ~/.local/bin/antibody/antibody ] && curl -sfL git.io/antibody | sh -s - -b ~/.local/bin/antibody
+# }}}
 
-
-# ==> Antibody
+# Antibody run & load {{{
 source <(antibody init)
 antibody bundle < ~/.config/zsh/plugins.txt
 # because of zsh-completions
 autoload -U compinit && compinit
+# }}}
 
 
-# ==> Load powerlevel10k
+# }}}
+
+# Load powerlevel10k {{{
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
+# }}}
