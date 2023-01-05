@@ -21,28 +21,9 @@ command -v podman &> /dev/null && export DOCKER_HOST="unix://$XDG_RUNTIME_DIR/po
 [ "$(uname -s)" = "Darwin" ] && stty discard undef > /dev/null 2>&1
 
 
-# ==> Vi mode :: https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
-bindkey -v
-# Change cursor shape for different vi modes.
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[2 q'
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[6 q'
-  fi
-}
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[6 q"
-}
-zle -N zle-line-init
-echo -ne '\e[6 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[6 q' ;} # Use beam shape cursor for each new prompt
+# ==> Use emacs (default) keybinds instead of vi mode
+# vim automatically guesses you want vi mode based on $EDITOR
+bindkey -e
 
 
 # ==> Fix keys using terminfo :: https://wiki.archlinux.org/title/Zsh#Key_bindings
@@ -100,9 +81,16 @@ function osc7 {
 add-zsh-hook -Uz chpwd osc7
 
 
-precmd() {
+# runs before prompt
+function precmd {
     # ==> https://codeberg.org/dnkl/foot/wiki#jumping-between-prompts
     print -Pn "\e]133;A\e\\"
+    echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;") — $TERM\a"
+}
+
+# runs before command (after enter)
+function preexec {
+    echo -ne "\033]0;$1 — $TERM\a"
 }
 
 
