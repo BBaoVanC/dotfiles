@@ -1,29 +1,21 @@
 #!/bin/zsh
 # vim: foldmethod=marker
 
-# Enable Powerlevel10k instant prompt {{{
-# Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-# }}}
+autoload -U add-zsh-hook
 
 # Environment {{{
 source ~/.zprofile
+source ~/.config/zsh/aliasrc
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
 SAVEHIST=500
-source ~/.config/zsh/aliasrc
 [ -f ~/.config/zsh/zshrc_nosync ] && source ~/.config/zsh/zshrc_nosync
 # }}}
 
 # Keybinds {{{
 
-# Use emacs (default) keybinds instead of vi mode {{{
+# Use emacs (default) keybinds instead of vi mode
 # vim automatically guesses you want vi mode based on $EDITOR
 bindkey -e
-# }}}
 
 # Fix keys using terminfo {{{
 # https://wiki.archlinux.org/title/Zsh#Key_bindings
@@ -82,23 +74,28 @@ function osc7 {
     uri=${(j::)input/(#b)([^A-Za-z0-9_.\!~*\'\(\)-\/])/%${(l:2::0:)$(([##16]#match))}}
     print -n "\e]7;file://${HOSTNAME}${uri}\e\\"
 }
-add-zsh-hook -Uz chpwd osc7
+add-zsh-hook chpwd osc7
 # }}}
 
-# precmd and preexec (and some terminal integrations) {{{
-
-# runs before prompt
-function precmd {
-    # https://codeberg.org/dnkl/foot/wiki#jumping-between-prompts
+# foot: Jump between prompts {{{
+# https://codeberg.org/dnkl/foot/wiki#jumping-between-prompts
+function precmd_foot_jumping_between_prompts {
     print -Pn "\e]133;A\e\\"
+}
+add-zsh-hook precmd precmd_foot_jumping_between_prompts
+# }}}
 
+# Window title {{{
+# set window title when at prompt
+function window_title_prompt {
     echo -ne "\033]0;$(pwd | sed -e "s;^$HOME;~;") — $TERM\a"
 }
-# runs before command (after enter)
-function preexec {
+add-zsh-hook precmd window_title_prompt
+# set window title when executing program
+function window_title_executing {
     echo -ne "\033]0;$1 — $TERM\a"
 }
-
+add-zsh-hook preexec window_title_executing
 # }}}
 
 # }}}
@@ -138,10 +135,9 @@ antibody bundle < ~/.config/zsh/plugins.txt
 autoload -U compinit && compinit
 # }}}
 
-
 # }}}
 
 # Load powerlevel10k {{{
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
+[ -f ~/.config/zsh/p10k.zsh ] && source ~/.config/zsh/p10k.zsh
 # }}}

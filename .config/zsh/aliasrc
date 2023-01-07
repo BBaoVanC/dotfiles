@@ -1,49 +1,73 @@
 #!/bin/zsh
+# vim: foldmethod=marker
 
-# ==> Colors
-#alias ls="exa --group-directories-first --color=auto --icons"
-[ "$(uname -s)" = "Darwin" ] && alias ls="ls -G" || alias ls="ls --color=auto"
+# Colorful commands {{{
+
 alias grep="grep --color=auto"
-lsclr() {for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done}
-[ "$(uname -s)" = "Darwin" ] && alias diff="colordiff" || alias diff="diff --color=auto"
 
-# ==> Python
-alias senv="source env/bin/activate"
-alias svenv="source venv/bin/activate"
-
-# ==> Java
-javaver() {
-    # https://wiki.archlinux.org/title/Java#Launching_an_application_with_the_non-default_java_version
-    version="$1"
-    shift
-    PATH="/usr/lib/jvm/java-$version-openjdk/bin/:$PATH" $@
+function lsclr {
+    for i in {0..255}; do
+        print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}
+    done
 }
 
-# ==> Dragon drag and drop
+# Platform-dependent {{{
+if [ "$(uname -s)" = "Darwin" ]; then
+    alias ls="ls -G"
+    alias diff="colordiff"
+else
+    alias ls="ls --color=auto"
+    alias diff="diff --color=auto"
+fi
+# }}}
+
+# }}}
+
+# Arch-specific {{{
+if grep '^ID=arch$' /etc/os-release &> /dev/null; then
+    alias rmorphans="sudo pacman -Rns \$(pacman -Qdtq | xargs)"
+    alias rmpkg="pacman -Qq |
+                 fzf --multi --preview 'pacman -Qi {1}' |
+                 xargs -ro sudo pacman -Rns"
+    if command -v fzf &> /dev/null; then
+        if command -v yay &> /dev/null; then
+            alias addpkg="yay -Slq |
+                          fzf --multi --preview 'yay -Si {1}' |
+                          xargs -ro sudo yay -S"
+        elif command -v paru &> /dev/null; then
+            alias addpkg="paru -Slq |
+                          fzf --multi --preview 'paru -Si {1}' |
+                          xargs -ro sudo paru -S"
+        else
+            alias addpkg="pacman -Slq |
+                          fzf --multi --preview 'pacman -Si {1}' |
+                          xargs -ro sudo pacman -S"
+        fi
+    fi
+fi
+# }}}
+
+# Miscellaneous {{{
+alias rscp="rsync -avPc" # add -z to compress
+alias eat_newline="perl -pi -e 'chomp if eof'"
 alias dragon="dragon-drop -a -x"
 
-# ==> Miscellaneous
-alias rscp="rsync -avPc" # add -z to compress
-alias scpng="scanimage --progress --format=png --output-file"
-alias mk="make -j$(($(nproc)+1))"
-alias eat_newline="perl -pi -e 'chomp if eof'"
-
+# Use different wine prefix
 winepref() {
     WINEPREFIX="$HOME/.local/share/wineprefixes/$1"
     shift
     $@
 }
 
-# ==> Arch-specific
-if command -v pacman &> /dev/null; then
-    alias rmorphans="sudo pacman -Rns \$(pacman -Qdtq | xargs)"
-    if command -v fzf &> /dev/null; then
-        if command -v yay &> /dev/null; then
-            alias addpkg="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro sudo yay -S"
-            alias rmpkg="yay -Qq | fzf --multi --preview 'yay -Qi {1}' | xargs -ro sudo yay -Rns"
-        else
-            alias addpkg="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
-            alias rmpkg="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
-        fi
-    fi
-fi
+# Python virtualenv
+alias senv="source env/bin/activate"
+alias svenv="source venv/bin/activate"
+
+# Use non-default Java version
+javaver() {
+    # https://wiki.archlinux.org/title/Java#Launching_an_application_with_the_non-default_java_version
+    version="$1"
+    shift
+    PATH="/usr/lib/jvm/java-$version-openjdk/bin/:$PATH" $@
+}
+# }}}
