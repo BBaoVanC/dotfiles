@@ -14,8 +14,6 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 
-set foldcolumn=auto:9
-
 
 " use j/k to move screen lines *useful for soft wrapping)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -180,3 +178,5 @@ highlight Comment cterm=italic
 nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+set foldcolumn=auto:9
