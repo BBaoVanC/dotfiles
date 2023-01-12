@@ -40,3 +40,8 @@ export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 
 # ==> Qt
 [ "$XDG_CURRENT_DESKTOP" != "KDE" ] && export QT_QPA_PLATFORMTHEME=qt5ct
+
+# wlroots debug
+#export WLR_SCENE_DEBUG_DAMAGE=rerender
+#export WLR_SCENE_DEBUG_DAMAGE=highlight
+#export WLR_XWAYLAND=~/git-repos/xserver/build/hw/xwayland/Xwayland
