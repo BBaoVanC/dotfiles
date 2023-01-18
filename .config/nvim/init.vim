@@ -16,8 +16,8 @@ set autoindent
 
 
 " use j/k to move screen lines *useful for soft wrapping)
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+"noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+"noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " wrap at word boundaries
 "set linebreak
