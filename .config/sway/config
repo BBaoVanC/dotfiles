@@ -16,7 +16,6 @@ set $term foot
 # NOTE: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu-wofi wofi --show drun
-set $menu-sld $term --class=launcher sway-launcher-desktop
 
 ### Startup
 
@@ -135,7 +134,6 @@ bindsym $mod+Shift+c kill
 
 # Start your launcher
 bindsym $mod+d exec $menu-wofi
-bindsym $mod+Shift+d exec $menu-sld
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -153,6 +151,14 @@ bindsym $mod+ctrl+Shift+q exec swaymsg exit
 
 # Lock screen
 bindsym Mod1+Mod4+l exec swaylock -f
+
+#
+# Menus
+#
+
+# power menu
+set $menu-power echo 'suspend\nhibernate\nhybrid-sleep\nreboot\npoweroff' | wofi --dmenu | xargs systemctl
+bindsym $mod+Shift+p exec $menu-power
 
 #
 # Moving around
