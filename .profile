@@ -24,6 +24,7 @@ export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
 
 # ==> Nvidia wayland stuff
+[ "$HOSTNAME" = "bbaoportable" ] && export LIBVA_DRIVER_NAME=nvidia
 [ "$HOSTNAME" = "bbaoportable" ] && export GBM_BACKEND=nvidia-drm
 [ "$HOSTNAME" = "bbaoportable" ] && export __GLX_VENDOR_LIBRARY_NAME=nvidia
 [ "$HOSTNAME" = "bbaoportable" ] && export WLR_NO_HARDWARE_CURSORS=1
