@@ -23,7 +23,6 @@ set $menu-wofi wofi --show drun
 exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec nm-applet --indicator
 exec polkit-dumb-agent
-exec kdeconnect-indicator
 # dunst is started by systemd automatically when a notification is first sent
 # ---
 # https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
