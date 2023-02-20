@@ -14,6 +14,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/antibody:$PATH"
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
+# https://wiki.archlinux.org/title/Blender#HIP_on_AMD_open_source_drivers
+[ -d "/opt/rocm/bin" ] && export PATH="/opt/rocm/bin:$PATH"
 
 # ==> $HOME cleanup
 export LESSHISTFILE="-"
