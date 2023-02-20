@@ -15,7 +15,7 @@ set $right l
 set $term kitty
 # NOTE: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu $term --class=launcher sway-launcher-desktop
+set $menu $term --class=launcher wofi --show drun
 
 ### Startup
 

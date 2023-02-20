@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd ~/git-repos/sway
+cd ~/projects/sway
 ./build/sway/sway --unsupported-gpu --debug --config ~/.config/sway/minimal_config
