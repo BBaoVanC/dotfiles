@@ -12,10 +12,10 @@ set $up k
 set $right l
 
 # Preferred programs
-set $term kitty
+set $term foot
 # NOTE: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu $term --class=launcher wofi --show drun
+set $menu $term wofi --show drun
 
 ### Startup
 
@@ -44,7 +44,8 @@ seat seat0 xcursor_theme Vimix-white-cursors 24
 # Wallpaper
 #
 # TODO: find a new one instead of recycling the same one from last year
-output * bg ~/wallpaper fill
+#output * bg ~/wallpaper fill
+output * bg ~/projects/sway/assets/Sway_Wallpaper_Blue_1920x1080.png fill
 
 #
 # Status Bar
@@ -139,10 +140,6 @@ bindsym $mod+Shift+Right move right
 # Workspaces
 #
 
-# Overview
-bindsym --no-repeat $mod+F1 exec echo 1 > $SOVSOCK
-bindsym --release $mod+F1 exec echo 0 > $SOVSOCK
-
 # Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -166,9 +163,6 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 # NOTE: workspaces can have any name you want, not just numbers.
-
-# Rename workspace
-bindsym $mod+Shift+r exec swaymsg rename workspace to "$(swaymsg -t get_workspaces | jq -r '.[] | select(.focused).num') $(wofi --show dmenu)"
 
 #
 # Layout stuff
@@ -297,28 +291,6 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-#
-# Move all workspace windows
-#
-
-set $mode_move_all_workspace_windows "Move all workspace windows to [0-9]?"
-mode $mode_move_all_workspace_windows {
-    bindsym 1 [workspace=".*"] move to workspace 1; workspace number 1, mode "default"
-    bindsym 2 [workspace=".*"] move to workspace 2; workspace number 2, mode "default"
-    bindsym 3 [workspace=".*"] move to workspace 3; workspace number 3, mode "default"
-    bindsym 4 [workspace=".*"] move to workspace 4; workspace number 4, mode "default"
-    bindsym 5 [workspace=".*"] move to workspace 5; workspace number 5, mode "default"
-    bindsym 6 [workspace=".*"] move to workspace 6; workspace number 6, mode "default"
-    bindsym 7 [workspace=".*"] move to workspace 7; workspace number 7, mode "default"
-    bindsym 8 [workspace=".*"] move to workspace 8; workspace number 8, mode "default"
-    bindsym 9 [workspace=".*"] move to workspace 9; workspace number 9, mode "default"
-    bindsym 0 [workspace=".*"] move to workspace 10; workspace number 10, mode "default"
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+shift+ctrl+m mode $mode_move_all_workspace_windows
 
 #
 # Passthrough mode (for programs that conflict with WM keybinds)

@@ -1,4 +1,6 @@
 #!/bin/sh
 
+export WLR_XWAYLAND=~/projects/xserver/build/hw/xwayland/Xwayland
+
 cd ~/projects/sway
 ./build/sway/sway --unsupported-gpu --debug --config ~/.config/sway/minimal_config
