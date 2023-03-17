@@ -1,6 +1,5 @@
 set background=dark
 set number
-syntax enable
 set ignorecase
 set incsearch
 "" Use system clipboard by default
@@ -79,11 +78,16 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'sbdchd/neoformat'
 Plug 'whiteinge/diffconflicts'
+Plug 'rust-lang/rust.vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
+" https://github.com/rust-lang/rust.vim#installation
+syntax enable
+filetype plugin indent on
 
 
 " Undo tree
