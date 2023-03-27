@@ -1,11 +1,12 @@
 set background=dark
 set number
-syntax enable
 set ignorecase
 set incsearch
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
 set indentkeys=""
+" allow indenting of preprocessor macros
+set cinkeys-=0#
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
@@ -16,8 +17,8 @@ set autoindent
 
 
 " use j/k to move screen lines *useful for soft wrapping)
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+"noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+"noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " wrap at word boundaries
 "set linebreak
@@ -77,9 +78,14 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'sbdchd/neoformat'
 Plug 'whiteinge/diffconflicts'
+Plug 'rust-lang/rust.vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
+
+" https://github.com/rust-lang/rust.vim#installation
+syntax enable
+filetype plugin indent on
 
 
 " Undo tree
