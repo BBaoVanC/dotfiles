@@ -3,4 +3,10 @@
 export WLR_XWAYLAND=~/projects/xserver/build/hw/xwayland/Xwayland
 
 cd ~/projects/sway
-./build/sway/sway --unsupported-gpu --debug --config ~/.config/sway/minimal_config
+if [ -n "$GDB" ]; then
+    gdb --args ./build/sway/sway --unsupported-gpu --debug --config ~/.config/sway/minimal_config
+elif [ -n "$LLDB" ]; then
+    lldb -- ./build/sway/sway --unsupported-gpu --debug --config ~/.config/sway/minimal_config
+else
+    ./build/sway/sway --unsupported-gpu --debug --config ~/.config/sway/minimal_config
+fi
