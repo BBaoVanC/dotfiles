@@ -24,6 +24,7 @@ export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
+export GHCUP_USE_XDG_DIRS=true
 
 # ==> Nvidia wayland stuff
 [ "$HOSTNAME" = "bbaoportable" ] && export LIBVA_DRIVER_NAME=nvidia
