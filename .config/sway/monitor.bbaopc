@@ -1,6 +1,6 @@
 # vim: ft=swayconfig
 
-set $disp1 "LG Electronics LG HDR 4K 0x00003F69"
+set $disp1 "LG Electronics LG HDR 4K 0x000B3569"
 set $disp2 "Dell Inc. DELL ST2410 X175R08G1TGU"
 
 # main 4k monitor (DP-2?)
