@@ -160,6 +160,13 @@ set $menu-power echo 'suspend\nhibernate\nhybrid-sleep\nreboot\npoweroff' | wofi
 bindsym $mod+Shift+p exec $menu-power
 
 #
+# Programs
+#
+
+# firefox
+bindsym $mod+f exec firefox
+
+#
 # Moving around
 #
 
