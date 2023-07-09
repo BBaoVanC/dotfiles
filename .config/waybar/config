@@ -64,16 +64,16 @@
     "pulseaudio": {
         "on-click": "pavucontrol",
         "format": "{icon} {volume}% {format_source}",
-        "format-muted": "婢 {format_source}",
+        "format-muted": "󰖁 {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "婢 {icon} {format_source}",
+        "format-bluetooth-muted": "󰖁 {icon} {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": " ",
-            "hands-free": "",
-            "headset": " ",
-            "phone": " ",
+            "hands-free": "󰂰 ",
+            "headset": "󰋎 ",
+            "phone": "󰏶 ",
             "portable": "",
             "car": " ",
             "default": ["", "", ""]
@@ -81,11 +81,11 @@
     },
     "network": {
         // "format-ethernet": " ",
-        "format-ethernet": " Ethernet",
+        "format-ethernet": "󰈀 Ethernet",
         "format-wifi": "  {essid} ({signalStrength}%)",
         "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "  Disconnected",
-        "format-disabled": " Disabled",
+        "format-disconnected": "󰅤  Disconnected",
+        "format-disabled": "󰀝 Disabled",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
         // for some reason these speeds are not accurate
         // "tooltip-format": " {bandwidthDownBytes}  {bandwidthUpBytes}"
@@ -101,7 +101,7 @@
     //     "interval": 2,
     //     "on-click": "swaymsg 'exec kitty htop -s PERCENT_CPU'",
     //     // "states": [],
-    //     "format": " {usage}%"
+    //     "format": "󰍛 {usage}%"
     // },
     // "memory": {
     //     "interval": 10,
@@ -116,11 +116,11 @@
     //     "exec": "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g"
     // },
     // "temperature#cpu": {
-    //     "format": " {temperatureC}°C"
+    //     "format": "󰍛 {temperatureC}°C"
     // },
     // "temperature#gpu": {
     //     //"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input"
-    //     "format": " {temperatureC}°C",
+    //     "format": "󰍛 {temperatureC}°C",
     //     // TODO: figure out why critical threshhold doesn't work
     // },
     // "backlight": {
@@ -145,7 +145,7 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time} ({power}W)",
         // "format-good": "", // An empty format will hide the module
