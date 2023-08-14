@@ -1,6 +1,6 @@
 set background=dark
 set number
-set ignorecase
+set smartcase
 set incsearch
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
@@ -20,36 +20,30 @@ set autoindent
 "noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 "noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
-" wrap at word boundaries
+" soft wrap at word boundaries to look nicer
 "set linebreak
 
 " Map escape to clear search highlighting
 nnoremap <esc> :noh<return>
 
-" Highlight current line number and line
-" Makes it easier to find where the cursor is
+" highlight current line number and line
+" makes it easier to find where the cursor is
 set cursorline
 
-" Enable mouse support
+" enable mouse support
 set mouse=a
 
-" Change characters in `:set list`
+" display characters for `:set list`
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 
-" ==> More natural split opening
+" more natural split opening
 set splitbelow
 set splitright
 
 
+" leave some lines of space behind/in front of cursor line when scrolling
 set scrolloff=5
-
-
-" ==> Make navigation between splits easier
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
 
 
 " ==> Keybinds to search for selected text, forwards or backwards using * and #
@@ -82,6 +76,7 @@ Plug 'rust-lang/rust.vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+" is not started automatically
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -90,18 +85,16 @@ syntax enable
 filetype plugin indent on
 
 
-" Undo tree
 nnoremap <F5> :UndotreeToggle<CR>
 
 
-" ==> Theme settings
 try
   colorscheme bobaschemedark
 catch
   echo "Error loading color scheme: " . v:exception
 endtry
 
-"hi StatusLine ctermbg=none
+" is default with regular vim, only show statusline if multiple splits
 "set laststatus=1
 
 
@@ -167,20 +160,20 @@ nmap <leader>p <Plug>(coc-format)
 vmap <leader>p <Plug>(coc-format-selected)
 
 
-" ==> Don't start coc.nvim automatically
+" don't start coc.nvim automatically
 let g:coc_start_at_startup = 0
 
 
-" ==> Disable automatic indentation
+" disable auto indent
 let g:sleuth_no_filetype_indent_on = 1
 filetype indent off
 
 
-" Italicize comments
+" italicize comments
 highlight Comment cterm=italic
 
 
-" F10 to see highlight group under cursor
+" F10 to see highlight group under cursor, for theme debug
 nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
