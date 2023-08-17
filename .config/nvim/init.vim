@@ -1,6 +1,7 @@
 set background=dark
 set number
 set smartcase
+set ignorecase
 set incsearch
 "" Use system clipboard by default
 "set clipboard+=unnamedplus
