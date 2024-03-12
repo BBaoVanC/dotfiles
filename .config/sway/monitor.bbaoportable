@@ -4,9 +4,9 @@ set $disp1 "Hewlett Packard HP W2072a CNC217SP4S"
 set $disp2 "Dell Inc. DELL 1907FPV CC388742ABGX"
 
 # main monitor
-output $disp1 pos 0 70
+output $disp1 pos 1280 70
 # second (right) monitor
-output $disp2 pos 1600 0
+output $disp2 pos 0 0
 
 workspace 1 output $disp1 $disp2
 workspace 2 output $disp2 $disp1
