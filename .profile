@@ -26,6 +26,9 @@ export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
 export GHCUP_USE_XDG_DIRS=true
 
+# ==> Privacy
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 # ==> Nvidia wayland stuff
 [ "$HOSTNAME" = "bbaoportable" ] && export LIBVA_DRIVER_NAME=nvidia
 [ "$HOSTNAME" = "bbaoportable" ] && export GBM_BACKEND=nvidia-drm
