@@ -1,0 +1,10 @@
+[hyprsplit]
+enabled = true
+failed = false
+filename = 'hyprsplit.so'
+
+[repository]
+hash = 'd4c59ca20581b04ef9348944377a12b911d9b5e3'
+name = 'hyprsplit'
+rev = ''
+url = 'https://github.com/shezdy/hyprsplit'
