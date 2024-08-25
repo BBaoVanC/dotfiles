@@ -3,7 +3,7 @@
 /* TODO: maybe use font awesome font instead of nerd font */
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: monospace;
+    font-family: monospace, "JetBrains Mono NL Nerd Font";
     font-size: 13px;
 }
 
