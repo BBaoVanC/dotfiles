@@ -52,6 +52,7 @@ alias rscp="rsync -avPc" # add -z to compress
 alias eat_newline="perl -pi -e 'chomp if eof'"
 alias dragon="dragon-drop -a -x"
 alias sshunknown="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+alias wineshell="flatpak run --command=bash org.winehq.Wine"
 
 # Use different wine prefix
 winepref() {
