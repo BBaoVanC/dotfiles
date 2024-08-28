@@ -1,5 +1,0 @@
-[Desktop Entry]
-Exec=dunstctl context
-Name=dunstctl context
-NoDisplay=true
-Type=Application

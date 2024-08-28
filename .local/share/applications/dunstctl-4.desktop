@@ -1,5 +1,0 @@
-[Desktop Entry]
-Exec=dunstctl action
-Name=dunstctl action
-NoDisplay=true
-Type=Application

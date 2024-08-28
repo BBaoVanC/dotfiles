@@ -1,5 +1,0 @@
-[Desktop Entry]
-Exec=dunstctl history-pop
-Name=dunstctl history-pop
-NoDisplay=true
-Type=Application
