@@ -8,8 +8,7 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    background-color: rgba(32, 32, 32, 0.5);
     color: #ffffff;
 }
 
@@ -209,7 +208,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: #434b4d;
 }
 
 #idle_inhibitor.activated {
