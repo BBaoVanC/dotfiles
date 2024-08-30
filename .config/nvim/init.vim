@@ -62,7 +62,7 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'BBaoVanC/bobascheme', { 'rtp': 'vim' }
+Plug 'BBaoVanC/bobascheme', { 'rtp': 'neovim' }
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
@@ -168,10 +168,6 @@ let g:coc_start_at_startup = 0
 " disable auto indent
 let g:sleuth_no_filetype_indent_on = 1
 filetype indent off
-
-
-" italicize comments
-highlight Comment cterm=italic
 
 
 " F10 to see highlight group under cursor, for theme debug
