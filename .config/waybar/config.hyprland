@@ -1,6 +1,5 @@
 // vim: ft=jsonc
 {
-    // "include": "$HOME/.config/waybar/temp_paths",
     "height": 30,
     "spacing": 4,
     "layer": "top",
