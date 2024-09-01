@@ -77,8 +77,7 @@ Plug 'rust-lang/rust.vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-" is not started automatically
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " https://github.com/rust-lang/rust.vim#installation
@@ -138,8 +137,6 @@ let g:vim_markdown_auto_insert_bullets = 0
 let g:vim_markdown_strikethrough = 1
 
 
-" use <c-space>for trigger completion
-inoremap <silent><expr> <c-space> coc#refresh()
 " use tab to move between autocomplete options
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -149,20 +146,6 @@ inoremap <expr> <up> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-" use \p to format text
-nmap <leader>p <Plug>(coc-format)
-vmap <leader>p <Plug>(coc-format-selected)
-
-
-" don't start coc.nvim automatically
-let g:coc_start_at_startup = 0
 
 
 " disable auto indent
@@ -171,6 +154,77 @@ filetype indent off
 
 
 " F10 to see highlight group under cursor, for theme debug
-nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+nnoremap <F10> :Inspect<CR>
+nnoremap <S-F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+
+" treesitter config
+lua << EOF
+require("nvim-treesitter.configs").setup({
+  -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
+  ensure_installed = {
+    "asm",
+    "bash",
+    "c",
+    "c_sharp",
+    "cmake",
+    --"comment",
+    "cpp",
+    "css",
+    "csv",
+    "diff",
+    "dockerfile",
+    "editorconfig",
+    "elixir",
+    "erlang",
+    "git_config",
+    "git_rebase",
+    "gitattributes",
+    "gitcommit",
+    "gitignore",
+    "go",
+    "gomod",
+    "gosum",
+    "groovy",
+    "haskell",
+    --"haskell_persistent",
+    "html",
+    "http",
+    "hyprlang",
+    "ini",
+    "java",
+    "javascript",
+    "json",
+    "kotlin",
+    --"latex",
+    "lua",
+    "make",
+    "muttrc",
+    "nix",
+    "perl",
+    "php",
+    "proto",
+    "ruby",
+    "rust",
+    "scss",
+    "sql",
+    "typescript",
+    "yaml",
+    "zig",
+  },
+
+  auto_install = true,
+  highlight = {
+    enable = true,
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+})
+--vim.wo.foldmethod = 'expr'
+--vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+EOF
