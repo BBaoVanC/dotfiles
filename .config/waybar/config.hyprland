@@ -5,46 +5,47 @@
     "layer": "top",
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/submap"
+        "hyprland/submap",
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/window",
     ],
     "modules-right": [
         //"mpd",
         "idle_inhibitor",
         "custom/media",
-        "pulseaudio",
+        "wireplumber",
+        //"wireplumber#microphone",
         "network",
         "battery",
         "clock",
-        "tray"
+        "tray",
     ],
     "hyprland/workspaces": {
         "format": "{icon}{name}",
         "format-icons": {
             "urgent": " ",
             "special": " ",
-            "default": ""
+            "default": "",
         },
-        "show-special": true
+        "show-special": true,
     },
     "hyprland/submap": {
         "format": "<span style='italic'>{}</span>",
         "on-click": "hyprctl dispatch submap reset",
-        "tooltip": false
+        "tooltip": false,
     },
 
     "hyprland/window": {
-        "format": "{title}"
+        "format": "{title}",
     },
 
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "  staying awake",
-            "deactivated": " "
-        }
+            "deactivated": " ",
+        },
     },
     "custom/media": {
         "format": "{icon} {}",
@@ -52,19 +53,16 @@
         "max-length": 32,
         "format-icons": {
             "spotify": "",
-            "default": "🎜"
+            "default": "🎜",
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
     },
-    "pulseaudio": {
-        "on-click": "pavucontrol",
-        "format": "{icon} {volume}% {format_source}",
-        "format-muted": "󰖁 {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "󰖁 {icon} {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+    "wireplumber": {
+        "on-click": "pwvucontrol",
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
+        "format-bluetooth": "󰂰 {icon} {volume}%",
         "format-icons": {
             "headphone": " ",
             "hands-free": "󰂰 ",
@@ -72,9 +70,16 @@
             "phone": "󰏶 ",
             "portable": "",
             "car": " ",
-            "default": ["", "", ""]
-        }
+            "default": ["", "", ""],
+        },
     },
+    // doesn't seem to exist?
+    //"wireplumber#microphone": {
+    //    "on-click": "pwvucontrol",
+    //    "format": " {volume}%",
+    //    "format-muted": "",
+    //    "format-bluetooth": "󰂰  {volume}%",
+    //},
     "network": {
         // "format-ethernet": " ",
         "format-ethernet": "󰈀 Ethernet",
@@ -82,9 +87,9 @@
         "format-linked": " {ifname} (No IP)",
         "format-disconnected": "󰅤  Disconnected",
         "format-disabled": "󰀝 Disabled",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
         // for some reason these speeds are not accurate
-        // "tooltip-format": " {bandwidthDownBytes}  {bandwidthUpBytes}"
+        // "tooltip-format": " {bandwidthDownBytes}  {bandwidthUpBytes}",
     },
     "battery": {
         "states": {
@@ -98,15 +103,15 @@
         "format-alt": "{icon} {time} ({power}W)",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
     },
     "clock": {
         "interval": 1,
         "format": "{:%I:%M:%S %p}",
         "format-alt": "{:%Y-%m-%d}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
     "tray": {
-        "spacing": 10
-    }
+        "spacing": 10,
+    },
 }
