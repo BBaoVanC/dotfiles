@@ -1,10 +1,28 @@
 #!/bin/sh
 
+case "$1" in
+    "-"*)
+        case "$1" in
+            "-g")
+                git=1
+                ;;
+            *)
+                echo "invalid flag, use -g to do git grep"; exit 1
+                ;;
+        esac
+        shift
+        ;;
+esac
+
 # TODO: support adding flags such as -E
 
 [ -z "$1" ] || [ -z "$2" ] && echo "Usage: $0 [regex] [directory]" && exit 1
 
-filename=$(grep "$1" -lr "$2" | fzf)
+if [ -z "$git" ]; then
+    filename=$(grep "$1" -lr "$2" | fzf)
+else
+    filename=$(git grep -l "$1" "$2" | fzf)
+fi
 
 [ -z "$filename" ] && exit 0
 nvim -c "/$1" "$filename"
