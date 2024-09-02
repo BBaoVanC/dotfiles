@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# TODO: support adding flags such as -E
+
+[ -z "$1" ] || [ -z "$2" ] && echo "Usage: $0 [regex] [directory]" && exit 1
+
+filename=$(grep "$1" -lr "$2" | fzf)
+
+[ -z "$filename" ] && exit 0
+nvim -c "/$1" "$filename"
