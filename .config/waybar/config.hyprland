@@ -50,7 +50,8 @@
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
-        "max-length": 32,
+        // with this set, if the window title is too long, it overrides this and media just becomes "..."
+        //"max-length": 32,
         "format-icons": {
             "spotify": "",
             "default": "🎜",
