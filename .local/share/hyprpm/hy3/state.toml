@@ -4,7 +4,7 @@ failed = false
 filename = 'hy3.so'
 
 [repository]
-hash = '23682f7707e7f051618c1c35ce09708b80164c62'
+hash = 'e91460d63627cdad417cac2c09897be58094e2e0'
 name = 'hy3'
 rev = ''
 url = 'https://github.com/outfoxxed/hy3'
