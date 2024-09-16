@@ -30,3 +30,5 @@
 	insteadOf = https://git.boba.best/
 [tag]
 	gpgSign = true
+[init]
+	defaultBranch = master
