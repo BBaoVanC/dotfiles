@@ -198,7 +198,7 @@ require("nvim-treesitter.configs").setup({
     "javascript",
     "json",
     "kotlin",
-    --"latex",
+    "latex",
     "lua",
     "make",
     "muttrc",
