@@ -74,6 +74,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'sbdchd/neoformat'
 Plug 'whiteinge/diffconflicts'
 Plug 'rust-lang/rust.vim'
+Plug 'lervag/vimtex'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -126,6 +127,10 @@ command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set e
 "syn region htmlTag start=+<[^/]+ end=+>+ fold oneline contains=htmlTagN,htmlString,htmlArg,htmlValue,htmlTagError,htmlEvent,htmlCssDefinition,@htmlPreproc,@htmlArgCluster
 
 
+" vimtex
+let g:vimtex_view_method = 'zathura'
+
+
 " markdown settings
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
@@ -163,58 +168,7 @@ nnoremap <S-F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '
 " treesitter config
 lua << EOF
 require("nvim-treesitter.configs").setup({
-  -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
-  ensure_installed = {
-    "asm",
-    "bash",
-    "c",
-    "c_sharp",
-    "cmake",
-    --"comment",
-    "cpp",
-    "css",
-    "csv",
-    "diff",
-    "dockerfile",
-    "editorconfig",
-    "elixir",
-    "erlang",
-    "git_config",
-    "git_rebase",
-    "gitattributes",
-    "gitcommit",
-    "gitignore",
-    "go",
-    "gomod",
-    "gosum",
-    "groovy",
-    "haskell",
-    --"haskell_persistent",
-    "html",
-    "http",
-    "hyprlang",
-    "ini",
-    "java",
-    "javascript",
-    "json",
-    "kotlin",
-    "latex",
-    "lua",
-    "make",
-    "muttrc",
-    "nix",
-    "perl",
-    "php",
-    "proto",
-    "ruby",
-    "rust",
-    "scss",
-    "sql",
-    "typescript",
-    "yaml",
-    "zig",
-  },
-
+  -- no need for ensure_installed since auto_install covers it
   auto_install = true,
   highlight = {
     enable = true,
@@ -223,6 +177,9 @@ require("nvim-treesitter.configs").setup({
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
+
+    -- covered by vimtex plugin
+    disable = { "latex" }
   },
 })
 --vim.wo.foldmethod = 'expr'
