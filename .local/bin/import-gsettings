@@ -14,3 +14,11 @@ gsettings set "$gnome_schema" gtk-theme "$gtk_theme"
 gsettings set "$gnome_schema" icon-theme "$icon_theme"
 gsettings set "$gnome_schema" cursor-theme "$cursor_theme"
 gsettings set "$gnome_schema" font-name "$font_name"
+
+prefer_dark_theme="$(grep 'gtk-application-prefer-dark-theme' "$config" | sed 's/.*\s*=\s*//')"
+if [ "$prefer_dark_theme" -eq "1" ]; then
+    gsettings set "$gnome_schema" color-scheme prefer-dark
+fi
+if [ "$prefer_dark_theme" -eq "0" ]; then
+    gsettings set "$gnome_schema" color-scheme prefer-light
+fi
