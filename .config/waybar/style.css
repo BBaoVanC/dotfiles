@@ -12,9 +12,12 @@ window#waybar {
     color: #ffffff;
 }
 
-
 window#waybar.hidden {
     opacity: 0.2;
+}
+
+window#waybar > .horizontal {
+    padding: 0 16px;
 }
 
 button {
