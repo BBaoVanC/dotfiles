@@ -91,14 +91,11 @@ button:hover {
     }
 }
 
+#battery.warning:not(.charging) {
+    color: @yellow-light
+}
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    color: @red-light;
 }
 
 label:focus {

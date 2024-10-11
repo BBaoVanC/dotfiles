@@ -47,3 +47,23 @@
 @define-color pagination-active-hover-text black;
 @define-color pagination-active-background #1a3d69; /* lch(25, 30, 270) */
 @define-color pagination-active-hover-background #2061a8; /* lch(40, 45, 270) */
+
+/* 16 colors */
+
+@define-color black-dark     #2b2b2b;
+@define-color red-dark       #b04744;
+@define-color green-dark     #167a42;
+@define-color yellow-dark    #8c6110;
+@define-color blue-dark      #216dbf;
+@define-color magenta-dark   #9f4b95;
+@define-color cyan-dark      #29757f;
+@define-color white-dark     #bfbfbf;
+
+@define-color black-light    #5e5e5e;
+@define-color red-light      #eb7c74;
+@define-color green-light    #54b073;
+@define-color yellow-light   #b78738;
+@define-color blue-light     #66a1f8;
+@define-color magenta-light  #d87fcc;
+@define-color cyan-light     #61aab3;
+@define-color white-light    #e9e9e9;
