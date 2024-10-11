@@ -16,7 +16,6 @@
         "custom/media",
         "wireplumber",
         //"wireplumber#microphone",
-        "network",
         "battery",
         "clock",
         "tray",
@@ -81,17 +80,6 @@
     //    "format-muted": "",
     //    "format-bluetooth": "󰂰  {volume}%",
     //},
-    "network": {
-        // "format-ethernet": " ",
-        "format-ethernet": "󰈀 Ethernet",
-        "format-wifi": "  {essid} ({signalStrength}%)",
-        "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "󰅤  Disconnected",
-        "format-disabled": "󰀝 Disabled",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        // for some reason these speeds are not accurate
-        // "tooltip-format": " {bandwidthDownBytes}  {bandwidthUpBytes}",
-    },
     "battery": {
         "states": {
             // "good": 95,
