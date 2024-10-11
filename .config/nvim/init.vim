@@ -75,6 +75,7 @@ Plug 'sbdchd/neoformat'
 Plug 'whiteinge/diffconflicts'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -163,6 +164,15 @@ nnoremap <F10> :Inspect<CR>
 nnoremap <S-F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+
+" snippets
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 " treesitter config
