@@ -51,7 +51,7 @@ echo $DESKTOP_SESSION | grep sway > /dev/null && export XDG_CURRENT_DESKTOP=sway
 export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 
 # ==> Qt
-[ "$XDG_CURRENT_DESKTOP" != "KDE" ] && export QT_QPA_PLATFORMTHEME=qt6ct
+[ "$XDG_CURRENT_DESKTOP" != "KDE" ] && export QT_QPA_PLATFORMTHEME=qt5ct
 
 # wlroots debug
 #export WLR_SCENE_DEBUG_DAMAGE=rerender
