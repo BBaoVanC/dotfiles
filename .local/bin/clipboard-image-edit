@@ -1,0 +1,23 @@
+#!/bin/sh
+
+filename="$(mktemp /tmp/swappy-edit.XXXXXXXX.png)"
+
+wl-paste > "$filename" 2>&1
+if [ "$?" -ne 0 ]; then
+    notify-send "Error grabbing image from clipboard" "$(cat $filename)"
+    rm "$filename"
+    exit 1
+fi
+
+swappy_output="$(swappy -f $filename -o $filename.out 2>&1)"
+if [ "$?" -ne 0 ]; then
+    notify-send "Error editing image" "$swappy_output"
+    rm "$filename"
+    rm "$filename.out"
+    exit 1
+fi
+
+wl-copy < "$filename.out"
+rm "$filename"
+rm "$filename.out"
+exit 0
