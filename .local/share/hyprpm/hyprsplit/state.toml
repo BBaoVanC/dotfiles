@@ -4,7 +4,7 @@ failed = false
 filename = 'hyprsplit.so'
 
 [repository]
-hash = '906bac033b17d73c86342f9d25e1b4c2564b8abf'
+hash = '27eef65a6b1aafc0baa34aba3b89306aa0c59d9e'
 name = 'hyprsplit'
 rev = ''
 url = 'https://github.com/shezdy/hyprsplit'
