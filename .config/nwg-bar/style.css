@@ -29,6 +29,10 @@ button {
 	margin: 5px
 }
 
-button:hover {
+button:focus {
 	background-color: #212121;
+	outline: none;
+}
+button:hover {
+	background-color: #303030;
 }
