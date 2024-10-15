@@ -1,32 +1,25 @@
 [
   {
-    "label": "Lock",
-    "exec": "hyprlock --immediate",
-    "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
-  },
-  {
-    "label": "Logout",
-    "exec": "hyprctl exit",
-    "icon": "/usr/share/nwg-bar/images/system-log-out.svg"
-  },
-  {
     "label": "Sleep",
-    "exec": "systemctl suspend",
+    "exec": "systemctl sleep",
     "icon": "/usr/share/nwg-bar/images/system-suspend.svg"
   },
-  {
-    "label": "Hibernate",
-    "exec": "systemctl hibernate",
-    "icon": "/usr/share/nwg-bar/images/system-hibernate.svg"
-  },
+
   {
     "label": "Reboot",
     "exec": "systemctl reboot",
     "icon": "/usr/share/nwg-bar/images/system-reboot.svg"
   },
+
   {
     "label": "Shutdown",
     "exec": "systemctl poweroff",
     "icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
+  },
+
+  {
+    "label": "Hibernate",
+    "exec": "systemctl hibernate",
+    "icon": "/usr/share/nwg-bar/images/system-hibernate.svg"
   }
 ]
