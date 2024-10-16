@@ -52,7 +52,8 @@
         "format-icons": ["󰃞", "󰃟", "󰃠"],
     },
     "custom/media": {
-        "format": "{icon} {}",
+        // for why {0}, see https://github.com/Alexays/Waybar/issues/3623
+        "format": "{icon} {0}",
         "return-type": "json",
         // with this set, if the window title is too long, it overrides this and media just becomes "..."
         //"max-length": 32,
