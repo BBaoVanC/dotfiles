@@ -61,6 +61,8 @@ winepref() {
     $@
 }
 
+alias nemohere="nemo . &> /dev/null & disown"
+
 # Python virtualenv
 alias senv="source env/bin/activate"
 alias svenv="source venv/bin/activate"
