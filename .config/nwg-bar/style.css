@@ -30,9 +30,9 @@ button {
 }
 
 button:focus {
-	background-color: #212121;
+	background-color: rgba(127, 127, 127, 0.25);
 	outline: none;
 }
 button:hover {
-	background-color: #303030;
+	background-color: rgba(127, 127, 127, 0.5);
 }
