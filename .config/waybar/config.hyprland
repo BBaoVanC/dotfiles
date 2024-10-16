@@ -13,6 +13,7 @@
     "modules-right": [
         //"mpd",
         "idle_inhibitor",
+        "backlight",
         "custom/media",
         "wireplumber",
         //"wireplumber#microphone",
@@ -45,6 +46,10 @@
             "activated": "  staying awake",
             "deactivated": " ",
         },
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
     },
     "custom/media": {
         "format": "{icon} {}",
