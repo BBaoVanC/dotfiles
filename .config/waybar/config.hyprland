@@ -14,7 +14,7 @@
         //"mpd",
         "idle_inhibitor",
         "backlight",
-        "custom/media",
+        "mpris",
         "wireplumber",
         //"wireplumber#microphone",
         "battery",
@@ -51,18 +51,15 @@
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
     },
-    "custom/media": {
-        // for why {0}, see https://github.com/Alexays/Waybar/issues/3623
-        "format": "{icon} {0}",
-        "return-type": "json",
-        // with this set, if the window title is too long, it overrides this and media just becomes "..."
-        //"max-length": 32,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜",
+    "mpris": {
+        "format": "{status_icon} {dynamic}",
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "stopped": "'",
         },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+        "title-len": 24,
+        "dynamic-len": 48,
     },
     "wireplumber": {
         "on-click": "pwvucontrol",
