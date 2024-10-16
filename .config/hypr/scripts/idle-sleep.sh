@@ -2,7 +2,7 @@
 
 case "$HOSTNAME" in
     bobafw)
-        systemctl suspend-then-hibernate
+        systemctl sleep
         ;;
     *)
         # do nothing on my desktops
