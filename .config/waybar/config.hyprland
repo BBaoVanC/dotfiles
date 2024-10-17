@@ -64,6 +64,7 @@
         },
         "title-len": 24,
         "dynamic-len": 48,
+        "dynamic-order": ["title", "artist"]
     },
     "wireplumber": {
         "on-click": "pwvucontrol",
