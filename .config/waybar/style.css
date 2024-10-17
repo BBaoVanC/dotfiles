@@ -83,6 +83,11 @@ button:hover {
     margin-right: 0;
 }
 
+#systemd-failed-units {
+    background-color: @red-dark;
+    color: @white-light;
+}
+
 #battery.charging, #battery.plugged {
     color: #26A65B;
 }

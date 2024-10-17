@@ -12,6 +12,7 @@
     ],
     "modules-right": [
         //"mpd",
+        "systemd-failed-units",
         "idle_inhibitor",
         "backlight",
         "mpris",
@@ -40,6 +41,9 @@
         "format": "{title}",
     },
 
+    "systemd-failed-units": {
+        "on-click": "foot sh -xc 'systemctl list-units --no-pager --failed; systemctl list-units --no-pager --failed --user; zsh -i'",
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
