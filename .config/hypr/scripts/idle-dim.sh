@@ -2,9 +2,9 @@
 
 case "$HOSTNAME" in
     bobafw)
-        systemctl sleep
+        brightnessctl -s set 1
         ;;
     *)
-        hyprctl dispatch dpms off
+        # my desktops don't have brightness
         ;;
 esac

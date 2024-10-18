@@ -2,9 +2,9 @@
 
 case "$HOSTNAME" in
     bobafw)
-        systemctl sleep
+        # nothing to do after wake
         ;;
     *)
-        hyprctl dispatch dpms off
+        hyprctl dispatch dpms on
         ;;
 esac
