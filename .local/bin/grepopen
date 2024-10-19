@@ -26,4 +26,6 @@ fi
 
 [ -z "$filename" ] && exit 0
 search_term="$(echo $1 | tr '[:upper:]' '[:lower:]')"
-nvim -c "/$search_term" "$filename"
+# vim said I can use any single-byte character instead of / as the search separator.
+# \007 (the bell character) sounds good enough to me.
+nvim -c ":silent g \V$search_term" "$filename"
