@@ -57,3 +57,7 @@ export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 #export WLR_SCENE_DEBUG_DAMAGE=rerender
 #export WLR_SCENE_DEBUG_DAMAGE=highlight
 #export WLR_XWAYLAND=~/git-repos/xserver/build/hw/xwayland/Xwayland
+
+# ==> Docker
+systemctl --user is-active --quiet docker.socket
+[ "$?" -eq 0 ] && export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
