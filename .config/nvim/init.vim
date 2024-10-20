@@ -128,6 +128,12 @@ command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set e
 "syn region htmlTag start=+<[^/]+ end=+>+ fold oneline contains=htmlTagN,htmlString,htmlArg,htmlValue,htmlTagError,htmlEvent,htmlCssDefinition,@htmlPreproc,@htmlArgCluster
 
 
+" vim-signify
+let g:signify_sign_add      = '┃'
+let g:signify_sign_delete   = '┃'
+let g:signify_sign_change   = '┃'
+
+
 " vimtex
 let g:vimtex_view_method = 'zathura'
 
