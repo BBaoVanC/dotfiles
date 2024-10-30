@@ -77,6 +77,7 @@ application/x-matroska=mpv.desktop;
 application/x-shellscript=nvim.desktop;
 application/xhtml+xml=firefox.desktop;
 application/xml=nvim.desktop;
+application/zip=org.gnome.FileRoller.desktop;
 audio/aac=mpv.desktop;
 audio/mp4=mpv.desktop;
 audio/mpeg=mpv.desktop;
