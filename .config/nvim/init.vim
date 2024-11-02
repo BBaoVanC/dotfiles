@@ -17,6 +17,10 @@ set softtabstop=4
 set autoindent
 
 
+" prevent indentation from being deleted if line starts with `#`
+inoremap # X#
+
+
 " use j/k to move screen lines *useful for soft wrapping)
 "noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 "noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
