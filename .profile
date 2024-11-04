@@ -61,3 +61,4 @@ export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 # ==> Docker
 systemctl --user is-active --quiet docker.socket
 [ "$?" -eq 0 ] && export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+[ "$HOSTNAME" = "bobafw" ] && export CROSS_ROOTLESS_CONTAINER_ENGINE=1
