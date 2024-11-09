@@ -1,0 +1,4 @@
+[Unit]
+Description=User systemd services for Hyprland graphical session
+#Wants=
+BindsTo=graphical-session.target
