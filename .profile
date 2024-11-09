@@ -48,6 +48,8 @@ echo $DESKTOP_SESSION | grep sway > /dev/null && export XDG_CURRENT_DESKTOP=sway
 [ "$HOSTNAME" = "bobafw" ] && export VDPAU_DRIVER=radeonsi
 
 # ==> GNOME Keyring
+# FIXME: if https://github.com/sddm/sddm/issues/1276 solved, this can be removed
+# gcr-ssh-agent.socket sets SSH_AUTH_SOCK in systemd environment
 export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 
 # ==> Qt
