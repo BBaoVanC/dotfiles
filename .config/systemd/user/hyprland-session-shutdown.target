@@ -1,0 +1,12 @@
+# https://github.com/alebastr/sway-systemd/blob/d2c149340a6836c8d6abd2277a6b511a480871a8/units/sway-session-shutdown.target
+
+[Unit]
+Description=Shutdown running Hyprland session
+DefaultDependencies=no
+StopWhenUnneeded=true
+
+Conflicts=graphical-session.target graphical-session-pre.target
+After=graphical-session.target graphical-session-pre.target
+
+Conflicts=hyprland-session.target
+After=hyprland-session.target

@@ -1,4 +1,8 @@
+# https://github.com/alebastr/sway-systemd/blob/d2c149340a6836c8d6abd2277a6b511a480871a8/units/sway-session.target
+
 [Unit]
 Description=User systemd services for Hyprland graphical session
 #Wants=
 BindsTo=graphical-session.target
+Wants=graphical-session-pre.target
+After=graphical-session-pre.target
