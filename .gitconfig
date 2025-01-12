@@ -6,6 +6,7 @@
 	editor = nvim
 [commit]
 	gpgsign = true
+	verbose = true
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
