@@ -78,6 +78,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -89,6 +92,13 @@ filetype plugin indent on
 
 
 nnoremap <F5> :UndotreeToggle<CR>
+
+
+" telescope.nvim binds
+nnoremap <Leader>ff <Cmd>Telescope find_files<CR>
+nnoremap <Leader>fg <Cmd>Telescope live_grep<CR>
+nnoremap <Leader>fb <Cmd>Telescope buffers<CR>
+nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
 
 
 try
