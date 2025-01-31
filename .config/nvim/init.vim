@@ -77,6 +77,7 @@ Plug 'whiteinge/diffconflicts'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
+Plug 'stevearc/oil.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
@@ -212,3 +213,5 @@ require("nvim-treesitter.configs").setup({
 --vim.wo.foldmethod = 'expr'
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 EOF
+
+lua require("oil").setup()
