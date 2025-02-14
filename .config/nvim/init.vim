@@ -98,6 +98,7 @@ nnoremap <F5> :UndotreeToggle<CR>
 " telescope.nvim binds
 nnoremap <Leader>ff <Cmd>Telescope find_files<CR>
 nnoremap <Leader>fg <Cmd>Telescope live_grep<CR>
+nnoremap <Leader>fG <Cmd>Telescope grep_string<CR>
 nnoremap <Leader>fb <Cmd>Telescope buffers<CR>
 nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
 
