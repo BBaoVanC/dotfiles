@@ -215,4 +215,8 @@ require("nvim-treesitter.configs").setup({
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 EOF
 
-lua require("oil").setup()
+lua << EOF
+require("oil").setup({
+  default_file_explorer = false,
+})
+EOF
