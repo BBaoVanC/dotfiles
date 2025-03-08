@@ -52,7 +52,7 @@ set color_win_title_bg=blue
 set color_win_title_fg=white
 set confirm_run=true
 set continue=true
-set continue_album=true
+set continue_album=false
 set device=/dev/cdrom
 set display_artist_sort_name=false
 set dsp.alsa.device=
@@ -109,7 +109,7 @@ set pl_sort=
 set play_library=true
 set play_sorted=false
 set progress_bar=line
-set repeat=false
+set repeat=true
 set repeat_current=false
 set replaygain=disabled
 set replaygain_limit=true
@@ -124,14 +124,14 @@ set show_current_bitrate=false
 set show_hidden=false
 set show_playback_position=true
 set show_remaining_time=false
-set shuffle=off
+set shuffle=albums
 set skip_track_info=false
 set smart_artist_sort=true
 set softvol=false
 set softvol_state=0 0
 set sort_albums_by_name=false
 set start_view=tree
-set status_display_program=
+set status_display_program=cmusfm
 set stop_after_queue=false
 set time_show_leading_zero=true
 set tree_width_max=0
@@ -144,7 +144,7 @@ bind browser u win-update
 bind common ! push shell 
 bind common + vol +10%
 bind common , seek -1m
-bind common - vol -10%
+bind common - vol -1%
 bind common . seek +1m
 bind common / search-start
 bind common 1 view tree
@@ -154,7 +154,7 @@ bind common 4 view queue
 bind common 5 view browser
 bind common 6 view filters
 bind common 7 view settings
-bind common = vol +10%
+bind common = vol +1%
 bind common ? search-b-start
 bind common B player-next-album
 bind common C toggle continue
@@ -180,6 +180,7 @@ bind common ^L refresh
 bind common ^R toggle repeat_current
 bind common ^U win-half-page-up
 bind common ^Y win-scroll-up
+bind common _ vol -10%
 bind common a win-add-l
 bind common b player-next
 bind common c player-pause
