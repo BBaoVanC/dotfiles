@@ -59,6 +59,14 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 # }}}
 
+# Disable flow control (so history-search-forward works)
+stty -ixon
+
+# Parity with bash {{{
+# Full list: https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
+bindkey '^U' backward-kill-line
+# }}}
+
 # }}}
 
 # Terminal integrations {{{
