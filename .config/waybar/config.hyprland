@@ -20,6 +20,7 @@
         //"wireplumber#microphone",
         "battery",
         "clock",
+        "bluetooth",
         "tray",
     ],
     "hyprland/workspaces": {
@@ -106,6 +107,11 @@
         "format": "{:%I:%M:%S %p}",
         "format-alt": "{:%Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "bluetooth": {
+        "format-disabled": "󰂲",
+        "format-on": "󰂯",
+        "format-connected": "󰂰",
     },
     "tray": {
         "spacing": 10,
