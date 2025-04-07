@@ -126,6 +126,10 @@ label:focus {
     background-color: #eb4d4b;
 }
 
+#bluetooth.on {
+    background-color: @background-2;
+}
+
 #tray > .passive {
     -gtk-icon-effect: dim;
 }

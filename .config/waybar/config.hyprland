@@ -112,6 +112,8 @@
         "format-disabled": "󰂲",
         "format-on": "󰂯",
         "format-connected": "󰂰",
+        "on-click": "overskride",
+        "on-click-middle": "rfkill toggle bluetooth",
     },
     "tray": {
         "spacing": 10,
