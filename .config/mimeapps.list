@@ -64,6 +64,7 @@ x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/mailto=thunderbird.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 text/x-tex=nvim.desktop;
+audio/vnd.wave=tenacity.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
