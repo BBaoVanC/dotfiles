@@ -72,6 +72,11 @@ javaver() {
     # https://wiki.archlinux.org/title/Java#Launching_an_application_with_the_non-default_java_version
     version="$1"
     shift
-    PATH="/usr/lib/jvm/java-$version-openjdk/bin/:$PATH" $@
+    java_home_path="/usr/lib/jvm/java-$version/bin/"
+    if [ ! -d "$java_home_path" ]; then
+        echo "The path $java_home_path does not exist!"
+        return 1
+    fi
+    PATH="$java_home_path:$PATH" $@
 }
 # }}}
