@@ -57,6 +57,7 @@
         "format-icons": ["󰃞", "󰃟", "󰃠"],
     },
     "mpris": {
+        "on-click-middle": "pwvucontrol",
         "format": "{status_icon} {dynamic}",
         "status-icons": {
             "paused": "",
