@@ -23,10 +23,7 @@ rm "$filename"
 
 if [ "$?" -ne 0 ]; then
     notify-send "Error editing image" "$edit_output"
-    rm "$filename.out"
     exit 1
 fi
 
-wl-copy < "$filename.out"
-rm "$filename.out"
 exit 0
