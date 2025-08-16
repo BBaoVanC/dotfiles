@@ -22,7 +22,7 @@ esac
 rm "$filename"
 
 if [ "$?" -ne 0 ]; then
-    notify-send "Error editing image" "$edit_output"
+    notify-send "Error editing $filename" "$edit_output"
     exit 1
 fi
 
