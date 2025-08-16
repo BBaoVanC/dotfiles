@@ -3,7 +3,7 @@
 edit_program="$1"
 filename="$(mktemp /tmp/$edit_program-edit.XXXXXXXX.png)"
 
-wl-paste > "$filename" 2>&1
+wl-paste -t image/png > "$filename" 2>&1
 if [ "$?" -ne 0 ]; then
     notify-send "Error grabbing image from clipboard" "$(cat $filename)"
     rm "$filename"
