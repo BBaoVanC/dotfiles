@@ -72,12 +72,10 @@ Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 Plug 'whiteinge/diffconflicts'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
-Plug 'stevearc/oil.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.*' }
@@ -152,17 +150,6 @@ let g:signify_sign_change   = '┃'
 let g:vimtex_view_method = 'zathura'
 
 
-" markdown settings
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_toml_frontmatter = 1
-let g:vim_markdown_auto_insert_bullets = 0
-" vim-markdown readme says I want this but it doesnt make any difference, I'll
-" keep it here just in case
-" let g:vim_markdown_new_list_item_indent = 0
-let g:vim_markdown_strikethrough = 1
-
-
 " use tab to move between autocomplete options
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -217,10 +204,4 @@ require("nvim-treesitter.configs").setup({
 })
 --vim.wo.foldmethod = 'expr'
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-EOF
-
-lua << EOF
-require("oil").setup({
-  default_file_explorer = false,
-})
 EOF
