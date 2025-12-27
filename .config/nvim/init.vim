@@ -194,3 +194,8 @@ require("nvim-treesitter.configs").setup({
 --vim.wo.foldmethod = 'expr'
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 EOF
+
+" lsp related settings
+lua << EOF
+vim.diagnostic.config({ virtual_text = true })
+EOF
