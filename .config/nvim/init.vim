@@ -80,7 +80,7 @@ Plug 'SirVer/ultisnips'
 Plug 'stevearc/oil.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.0' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.*' }
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
