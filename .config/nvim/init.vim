@@ -210,6 +210,9 @@ require("nvim-treesitter.configs").setup({
     -- covered by vimtex plugin
     disable = { "latex" }
   },
+  incremental_selection = {
+    enable = true,
+  }
 })
 --vim.wo.foldmethod = 'expr'
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
