@@ -150,17 +150,6 @@ let g:signify_sign_change   = '┃'
 let g:vimtex_view_method = 'zathura'
 
 
-" use tab to move between autocomplete options
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <down> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <up> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" use enter to accept completion
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-
 " disable auto indent
 let g:sleuth_no_filetype_indent_on = 1
 filetype indent off
