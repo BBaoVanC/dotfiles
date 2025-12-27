@@ -84,7 +84,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'do': ':TSUpdate' }
 call plug#end()
 
 " https://github.com/rust-lang/rust.vim#installation
