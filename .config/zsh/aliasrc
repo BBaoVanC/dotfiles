@@ -53,6 +53,9 @@ alias eat_newline="perl -pi -e 'chomp if eof'"
 alias dragon="dragon-drop -a -x"
 alias sshunknown="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias wineshell="flatpak run --command=bash org.winehq.Wine"
+#alias matlab-nspawn="systemd-nspawn -D ~/.local/share/matlab/systemd-nspawn --bind-ro=/dev/dri --bind-ro=/tmp/.X11-unix --bind=/dev/shm --bind=$HOME/.local/share/matlab/releases --setenv=DISPLAY=:0 -b --bind=$HOME/projects/FSAE"
+alias matlab-nspawn="systemd-nspawn -D ~/.local/share/matlab/systemd-nspawn --bind-ro=/dev/dri --bind-ro=/tmp/.X11-unix --bind=/dev/shm --setenv=DISPLAY=:0 -b --bind=$HOME/projects/FSAE"
+alias matlab-nspawn-root="sudo systemd-nspawn -D ~/.local/share/matlab/systemd-nspawn"
 
 # Use different wine prefix
 winepref() {
