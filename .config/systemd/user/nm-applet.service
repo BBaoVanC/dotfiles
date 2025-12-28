@@ -1,0 +1,11 @@
+# Adapted from https://github.com/kevincox/systemd-user-apps/blob/c0959fcf28466f26d53b8d569591bc9b9e425300/nm-applet.service
+
+[Unit]
+Description=Network Manager applet
+
+[Service]
+ExecStart=nm-applet --indicator
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
