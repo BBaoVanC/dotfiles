@@ -4,5 +4,5 @@
 Description=User systemd services for Hyprland graphical session
 #Wants=
 BindsTo=graphical-session.target
-Wants=graphical-session-pre.target
-After=graphical-session-pre.target
+Wants=graphical-session-pre.target xdg-desktop-autostart.target
+After=graphical-session-pre.target xdg-desktop-autostart.target
