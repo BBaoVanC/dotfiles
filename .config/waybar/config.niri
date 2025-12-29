@@ -1,0 +1,35 @@
+// vim: ft=jsonc
+{
+    "height": 30,
+    "spacing": 4,
+    "layer": "top",
+    "modules-left": [
+        "niri/workspaces",
+    ],
+    "modules-center": [
+        "niri/window",
+    ],
+    "modules-right": [
+        //"mpd",
+        "systemd-failed-units",
+        "idle_inhibitor",
+        "backlight",
+        "mpris",
+        "wireplumber",
+        //"wireplumber#microphone",
+        "battery",
+        "clock",
+        "bluetooth",
+        "tray",
+    ],
+    "niri/workspaces": {
+        "format": "{icon}{name}",
+        "format-icons": {
+            "urgent": " ",
+            "special": " ",
+            "default": "",
+        },
+    },
+
+    "include": ["~/.config/waybar/modules-common.jsonc"],
+}
