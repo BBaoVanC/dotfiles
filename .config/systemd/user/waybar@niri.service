@@ -1,10 +1,10 @@
-# Adapted to a multi-instance unit from /usr/lib/systemd/user/waybar.service
+# Adapted from /usr/lib/systemd/user/waybar.service
 [Unit]
 Description=Highly customizable Wayland bar for Sway and Wlroots based compositors
 Documentation=https://github.com/Alexays/Waybar/wiki/
-PartOf=%i-session.target
-After=%i-session.target
-Requisite=%i-session.target
+PartOf=%i.service
+After=%i.service
+Requisite=%i.service
 
 [Service]
 ExecStart=/usr/bin/waybar --config %h/.config/waybar/config.%i
@@ -13,4 +13,4 @@ Restart=on-failure
 Slice=session.slice
 
 [Install]
-WantedBy=%i-session.target
+WantedBy=%i.service
