@@ -1,43 +1,40 @@
+// vim: foldmethod=marker
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
-// Input device configuration.
-// Find the full list of options on the wiki:
+include "host.kdl"
+
+// Input {{{
 // https://yalter.github.io/niri/Configuration:-Input
 input {
+    // make it handled by logind like on my Hyprland config
+    disable-power-key-handling
+
     keyboard {
         repeat-delay 300
         repeat-rate 50
         xkb {
+            layout "us"
+            variant "altgr-intl"
+
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
 
             // If this section is empty, niri will fetch xkb settings
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
         }
 
-        // Enable numlock on startup, omitting this setting disables it.
         numlock
     }
 
-    // Next sections include libinput settings.
-    // Omitting settings disables them, or leaves them at their default values.
-    // All commented-out settings here are examples, not defaults.
     touchpad {
-        // off
         tap
-        // dwt
-        // dwtp
-        // drag false
-        // drag-lock
         natural-scroll
+        scroll-factor 0.2
+        click-method "clickfinger"
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
@@ -45,11 +42,7 @@ input {
     }
 
     mouse {
-        // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "no-scroll"
+        accel-profile "flat"
     }
 
     trackpoint {
@@ -70,44 +63,9 @@ input {
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     // focus-follows-mouse max-scroll-amount="0%"
 }
+// }}}
 
-// You can configure outputs by their name, which you can find
-// by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
-    // Uncomment this line to disable this output.
-    // off
-
-    // Resolution and, optionally, refresh rate of the output.
-    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
-    // If the refresh rate is omitted, niri will pick the highest refresh rate
-    // for the resolution.
-    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
-    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
-
-    // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
-
-    // Transform allows to rotate the output counter-clockwise, valid values are:
-    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-    transform "normal"
-
-    // Position of the output in the global coordinate space.
-    // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
-    // The cursor can only move between directly adjacent outputs.
-    // Output scale and rotation has to be taken into account for positioning:
-    // outputs are sized in logical, or scaled, pixels.
-    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
-    // so to put another output directly adjacent to it on the right, set its x to 1920.
-    // If the position is unset or results in an overlap, the output is instead placed
-    // automatically.
-    position x=1280 y=0
-}
-
+// Layout {{{
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
@@ -263,7 +221,11 @@ layout {
         // bottom 64
     }
 }
+// }}}
 
+// seems like niri imports the entire environment by default?
+//spawn-at-startup "systemctl" "--user" "import-environment" "HOSTNAME"
+spawn-sh-at-startup "swww img ~/wallpaper"
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -295,7 +257,7 @@ hotkey-overlay {
 // You can also set this to null to disable saving screenshots to disk.
 screenshot-path null
 
-// Animation settings.
+// Animation {{{
 // The wiki explains how to configure individual animations:
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
@@ -305,6 +267,9 @@ animations {
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
 }
+// }}}
+
+// Window rules {{{
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
@@ -348,6 +313,17 @@ window-rule {
     clip-to-geometry true
 }
 
+// }}}
+
+// Gestures {{{
+gestures {
+    hot-corners {
+        off
+    }
+}
+// }}}
+
+// Binds {{{
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -623,3 +599,4 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+// }}}
