@@ -261,6 +261,7 @@ screenshot-path null
 // The wiki explains how to configure individual animations:
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
+    slowdown 0.5
     // Uncomment to turn off all animations.
     // off
 
