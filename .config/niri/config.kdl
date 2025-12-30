@@ -6,6 +6,10 @@
 
 include "host.kdl"
 
+// seems like niri imports the entire environment by default?
+//spawn-at-startup "systemctl" "--user" "import-environment" "HOSTNAME"
+spawn-sh-at-startup "swww img ~/wallpaper"
+
 // Input {{{
 // https://yalter.github.io/niri/Configuration:-Input
 input {
@@ -222,20 +226,6 @@ layout {
     }
 }
 // }}}
-
-// seems like niri imports the entire environment by default?
-//spawn-at-startup "systemctl" "--user" "import-environment" "HOSTNAME"
-spawn-sh-at-startup "swww img ~/wallpaper"
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-
-// This line starts waybar, a commonly used bar for Wayland compositors.
-//spawn-at-startup "waybar"
-
-// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
