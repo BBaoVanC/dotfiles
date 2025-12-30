@@ -579,8 +579,9 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Ctrl+Print { screenshot-window; }
+    Shift+Print { screenshot-screen; }
+    Alt+Print { spawn-sh "grim -g \"$(slurp)\" - | tesseract - - | wl-copy"; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
