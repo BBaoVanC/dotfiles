@@ -20,7 +20,7 @@
         "tray",
     ],
     "niri/workspaces": {
-        "format": "{icon}{name}",
+        "format": "{icon}{index}{name}",
         "format-icons": {
             "urgent": " ",
             "special": " ",
