@@ -183,6 +183,14 @@ layer-rule {
         on
     }
 }
+/-layer-rule {
+    match namespace="gtk-layer-shell"
+    // TODO: there doesn't seem to be a way to replicate the Hyprland "dimaround" option
+}
+/-layer-rule {
+    match namespace="waybar"
+    // TODO: waybar blur rule depends on https://github.com/YaLTeR/niri/issues/54
+}
 
 // }}}
 
