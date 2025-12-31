@@ -543,6 +543,7 @@ binds {
     Ctrl+Print { screenshot-window; }
     Shift+Print { screenshot-screen; }
     Alt+Print { spawn-sh "grim -g \"$(slurp)\" - | tesseract - - | wl-copy"; }
+    Mod+G { spawn "clipboard-image-edit" "swappy"; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
