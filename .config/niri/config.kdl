@@ -119,8 +119,8 @@ layout {
         //
         draw-behind-window true
 
-        softness 8
-        spread 4
+        softness 16
+        spread 3
         offset x=0 y=0
         color "#000c"
     }
