@@ -1,0 +1,9 @@
+[Unit]
+Description=Update shared dconf settings in dotfiles
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/bbaovanc/gsettings/sync-gsettings
+
+[Install]
+WantedBy=graphical-session.target
