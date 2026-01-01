@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+# Install some settings I want synchronized between my various systems
+
+from pathlib import Path
+import subprocess
+import sys
+import tomllib
+
+with open(Path.home()/".config"/"bbaovanc"/"gsettings"/"gsettings.toml", "rb") as f:
+	data = tomllib.load(f)
+	prefs_set = data["set"]
+
+had_error = False
+for pref in prefs_set:
+	# TODO: should I have used some GIO library or something instead of calling the `gsettings` command?
+	# capture_output=False by default, so it flows up to the main terminal output
+	output = subprocess.run(["gsettings", "set", pref["schema"], pref["key"], pref["value"]])
+	try:
+		output.check_returncode()
+		print(f"[*] Set {pref["schema"]} {pref["key"]} = '{pref["value"]}'")
+	except subprocess.CalledProcessError:
+		had_error = True
+		print(f"[*] Failed to set {pref["schema"]} {pref["key"]} to '{pref["value"]}'")
+
+if had_error:
+	print("\n[*] There were error(s) changing some settings")
+	exit(1)

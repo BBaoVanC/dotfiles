@@ -1,0 +1,7 @@
+[
+    {
+        "schema": "org.gnome.desktop.wm.preferences",
+        "key": "button-layout",
+        "value": "icon:maximize,close"
+    }
+]
