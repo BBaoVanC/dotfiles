@@ -11,9 +11,9 @@ set cinkeys-=0#
 
 " Set tabs to default to four spaces
 " This will be overridden by vim-sleuth and editorconfig
-set expandtab
-set shiftwidth=4
-set softtabstop=4
+"set expandtab
+"set shiftwidth=4
+"set softtabstop=4
 set autoindent
 
 
