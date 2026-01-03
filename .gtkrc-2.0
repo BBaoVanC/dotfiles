@@ -4,7 +4,7 @@
 include "/home/bbaovanc/.gtkrc-2.0.mine"
 gtk-theme-name="Adwaita"
 gtk-icon-theme-name="Papirus"
-gtk-font-name="Noto Sans,  10"
+gtk-font-name="Noto Sans 10"
 gtk-cursor-theme-name="Vimix-white-cursors"
 gtk-cursor-theme-size=24
 gtk-toolbar-style=3
