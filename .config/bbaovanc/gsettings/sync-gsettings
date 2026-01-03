@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # Install some settings I want synchronized between my various systems
 
+# TODO: would be nice to run `gsettings monitor` on all schemas to watch which
+#       values actually do end up getting updated; I tested and that does work
+
 from pathlib import Path
 import subprocess
 import sys
@@ -8,10 +11,14 @@ import tomllib
 
 # action: set or reset
 # prefs dict: dict[ schema -> dict[key,value] ]
-def perform_prefs(action: str, prefs: dict[str, dict[str, str]]) -> bool:
+def perform_prefs(action: str, prefs: dict[str, dict[str, any]]) -> bool:
 	had_error = False
 	for schema, pref in prefs.items():
 		for key, value in pref.items():
+			if isinstance(value, bool):
+				value = str(value).lower()
+			else:
+				value = str(value)
 			# TODO: should I have used some GIO library or something instead of calling the `gsettings` command?
 			# capture_output=False by default, so it flows up to the main terminal output
 			output = subprocess.run(["gsettings", action, schema, key, value])
