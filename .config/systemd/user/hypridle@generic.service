@@ -1,0 +1,15 @@
+[Unit]
+Description=Hyprland's idle daemon (for add-wants)
+Documentation=https://wiki.hyprland.org/Hypr-Ecosystem/hypridle
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hypridle
+Restart=on-failure
+Slice=session.slice
+
+#[Install]
+#WantedBy=niri.service

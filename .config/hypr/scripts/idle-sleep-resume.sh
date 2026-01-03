@@ -5,6 +5,6 @@ case "$HOSTNAME" in
         # nothing to do after wake
         ;;
     *)
-        hyprctl dispatch dpms on
+        ~/.config/hypr/dpms.sh on
         ;;
 esac

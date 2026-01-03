@@ -5,6 +5,6 @@ case "$HOSTNAME" in
         systemctl sleep
         ;;
     *)
-        hyprctl dispatch dpms off
+        ~/.config/hypr/dpms.sh off
         ;;
 esac
