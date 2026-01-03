@@ -6,22 +6,33 @@ import subprocess
 import sys
 import tomllib
 
+# action: set or reset
+# prefs dict: dict[ schema -> dict[key,value] ]
+def perform_prefs(action: str, prefs: dict[str, dict[str, str]]) -> bool:
+	had_error = False
+	for schema, pref in prefs.items():
+		for key, value in pref.items():
+			# TODO: should I have used some GIO library or something instead of calling the `gsettings` command?
+			# capture_output=False by default, so it flows up to the main terminal output
+			output = subprocess.run(["gsettings", action, schema, key, value])
+			try:
+				output.check_returncode()
+				print(f"[*] Set {schema} {key} = '{value}'")
+			except subprocess.CalledProcessError:
+				had_error = True
+				print(f"[*] Failed to set {schema} {key} to '{value}'")
+
+	return had_error
+
+
 with open(Path.home()/".config"/"bbaovanc"/"gsettings"/"gsettings.toml", "rb") as f:
 	data = tomllib.load(f)
-	prefs_set = data["set"]
 
-had_error = False
-for pref in prefs_set:
-	# TODO: should I have used some GIO library or something instead of calling the `gsettings` command?
-	# capture_output=False by default, so it flows up to the main terminal output
-	output = subprocess.run(["gsettings", "set", pref["schema"], pref["key"], pref["value"]])
-	try:
-		output.check_returncode()
-		print(f"[*] Set {pref["schema"]} {pref["key"]} = '{pref["value"]}'")
-	except subprocess.CalledProcessError:
-		had_error = True
-		print(f"[*] Failed to set {pref["schema"]} {pref["key"]} to '{pref["value"]}'")
+# flatten the multi-layered structure of preferences into a list of schema -> key -> value
+any_errors = False
+if perform_prefs("set", data["set"]):
+	any_errors = True
 
-if had_error:
+if any_errors:
 	print("\n[*] There were error(s) changing some settings")
 	exit(1)

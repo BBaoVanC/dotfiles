@@ -1,9 +1,5 @@
-[[set]]
-schema = "org.gnome.desktop.wm.preferences"
-key = "button-layout"
-value = "icon:maximize,close"
+[set."org.gnome.desktop.wm.preferences"]
+button-layout = "icon:maximize,close"
 
-[[set]]
-schema = "org.gnome.desktop.interface"
-key = "color-scheme"
-value = "prefer-dark"
+[set."org.gnome.desktop.interface"]
+color-scheme = "prefer-dark"
