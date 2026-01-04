@@ -84,6 +84,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'do': ':TSUpdate' }
 Plug 'neovim/nvim-lspconfig'
+
+Plug 'folke/which-key.nvim'
 call plug#end()
 
 " https://github.com/rust-lang/rust.vim#installation
