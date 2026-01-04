@@ -1,3 +1,11 @@
+/* shared styles imported by both light and dark
+ * https://github.com/Alexays/Waybar/blob/06484547d182057159c4bd58d14871c0b7a7f3dc/src/util/portal.cpp#L17
+ * https://github.com/Alexays/Waybar/blob/06484547d182057159c4bd58d14871c0b7a7f3dc/src/client.cpp#L159
+ *
+ * It chooses style-dark.css or style-light.css, and falls back to style.css if neither exist
+ * If we create both, then it doesn't fall back to style.css and we're free to do stuff
+ */
+
 @import url("bobascheme.css");
 
 /* TODO: maybe use font awesome font instead of nerd font */

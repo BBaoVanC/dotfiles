@@ -1,0 +1,5 @@
+@import url("style.css");
+
+window#waybar {
+    background-color: #f00;
+}
