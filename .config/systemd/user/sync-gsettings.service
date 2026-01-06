@@ -1,9 +1,13 @@
 [Unit]
 Description=Update shared dconf settings in dotfiles
+# run before the compositor launches, hopefully that means that it will have
+# configured everything before anything else, i.e. xdg desktop portals, can
+# start with the old settings, or race and cause weird stuff
+Before=graphical-session-pre.target
 
 [Service]
 Type=oneshot
 ExecStart=%h/.config/bbaovanc/gsettings/sync-gsettings
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=graphical-session-pre.target
