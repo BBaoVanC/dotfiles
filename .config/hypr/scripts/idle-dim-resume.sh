@@ -5,6 +5,6 @@ case "$HOSTNAME" in
         brightnessctl -r
         ;;
     *)
-        # no brightness
+        ~/.config/hypr/dpms.sh on
         ;;
 esac

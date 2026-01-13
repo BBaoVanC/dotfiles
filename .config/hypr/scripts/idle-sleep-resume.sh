@@ -5,6 +5,6 @@ case "$HOSTNAME" in
         # nothing to do after wake
         ;;
     *)
-        ~/.config/hypr/dpms.sh on
+        # nothing to do as not even sleeping the desktops in the first place
         ;;
 esac

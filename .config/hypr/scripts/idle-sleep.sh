@@ -5,6 +5,6 @@ case "$HOSTNAME" in
         systemctl sleep
         ;;
     *)
-        ~/.config/hypr/dpms.sh off
+        # don't sleep my desktops, only turn off screen
         ;;
 esac
