@@ -62,6 +62,7 @@ winepref() {
 }
 
 alias nemohere="nemo . &> /dev/null & disown"
+alias browse="xdg-open . &> /dev/null & disown"
 
 # Python virtualenv
 alias senv="source env/bin/activate"

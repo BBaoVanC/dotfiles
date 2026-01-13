@@ -33,8 +33,8 @@ menu:
     desc: Browser (Firefox)
     cmd: "gio launch /usr/share/applications/firefox.desktop"
   - key: "f"
-    desc: File manager (Nemo)
-    cmd: "gio launch /usr/share/applications/nemo.desktop"
+    desc: File manager (Nautilus)
+    cmd: "xdg-open ~"
   - key: "m"
     desc: Mail client (Thunderbird)
     cmd: "gio launch /usr/share/applications/org.mozilla.Thunderbird.desktop"
