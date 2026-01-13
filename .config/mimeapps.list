@@ -67,6 +67,7 @@ text/x-tex=nvim.desktop;
 audio/vnd.wave=tenacity.desktop;
 image/x-adobe-dng=rawtherapee.desktop;
 text/csv=libreoffice-calc.desktop;
+message/rfc822=org.mozilla.Thunderbird.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -158,3 +159,4 @@ x-scheme-handler/terminal=foot.desktop;
 text/x-tex=nvim.desktop
 image/x-adobe-dng=rawtherapee.desktop
 text/csv=libreoffice-calc.desktop
+message/rfc822=org.mozilla.Thunderbird.desktop
