@@ -53,7 +53,11 @@ echo $DESKTOP_SESSION | grep sway > /dev/null && export XDG_CURRENT_DESKTOP=sway
 export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 
 # ==> Qt
-[ "$XDG_CURRENT_DESKTOP" != "KDE" ] && export QT_QPA_PLATFORMTHEME=qt5ct
+# Originally was set to just qt5ct; should work to use qt5ct and qt6ct for their respective versions; see:
+# https://github.com/trialuser02/qt6ct/issues/12#issuecomment-1048942657
+#
+# But Arch Wiki suggests setting to `qt5ct:qt6ct`, so I will do that.
+[ "$XDG_CURRENT_DESKTOP" != "KDE" ] && export QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
 
 # wlroots debug
 #export WLR_SCENE_DEBUG_DAMAGE=rerender
