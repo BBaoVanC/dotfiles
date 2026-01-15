@@ -33,7 +33,7 @@ menu:
     desc: Browser (Firefox)
     cmd: "gio launch /usr/share/applications/firefox.desktop"
   - key: "f"
-    desc: File manager (Nautilus)
+    desc: File manager
     cmd: "xdg-open ~"
   - key: "m"
     desc: Mail client (Thunderbird)
