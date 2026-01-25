@@ -68,6 +68,7 @@ audio/vnd.wave=tenacity.desktop;
 image/x-adobe-dng=rawtherapee.desktop;
 text/csv=libreoffice-calc.desktop;
 message/rfc822=org.mozilla.Thunderbird.desktop;
+image/svg+xml=org.gnome.Loupe.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -105,7 +106,7 @@ audio/x-wav=mpv.desktop;
 image/gif=imv.desktop;
 image/jpeg=imv.desktop;
 image/png=imv.desktop;
-image/svg+xml=org.inkscape.Inkscape.desktop;
+image/svg+xml=org.gnome.Loupe.desktop
 image/vnd.microsoft.icon=imv.desktop;
 inode/directory=nemo.desktop;
 text/html=firefox.desktop;
