@@ -1,3 +1,7 @@
+/* TODO: depends on creation of a light mode bobascheme
+@import url("bobascheme-light.css");
+*/
+@import url("bobascheme.css");
 @import url("style.css");
 
 window#waybar {

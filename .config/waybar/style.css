@@ -6,8 +6,6 @@
  * If we create both, then it doesn't fall back to style.css and we're free to do stuff
  */
 
-@import url("bobascheme.css");
-
 /* TODO: maybe use font awesome font instead of nerd font */
 * {
     /* `otf-font-awesome` is required to be installed for icons */
