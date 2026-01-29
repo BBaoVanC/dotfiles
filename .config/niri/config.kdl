@@ -189,6 +189,10 @@ layer-rule {
 }
 /-layer-rule {
     match namespace="waybar"
+    shadow {
+        on
+        color "#0005"
+    }
     // TODO: waybar blur rule depends on https://github.com/YaLTeR/niri/issues/54
 }
 
