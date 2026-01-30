@@ -1,6 +1,6 @@
 {
     "systemd-failed-units": {
-        "on-click": "foot sh -xc 'systemctl list-units --no-pager --failed; systemctl list-units --no-pager --failed --user; zsh -i'",
+        "on-click": "foot -a foot-failed-units sh -xc 'systemctl list-units --no-pager --failed; systemctl list-units --no-pager --failed --user; zsh -i'",
         "format": "{nr_failed} failed ({nr_failed_system} system, {nr_failed_user} user)",
     },
     "idle_inhibitor": {
