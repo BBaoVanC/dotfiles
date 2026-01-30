@@ -3,7 +3,7 @@
     "height": 30,
     "spacing": 4,
     "position": "top",
-    "layer": "top",
+    "layer": "bottom", // prevent covering up floating windows
     "modules-left": [
         "niri/workspaces",
     ],
