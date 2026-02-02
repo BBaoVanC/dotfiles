@@ -187,11 +187,12 @@ layer-rule {
     match namespace="gtk-layer-shell"
     // TODO: there doesn't seem to be a way to replicate the Hyprland "dimaround" option
 }
-/-layer-rule {
+layer-rule {
     match namespace="waybar"
     shadow {
         on
         color "#0005"
+        draw-behind-window false
     }
     // TODO: waybar blur rule depends on https://github.com/YaLTeR/niri/issues/54
 }
