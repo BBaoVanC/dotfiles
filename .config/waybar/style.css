@@ -61,16 +61,16 @@ button:hover {
     background-color: @bar-background;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     background-color: alpha(@bobascheme-black-light, 0.50);
 }
-#workspaces button.focused:hover {
+#workspaces button.active:hover {
     background-color: @bobascheme-black-light;
 }
-#workspaces button.active {
+#workspaces button.focused {
     background-color: alpha(@bobascheme-blue-dark, 0.50);
 }
-#workspaces button.active:hover {
+#workspaces button.focused:hover {
     background-color: @bobascheme-blue-dark;
 }
 
