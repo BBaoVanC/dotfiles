@@ -1,9 +1,8 @@
 /* TODO: depends on creation of a light mode bobascheme
-@import url("bobascheme-light.css");
+@import url("../../.local/share/bobascheme/gtk/bobascheme-light.css");
 */
-@import url("bobascheme.css");
-@import url("style.css");
+@import url("../../.local/share/bobascheme/gtk/bobascheme.css");
 
-window#waybar {
-    background-color: #f00;
-}
+@define-color bar-background #fff;
+
+@import url("style.css");

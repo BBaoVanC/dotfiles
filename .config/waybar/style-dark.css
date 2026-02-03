@@ -1,2 +1,7 @@
-@import url("bobascheme.css");
+@import url("../../.local/share/bobascheme/gtk/bobascheme.css");
+
+/* backgrounds */
+/*@define-color bar-background #0f0f0f;*/
+@define-color bar-background #000;
+
 @import url("style.css");

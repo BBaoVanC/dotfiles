@@ -6,6 +6,13 @@
  * If we create both, then it doesn't fall back to style.css and we're free to do stuff
  */
 
+/* https://stackoverflow.com/a/52659242 */
+/* commented out because unfortunately this breaks the right click menu on tray icons
+window * {
+    all: unset;
+}
+*/
+
 /* TODO: maybe use font awesome font instead of nerd font */
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -13,9 +20,12 @@
     font-size: 13px;
 }
 
+@define-color module-background transparent;
+@define-color tray-background @module-background;
+
 window#waybar {
-    background-color: rgba(32, 32, 32, 0.5);
-    color: #ffffff;
+    background-color: alpha(@bar-background, 0.55);
+    color: @bobascheme-text-0;
 }
 
 window#waybar.hidden {
@@ -23,6 +33,7 @@ window#waybar.hidden {
 }
 
 window#waybar > .horizontal {
+    /* accounts for rounded corners on Framework 2.8K display */
     padding: 0 16px;
 }
 
@@ -30,6 +41,7 @@ button {
     /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
+    color: inherit;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -40,18 +52,26 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 8px;
     background-color: transparent;
-    color: #ffffff;
+    min-width: 0;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background-color: @bar-background;
 }
 
-#workspaces button.focused,
+#workspaces button.focused {
+    background-color: alpha(@bobascheme-black-light, 0.50);
+}
+#workspaces button.focused:hover {
+    background-color: @bobascheme-black-light;
+}
 #workspaces button.active {
-    background-color: #64727D;
+    background-color: alpha(@bobascheme-blue-dark, 0.50);
+}
+#workspaces button.active:hover {
+    background-color: @bobascheme-blue-dark;
 }
 
 #workspaces button.focused:hover,
@@ -60,7 +80,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @bobascheme-red-dark;
 }
 
 /* not used in hyprland: */
@@ -71,12 +91,11 @@ button:hover {
 
 .modules-right .module {
     padding: 0 10px;
-    color: #ffffff;
-    background-color: @background-1;
+    background-color: @module-background;
 }
 
 #tray {
-    background-color: @background-1;
+    background-color: @tray-background;
 }
 
 #window,
@@ -95,8 +114,8 @@ button:hover {
 }
 
 #systemd-failed-units {
-    background-color: @red-dark;
-    color: @white-light;
+    background-color: @bobascheme-red-dark;
+    color: @bobascheme-white-light;
 }
 
 #battery.charging, #battery.plugged {
@@ -111,10 +130,10 @@ button:hover {
 }
 
 #battery.warning:not(.charging) {
-    color: @yellow-light
+    color: @bobascheme-yellow-light;
 }
 #battery.critical:not(.charging) {
-    color: @red-light;
+    color: @bobascheme-red-light;
 }
 
 label:focus {
@@ -130,7 +149,7 @@ label:focus {
 }
 
 #wireplumber.muted {
-    background-color: @background-2;
+    background-color: @bobascheme-background-2;
 }
 
 #temperature.critical {
@@ -138,7 +157,7 @@ label:focus {
 }
 
 #bluetooth.on {
-    background-color: @background-2;
+    background-color: @bobascheme-background-2;
 }
 
 #tray > .passive {
@@ -147,12 +166,12 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @bobascheme-red-dark;
 }
 
 #idle_inhibitor.activated {
-    color: @background-0;
-    background-color: @text-0;
+    color: @bobascheme-background-0;
+    background-color: @bobascheme-text-0;
 }
 
 #language {
