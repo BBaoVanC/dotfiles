@@ -38,6 +38,9 @@ set cursorline
 " enable mouse support
 set mouse=a
 
+" automatically update the containing terminal's title
+set title
+
 " display characters for `:set list`
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
