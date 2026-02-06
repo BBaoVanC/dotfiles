@@ -24,7 +24,7 @@ window * {
 @define-color tray-background @module-background;
 
 window#waybar {
-    background-color: alpha(@bar-background, 0.55);
+    background-color: alpha(@bar-background, 0.65);
     color: @bobascheme-text-0;
 }
 
