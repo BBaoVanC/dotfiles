@@ -7,7 +7,9 @@ autoload -U add-zsh-hook
 source ~/.zprofile
 source ~/.config/zsh/aliasrc
 HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_history"
-SAVEHIST=500
+HISTSIZE=5000
+SAVEHIST=5000
+setopt share_history
 [ -f ~/.config/zsh/zshrc_nosync ] && source ~/.config/zsh/zshrc_nosync
 # }}}
 
