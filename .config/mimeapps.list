@@ -70,6 +70,7 @@ text/csv=libreoffice-calc.desktop;
 message/rfc822=org.mozilla.Thunderbird.desktop;
 image/svg+xml=org.gnome.Loupe.desktop;
 image/gif=mpv.desktop;
+text/x-c++src=nvim.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -162,3 +163,4 @@ text/x-tex=nvim.desktop
 image/x-adobe-dng=rawtherapee.desktop
 text/csv=libreoffice-calc.desktop
 message/rfc822=org.mozilla.Thunderbird.desktop
+text/x-c++src=nvim.desktop
