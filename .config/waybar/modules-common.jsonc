@@ -66,6 +66,11 @@
         "format": "{:%I:%M:%S %p}",
         "format-alt": "{:%Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "format": {
+                "today": "<b><u>{}</u></b>",
+            },
+        },
     },
     "bluetooth": {
         "format-disabled": "󰂲",
