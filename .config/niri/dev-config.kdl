@@ -1,0 +1,16 @@
+include "config.kdl"
+
+window-rule {
+    match app-id="^foot$"
+
+    background-effect {
+        blur true
+    }
+}
+
+spawn-sh-at-startup "swaybg -i ~/wallpaper -m fill"
+
+
+binds {
+    Mod+Shift+T hotkey-overlay-title="Open a Terminal" { spawn-sh "foot --config ~/.config/foot/dev-foot.ini"; }
+}
