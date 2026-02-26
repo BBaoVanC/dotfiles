@@ -178,7 +178,7 @@ layout {
 // Other appearance (layer rules) {{{
 
 layer-rule {
-    match namespace="wofi"
+    match namespace="^wofi$"
     shadow {
         on
     }
@@ -188,7 +188,7 @@ layer-rule {
     // TODO: there doesn't seem to be a way to replicate the Hyprland "dimaround" option
 }
 layer-rule {
-    match namespace="waybar"
+    match namespace="^waybar$"
     shadow {
         on
         draw-behind-window false
