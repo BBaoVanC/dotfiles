@@ -179,6 +179,7 @@ layout {
 
 layer-rule {
     match namespace="^wofi$"
+    match namespace="^vicinae$"
     shadow {
         on
     }
