@@ -315,7 +315,8 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal" { spawn "xdg-terminal-exec"; }
-    Mod+D hotkey-overlay-title="Run an Application: wofi insensitive" { spawn "wofi" "--insensitive" "--show" "drun"; }
+    Mod+Shift+D hotkey-overlay-title="Run an Application: wofi insensitive" { spawn "wofi" "--insensitive" "--show" "drun"; }
+    Mod+D hotkey-overlay-title="Run an Application: vicinae" { spawn "vicinae" "toggle"; }
     Mod+E hotkey-overlay-title="Run common applications (quick launch)" { spawn "wlr-which-key" "quicklaunch"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
 
