@@ -1,8 +1,8 @@
 [Unit]
 Description=Hyprland's idle daemon
 Documentation=https://wiki.hyprland.org/Hypr-Ecosystem/hypridle
-PartOf=hyprland-session.target
-After=hyprland-session.target
+PartOf=graphical-session.target
+After=graphical-session.target
 ConditionEnvironment=WAYLAND_DISPLAY
 
 [Service]
@@ -13,3 +13,4 @@ Slice=session.slice
 
 [Install]
 WantedBy=hyprland-session.target
+WantedBy=niri.service
