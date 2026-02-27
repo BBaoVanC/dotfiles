@@ -1,6 +1,6 @@
 # Adapted from /usr/lib/systemd/user/waybar.service
 [Unit]
-Description=Highly customizable Wayland bar for Sway and Wlroots based compositors
+Description=Highly customizable Wayland bar for Sway and Wlroots based compositors (custom config)
 Documentation=https://github.com/Alexays/Waybar/wiki/
 PartOf=graphical-session.target
 After=graphical-session.target
@@ -12,5 +12,7 @@ ExecReload=kill -SIGUSR2 $MAINPID
 Restart=on-failure
 Slice=session.slice
 
-[Install]
-WantedBy=%i-session.target
+# no [Install] section because this is generic, can be enabled using add-wants.
+# No generic way to specify which environment unit to start with
+# 
+# systemctl --user add-wants hyprland-session.target waybar@hyprland.service
