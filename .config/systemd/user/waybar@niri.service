@@ -2,9 +2,9 @@
 [Unit]
 Description=Highly customizable Wayland bar for Sway and Wlroots based compositors
 Documentation=https://github.com/Alexays/Waybar/wiki/
-PartOf=%i.service
-After=%i.service
-Requisite=%i.service
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
 
 [Service]
 ExecStart=/usr/bin/waybar --config %h/.config/waybar/config.%i
