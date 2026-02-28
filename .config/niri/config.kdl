@@ -499,7 +499,7 @@ binds {
     // Switches focus between the current and the previous workspace.
     // Mod+Tab { focus-workspace-previous; }
 
-    Mod+N hotkey-overlay-title="Rename workspace" { spawn-sh "wofi --dmenu | xargs niri msg action set-workspace-name"; }
+    Mod+N hotkey-overlay-title="Rename workspace" { spawn-sh "fuzzel --dmenu --mesg 'workspace name' | xargs niri msg action set-workspace-name"; }
     Mod+Shift+N hotkey-overlay-title="Reset workspace name" { unset-workspace-name; }
 
     // The following binds move the focused window in and out of a column.
