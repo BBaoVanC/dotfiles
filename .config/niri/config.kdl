@@ -74,7 +74,7 @@ input {
 // Sets color scheme
 // - layout.focus-ring.{active-color,inactive-color,urgent-color}
 // - window-rule[match:is-urgent=true].border
-include "../../.local/share/bobascheme/niri/bobascheme.kdl"
+include "../../.local/share/bobascheme/themes/niri/bobascheme_dark.kdl"
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:

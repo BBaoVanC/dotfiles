@@ -69,7 +69,7 @@ vnoremap <silent> # :<C-U>
 
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'BBaoVanC/bobascheme', { 'rtp': 'neovim' }
+Plug 'BBaoVanC/bobascheme', { 'branch': 'dist', 'rtp': 'themes/neovim' }
 Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
@@ -108,7 +108,7 @@ nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
 
 
 try
-  colorscheme bobaschemedark
+  colorscheme bobascheme_dark
 catch
   echo "Error loading color scheme: " . v:exception
 endtry
