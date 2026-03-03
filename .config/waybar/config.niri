@@ -31,6 +31,9 @@
             "default": "",
         },
     },
+    "idle_inhibitor": {
+        "on-click-right": "niri msg action power-off-monitors",
+    },
 
     "include": ["~/.config/waybar/modules-common.jsonc"],
 }
