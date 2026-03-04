@@ -4,8 +4,6 @@
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
-include "host.kdl"
-
 // seems like niri imports the entire environment by default?
 //spawn-at-startup "systemctl" "--user" "import-environment" "HOSTNAME"
 spawn-sh-at-startup "swww img ~/wallpaper"
@@ -594,3 +592,5 @@ binds {
     Mod+Shift+Ctrl+D { debug-toggle-damage; }
 }
 // }}}
+
+include "host.kdl"
