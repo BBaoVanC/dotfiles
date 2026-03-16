@@ -18,6 +18,7 @@
         "mpris",
         "wireplumber",
         //"wireplumber#microphone",
+        "upower#trackpad",
         "battery",
         "clock",
         "bluetooth",

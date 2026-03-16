@@ -48,6 +48,7 @@
     //    "format-muted": "",
     //    "format-bluetooth": "󰂰  {volume}%",
     //},
+    "include": ["~/documents/shared-docs/dotfiles/waybar/upower.jsonc"],
     "battery": {
         "states": {
             "warning": 30,
