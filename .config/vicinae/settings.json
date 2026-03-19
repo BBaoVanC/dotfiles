@@ -12,5 +12,17 @@
    "$schema": "https://vicinae.com/schemas/config.json",
    "telemetry": {
       "system_info": false
+   },
+   "providers": {
+      "core": {
+         "entrypoints": {
+            "forget-telemetry": {
+               "enabled": true
+            },
+            "inspect-local-storage": {
+               "enabled": true
+            }
+         }
+      }
    }
 }
