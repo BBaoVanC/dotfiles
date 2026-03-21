@@ -31,13 +31,13 @@ auto_kbd_layout: true
 menu:
   - key: "b"
     desc: Browser (Firefox)
-    cmd: "gio launch /usr/share/applications/firefox.desktop"
+    cmd: "uwsm-app /usr/share/applications/firefox.desktop"
   - key: "f"
     desc: File manager
-    cmd: "xdg-open ~"
+    cmd: "uwsm-app /usr/share/applications/nemo.desktop"
   - key: "m"
     desc: Mail client (Thunderbird)
-    cmd: "gio launch /usr/share/applications/org.mozilla.Thunderbird.desktop"
+    cmd: "uwsm-app /usr/share/applications/org.mozilla.Thunderbird.desktop"
 
   #- key: "p"
   #  desc: Power
