@@ -71,6 +71,10 @@ message/rfc822=org.mozilla.Thunderbird.desktop;
 image/svg+xml=org.gnome.Loupe.desktop;
 image/gif=mpv.desktop;
 text/x-c++src=nvim.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
+application/msword=libreoffice-writer.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -164,3 +168,7 @@ image/x-adobe-dng=rawtherapee.desktop
 text/csv=libreoffice-calc.desktop
 message/rfc822=org.mozilla.Thunderbird.desktop
 text/x-c++src=nvim.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop
+application/msword=libreoffice-writer.desktop
