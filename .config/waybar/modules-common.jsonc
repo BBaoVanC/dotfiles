@@ -54,10 +54,10 @@
             "warning": 30,
             "critical": 15,
         },
-        "format": "{icon} {capacity}% {power:.2f}W",
-        "format-charging": "󰂄 {capacity}% {power:.2f}W",
+        "format": "{icon} {capacity}% {power:.3g}W",
+        "format-charging": "󰂄 {capacity}% {power:.3g}W",
         "format-plugged": " {capacity}%",
-        "format-alt": "{icon} {time} ({power:.2f}W)",
+        "format-alt": "{icon} {time} ({power:.2g}W)",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""],
