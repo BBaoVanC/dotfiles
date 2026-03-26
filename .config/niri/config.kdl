@@ -6,7 +6,7 @@
 
 // seems like niri imports the entire environment by default?
 //spawn-at-startup "systemctl" "--user" "import-environment" "HOSTNAME"
-spawn-sh-at-startup "swww img ~/wallpaper"
+spawn-sh-at-startup "awww img ~/wallpaper"
 
 // Input {{{
 // https://yalter.github.io/niri/Configuration:-Input

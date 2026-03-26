@@ -1,11 +1,11 @@
 [Unit]
-Description=A Solution to your Wayland Wallpaper Woes
+Description=An Answer to your Wayland Wallpaper Woes
 PartOf=graphical-session.target
 After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=swww-daemon
+ExecStart=awww-daemon
 Restart=on-failure
 Slice=session.slice
 
