@@ -75,6 +75,7 @@ application/vnd.openxmlformats-officedocument.presentationml.presentation=libreo
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-calc.desktop;
 application/msword=libreoffice-writer.desktop;
+text/plain=org.gnome.TextEditor.desktop;
 application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
 
 [Default Applications]
