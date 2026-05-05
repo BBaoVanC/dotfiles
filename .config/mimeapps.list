@@ -78,6 +78,7 @@ application/msword=libreoffice-writer.desktop;
 text/plain=org.gnome.TextEditor.desktop;
 application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
 image/heif=org.gnome.Loupe.desktop;
+application/vnd.ms-powerpoint=libreoffice-impress.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -177,3 +178,4 @@ application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=libreoffice-ca
 application/msword=libreoffice-writer.desktop
 application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop
 image/heif=org.gnome.Loupe.desktop
+application/vnd.ms-powerpoint=libreoffice-impress.desktop
