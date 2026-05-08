@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-current_name="$(niri msg -j workspaces | jq '.[] | select (.is_active == true).name // empty' -r)"
+current_name="$(niri msg -j workspaces | jq '.[] | select (.is_focused == true).name // empty' -r)"
 if [ -z "$current_name" ]; then
 	new_name="$(fuzzel --dmenu --mesg 'workspace name?' -l 0)"
 else
