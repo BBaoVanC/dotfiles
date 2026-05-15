@@ -94,7 +94,7 @@ layout {
 
     // You can change how the focus ring looks.
     focus-ring {
-        width 4
+        off
     }
     border {
         off
@@ -171,6 +171,15 @@ layout {
         // bottom 64
     }
 }
+
+window-rule {
+    match is-active=false
+
+    shadow {
+        off
+    }
+}
+
 // }}}
 
 // Other appearance (layer rules) {{{
