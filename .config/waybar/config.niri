@@ -10,6 +10,9 @@
     "modules-left": [
         "niri/workspaces",
     ],
+    "modules-center": [
+        "niri/window",
+    ],
     "modules-right": [
         //"mpd",
         "systemd-failed-units",
