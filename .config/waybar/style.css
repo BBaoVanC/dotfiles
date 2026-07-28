@@ -55,6 +55,7 @@ button:hover {
     padding: 0 8px;
     background-color: transparent;
     min-width: 0;
+    text-shadow: none;
 }
 
 #workspaces button:hover {
@@ -72,11 +73,6 @@ button:hover {
 }
 #workspaces button.focused:hover {
     background-color: @bobascheme-blue-dark;
-}
-
-#workspaces button.focused:hover,
-#workspaces button.active:hover {
-    text-shadow: none;
 }
 
 #workspaces button.urgent {
