@@ -78,6 +78,10 @@ button:hover {
 #workspaces button.urgent {
     background-color: @bobascheme-red-dark;
 }
+#workspaces button.urgent:hover {
+    background-color: @bobascheme-red-light;
+    color: @bobascheme-background-0;
+}
 
 /* not used in hyprland: */
 #mode {
