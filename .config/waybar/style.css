@@ -58,29 +58,15 @@ button:hover {
     text-shadow: none;
 }
 
-#workspaces button:hover {
-    background-color: @bar-background;
-}
-
 #workspaces button.active {
     background-color: alpha(@bobascheme-black-light, 0.50);
-}
-#workspaces button.active:hover {
-    background-color: @bobascheme-black-light;
 }
 #workspaces button.focused {
     background-color: alpha(@bobascheme-blue-dark, 0.50);
 }
-#workspaces button.focused:hover {
-    background-color: @bobascheme-blue-dark;
-}
 
 #workspaces button.urgent {
     background-color: @bobascheme-red-dark;
-}
-#workspaces button.urgent:hover {
-    background-color: @bobascheme-red-light;
-    color: @bobascheme-background-0;
 }
 
 /* not used in hyprland: */
