@@ -35,6 +35,9 @@ menu:
   - key: "f"
     desc: File manager
     cmd: "uwsm-app /usr/share/applications/nemo.desktop"
+  - key: "F"
+    desc: File manager (alt)
+    cmd: "uwsm-app /usr/share/applications/org.gnome.Nautilus.desktop"
   - key: "m"
     desc: Mail client (Thunderbird)
     cmd: "uwsm-app /usr/share/applications/org.mozilla.Thunderbird.desktop"
