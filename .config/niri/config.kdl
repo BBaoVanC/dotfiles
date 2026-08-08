@@ -440,6 +440,10 @@ binds {
     Mod+Shift+U         { move-workspace-down; }
     Mod+Shift+I         { move-workspace-up; }
 
+    // move between monitors
+    Mod+Shift+Comma     { move-workspace-to-monitor-left; }
+    Mod+Shift+Period    { move-workspace-to-monitor-right; }
+
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
     //
