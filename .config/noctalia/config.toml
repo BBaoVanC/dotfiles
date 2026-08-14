@@ -4,6 +4,8 @@
 clipboard_enabled = false
 time_format = "{:%-I:%M %p}"
 date_format = "%A, %Y-%m-%d"
+[shell.session.power]
+suspend = "systemctl sleep"
 
 [osd.kinds]
 caffeine = false
