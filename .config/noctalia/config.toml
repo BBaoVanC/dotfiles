@@ -71,7 +71,7 @@ end = [
 	"clipboard", # disabled under [shell]
 	"brightness",
 	"volume",
-	"battery",
+	"group:battery",
 	"bluetooth",
 	"network",
 	"clock",
@@ -95,9 +95,20 @@ contact_shadow = false
 
 
 # Widget configuration {{{
+[[bar.default.capsule_group]]
+id = "battery"
+members = ["battery", "battery_rate"]
+padding = 5
+opacity = 0
+widget_spacing = 5
 [widget.battery]
 display_mode = "glyph"
-show_label = true
+label_content = "percent"
+warning_color = "error"
+[widget.battery_rate]
+type = "battery"
+display_mode = "none"
+label_content = "rate"
 warning_color = "error"
 
 [widget.clock]
