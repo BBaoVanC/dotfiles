@@ -344,7 +344,8 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "loginctl" "lock-session"; }
 
     Mod+S hotkey-overlay-title="Open Noctalia control center" { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Mod+P hotkey-overlay-title="Open power menu bar" { spawn "nwg-bar"; }
+    Mod+P hotkey-overlay-title="Open power menu" { spawn "noctalia" "msg" "panel-toggle" "session"; }
+    Mod+Ctrl+P hotkey-overlay-title="Open power menu: nwg-bar" { spawn "nwg-bar"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
