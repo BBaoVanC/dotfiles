@@ -1,0 +1,137 @@
+# vim: foldmethod=marker
+
+[shell]
+clipboard_enabled = false
+time_format = "{:%-I:%M %p}"
+date_format = "%A, %Y-%m-%d"
+
+[osd.kinds]
+caffeine = false
+media = false
+lock_keys = false
+
+
+# Services {{{
+
+[battery]
+warning_threshold = 15
+
+[idle]
+behavior_order = ["screen_off", "lock", "suspend"]
+pre_action_fade_seconds = 5.0
+[idle.behavior.screen-off]
+timeout = 300
+action = "screen_off"
+[idle.behavior.lock]
+timeout = 305
+action = "lock"
+[idle.behavior.suspend]
+timeout = 310
+action = "suspend"
+lock_before_suspend = true
+
+# [location]
+# [nightlight]
+
+# [notification]
+# enable_daemon = true
+# show_app_name = true
+# show_actions = true
+
+# }}}
+
+
+[theme]
+mode = "dark"
+source = "custom"
+custom_palette = "bobascheme"
+
+[wallpaper]
+enabled = true
+fill_mode = "crop"
+#edge_smoothness =
+[wallpaper.default]
+path = "/home/bbaovanc/wallpaper"
+
+
+# Bar {{{
+
+[bar.default]
+widget_spacing = 10
+start = [
+	"session",
+	#"launcher",
+	"workspaces",
+]
+center = [
+	"media",
+]
+end = [
+	"caffeine",
+	"clipboard", # disabled under [shell]
+	"brightness",
+	"volume",
+	"battery",
+	"bluetooth",
+	"network",
+	"clock",
+	"control-center",
+	"notifications",
+	"tray",
+]
+position = "top"
+enabled = true
+auto_hide = false
+
+background_opacity = 0.65
+radius = 0
+concave_edge_corners = false
+margin_ends = 0
+font_family = "sans"
+shadow = true
+contact_shadow = false
+
+# }}}
+
+
+# Widget configuration {{{
+[widget.battery]
+display_mode = "glyph"
+show_label = true
+warning_color = "error"
+
+[widget.clock]
+format = "{:%A %-I:%M %p}"
+
+[widget.control-center]
+# https://tabler.io/icons
+glyph = "adjustments"
+
+[widget.media]
+max_length = 400
+title_scroll = "on_hover"
+hide_when_no_media = true
+
+[widget.network]
+show_label = false
+vpn_status = "both"
+
+[widget.workspaces]
+style = "regular"
+show_labels = true
+label_source = "name"
+max_label_chars = 99
+occupied_color = "#00000000"
+empty_color = "#00000000"
+
+#[widget.tray]
+
+# Actions
+[widget.brightness.actions]
+scroll_up = "brightness-up current 1%"
+scroll_down = "brightness-down current 1%"
+[widget.volume.actions]
+scroll_up = "volume-up 1%"
+scroll_down = "volume-down 1%"
+
+# }}}

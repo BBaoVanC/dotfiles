@@ -208,6 +208,12 @@ layer-rule {
 
 // }}}
 
+// https://docs.noctalia.dev/noctalia/compositor-settings/niri/
+debug {
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+}
+
 hotkey-overlay {
     skip-at-startup
 }
@@ -241,6 +247,13 @@ animations {
 // }}}
 
 // Window rules {{{
+
+/-window-rule {
+  match app-id="dev.noctalia.Noctalia"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
+}
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
@@ -328,8 +341,9 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Ctrl+D hotkey-overlay-title="Run an Application: vicinae" { spawn "vicinae" "toggle"; }
     Mod+E repeat=false hotkey-overlay-title="Run common applications (quick launch)" { spawn "wlr-which-key" "quicklaunch"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "loginctl" "lock-session"; }
 
+    Mod+S hotkey-overlay-title="Open Noctalia control center" { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+P hotkey-overlay-title="Open power menu bar" { spawn "nwg-bar"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
