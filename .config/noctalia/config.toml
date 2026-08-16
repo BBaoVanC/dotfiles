@@ -1,5 +1,18 @@
 # vim: foldmethod=marker
 
+# disable plugins for now
+[[plugins.source]]
+enabled = false
+kind = "git"
+location = "https://github.com/noctalia-dev/official-plugins"
+name = "official"
+[[plugins.source]]
+enabled = false
+kind = "git"
+location = "https://github.com/noctalia-dev/community-plugins"
+name = "community"
+
+
 [shell]
 clipboard_enabled = false
 time_format = "{:%-I:%M %p}"
