@@ -206,6 +206,14 @@ layer-rule {
     // TODO: waybar blur rule depends on https://github.com/YaLTeR/niri/issues/54
 }
 
+// For more info see https://docs.noctalia.dev/noctalia/compositor-settings/niri/
+layer-rule {
+    match namespace="^noctalia-attached-panel"
+    background-effect {
+        xray false
+    }
+}
+
 // }}}
 
 // https://docs.noctalia.dev/noctalia/compositor-settings/niri/
