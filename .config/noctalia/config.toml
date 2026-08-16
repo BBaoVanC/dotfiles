@@ -1,5 +1,8 @@
 # vim: foldmethod=marker
 
+[include]
+files = ["~/documents/shared-docs/dotfiles/noctalia/"]
+
 # disable plugins for now
 [[plugins.source]]
 enabled = false
@@ -87,6 +90,7 @@ end = [
 	"brightness",
 	"volume",
 	"group:battery",
+	"battery/trackpad",
 	"bluetooth",
 	"network",
 	"clock",
