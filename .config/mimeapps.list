@@ -80,6 +80,7 @@ application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
 image/heif=org.gnome.Loupe.desktop;
 application/vnd.ms-powerpoint=libreoffice-impress.desktop;
 application/pdf=firefox.desktop;
+image/apng=imv.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
