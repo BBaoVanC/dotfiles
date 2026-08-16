@@ -70,9 +70,10 @@ custom_palette = "bobascheme"
 [wallpaper]
 enabled = true
 fill_mode = "crop"
+directory = "~/wallpapers"
 #edge_smoothness =
 [wallpaper.default]
-path = "/home/bbaovanc/wallpaper"
+path = "/home/bbaovanc/wallpapers/hifdzul-muhammad-siregar-F4cib3eJqT0-unsplash.jpg"
 
 
 # Bar {{{
