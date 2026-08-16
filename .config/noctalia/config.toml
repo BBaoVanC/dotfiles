@@ -56,6 +56,9 @@ lock_before_suspend = true
 # show_app_name = true
 # show_actions = true
 
+[system.monitor]
+enabled = false
+
 # }}}
 
 
