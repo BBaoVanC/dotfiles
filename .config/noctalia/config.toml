@@ -93,7 +93,9 @@ end = [
 	"clipboard", # disabled under [shell]
 	"brightness",
 	"volume",
-	"group:battery",
+	"battery",
+	#"group:battery",
+	#"battery_time",
 	"battery/trackpad",
 	"bluetooth",
 	"network",
@@ -133,6 +135,9 @@ type = "battery"
 display_mode = "none"
 label_content = "rate"
 warning_color = "error"
+[widget.battery_time]
+type = "battery"
+label_content = "time"
 
 [widget.clock]
 format = "{:%A %-I:%M %p}"
