@@ -118,6 +118,24 @@ contact_shadow = false
 
 # }}}
 
+# Lockscreen {{{
+[lockscreen_widgets]
+enabled = true
+
+[lockscreen_widgets.widget.clock]
+box_height = 0.0
+box_width = 0.0
+cx = 188.0
+cy = 89.0
+rotation = 0.0
+type = "clock"
+[lockscreen_widgets.widget.clock.settings]
+background_color = "surface"
+background_opacity = 0.0
+center_text = false
+clock_style = "digital"
+format = "{:%-I:%M %p}"
+# }}}
 
 # Widget configuration {{{
 [[bar.default.capsule_group]]
