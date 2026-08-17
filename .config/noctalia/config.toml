@@ -16,6 +16,20 @@ location = "https://github.com/noctalia-dev/community-plugins"
 name = "community"
 
 
+[theme]
+mode = "dark"
+source = "custom"
+custom_palette = "bobascheme"
+
+[wallpaper]
+enabled = true
+fill_mode = "crop"
+directory = "~/wallpapers"
+#edge_smoothness =
+[wallpaper.default]
+path = "/home/bbaovanc/wallpapers/hifdzul-muhammad-siregar-F4cib3eJqT0-unsplash.jpg"
+
+
 [shell]
 clipboard_enabled = false
 time_format = "{:%-I:%M %p}"
@@ -62,20 +76,6 @@ enabled = false
 # }}}
 
 
-[theme]
-mode = "dark"
-source = "custom"
-custom_palette = "bobascheme"
-
-[wallpaper]
-enabled = true
-fill_mode = "crop"
-directory = "~/wallpapers"
-#edge_smoothness =
-[wallpaper.default]
-path = "/home/bbaovanc/wallpapers/hifdzul-muhammad-siregar-F4cib3eJqT0-unsplash.jpg"
-
-
 # Bar {{{
 
 [bar.default]
@@ -93,8 +93,8 @@ end = [
 	"clipboard", # disabled under [shell]
 	"brightness",
 	"volume",
-	"battery",
-	#"group:battery",
+	#"battery",
+	"group:battery",
 	#"battery_time",
 	"battery/trackpad",
 	"bluetooth",
