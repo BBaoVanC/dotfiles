@@ -158,7 +158,7 @@ type = "battery"
 label_content = "time"
 
 [widget.clock]
-format = "{:%A %-I:%M %p}"
+format = "{:%a %b %e %-I:%M %p}"
 
 [widget.control-center]
 # https://tabler.io/icons
