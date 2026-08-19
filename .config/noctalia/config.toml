@@ -108,7 +108,7 @@ position = "top"
 enabled = true
 auto_hide = false
 
-background_opacity = 0.65
+background_opacity = 0.70
 radius = 0
 concave_edge_corners = false
 margin_ends = 0
