@@ -27,7 +27,7 @@ fill_mode = "crop"
 directory = "~/wallpapers"
 #edge_smoothness =
 [wallpaper.default]
-path = "/home/bbaovanc/wallpapers/hifdzul-muhammad-siregar-F4cib3eJqT0-unsplash.jpg"
+path = "/home/bbaovanc/wallpapers/evgeny-matveev-f4hR4QdFP04-unsplash.jpg"
 
 
 [shell]
