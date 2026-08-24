@@ -186,7 +186,6 @@ window-rule {
 
 layer-rule {
     match namespace="^wofi$"
-    match namespace="^vicinae$"
     match namespace="^launcher$" // fuzzel
     shadow {
         on
@@ -346,7 +345,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal" { spawn "xdg-terminal-exec"; }
     Mod+Shift+D hotkey-overlay-title="Run an Application: wofi insensitive" { spawn "wofi" "--insensitive" "--show" "drun"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+Ctrl+D hotkey-overlay-title="Run an Application: vicinae" { spawn "vicinae" "toggle"; }
+    Mod+Ctrl+D hotkey-overlay-title="Run an Application: Noctalia" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+E repeat=false hotkey-overlay-title="Run common applications (quick launch)" { spawn "wlr-which-key" "quicklaunch"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "loginctl" "lock-session"; }
 
