@@ -20,3 +20,9 @@ color-scheme = "prefer-dark"
 [set."org.gnome.desktop.sound"]
 event-sounds = true
 input-feedback-sounds = false
+
+[set."org.nemo.preferences"]
+show-hidden-files = true
+show-image-thumbnails = "local-only"
+size-prefixes = "base-2"
+thumbnail-limit = 20971520
