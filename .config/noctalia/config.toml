@@ -34,8 +34,6 @@ path = "/home/bbaovanc/wallpapers/evgeny-matveev-f4hR4QdFP04-unsplash.jpg"
 clipboard_enabled = false
 time_format = "{:%-I:%M %p}"
 date_format = "%A, %Y-%m-%d"
-[shell.session.power]
-suspend = "~/.config/noctalia/scripts/sleep.sh"
 
 [osd.kinds]
 caffeine = false
@@ -59,8 +57,8 @@ timeout = 305
 action = "lock"
 [idle.behavior.suspend]
 timeout = 310
-action = "suspend"
-lock_before_suspend = true
+action = "command"
+command = "~/.config/noctalia/scripts/sleep.sh"
 
 # [location]
 # [nightlight]
