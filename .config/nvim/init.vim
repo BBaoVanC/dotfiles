@@ -85,7 +85,7 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.*' }
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'do': ':TSUpdate' }
+Plug 'romus204/tree-sitter-manager.nvim', { 'do': ':TSUpdate!' }
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'folke/which-key.nvim'
@@ -176,26 +176,14 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
-" treesitter config
+" tree-sitter-manager config
 lua << EOF
-require("nvim-treesitter.configs").setup({
-  -- no need for ensure_installed since auto_install covers it
-  auto_install = true,
-  highlight = {
-    enable = true,
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-
-    -- covered by vimtex plugin
-    disable = { "latex" }
-  },
-  incremental_selection = {
-    enable = true,
-  }
+require("tree-sitter-manager").setup({
+  auto_install = true
 })
+EOF
+
+lua << EOF
 --vim.wo.foldmethod = 'expr'
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 EOF
