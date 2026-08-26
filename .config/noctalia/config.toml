@@ -114,28 +114,8 @@ font_family = "sans"
 shadow = true
 contact_shadow = false
 
-# }}}
-
-# Lockscreen {{{
-[lockscreen_widgets]
-enabled = true
-
-[lockscreen_widgets.widget.clock]
-box_height = 0.0
-box_width = 0.0
-cx = 188.0
-cy = 89.0
-rotation = 0.0
-type = "clock"
-[lockscreen_widgets.widget.clock.settings]
-background_color = "surface"
-background_opacity = 0.0
-center_text = false
-clock_style = "digital"
-format = "{:%-I:%M %p}"
-# }}}
-
 # Widget configuration {{{
+
 [[bar.default.capsule_group]]
 id = "battery"
 members = ["battery", "battery_rate"]
@@ -155,6 +135,10 @@ warning_color = "error"
 type = "battery"
 label_content = "time"
 
+[widget.brightness.actions]
+scroll_up = "brightness-up current 1%"
+scroll_down = "brightness-down current 1%"
+
 [widget.clock]
 format = "{:%a %b %e %-I:%M:%S %p}"
 
@@ -171,6 +155,10 @@ hide_when_no_media = true
 show_label = false
 vpn_status = "both"
 
+[widget.volume.actions]
+scroll_up = "volume-up 1%"
+scroll_down = "volume-down 1%"
+
 [widget.workspaces]
 style = "regular"
 show_labels = true
@@ -181,12 +169,25 @@ empty_color = "#00000000"
 
 #[widget.tray]
 
-# Actions
-[widget.brightness.actions]
-scroll_up = "brightness-up current 1%"
-scroll_down = "brightness-down current 1%"
-[widget.volume.actions]
-scroll_up = "volume-up 1%"
-scroll_down = "volume-down 1%"
+# }}}
 
+# }}}
+
+# Lockscreen {{{
+[lockscreen_widgets]
+enabled = true
+
+[lockscreen_widgets.widget.clock]
+box_height = 0.0
+box_width = 0.0
+cx = 188.0
+cy = 89.0
+rotation = 0.0
+type = "clock"
+[lockscreen_widgets.widget.clock.settings]
+background_color = "surface"
+background_opacity = 0.0
+center_text = false
+clock_style = "digital"
+format = "{:%-I:%M %p}"
 # }}}
