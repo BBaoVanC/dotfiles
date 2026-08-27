@@ -188,7 +188,9 @@ lua << EOF
 --vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 EOF
 
-" lsp related settings
+" lsp and nvim-lspconfig related settings
+command! LspInfo checkhealth vim.lsp
+" use :lsp enable and :lsp disable to en/disable LSPs; replaces the old :Lsp*
 lua << EOF
 vim.diagnostic.config({ virtual_text = true })
 EOF
