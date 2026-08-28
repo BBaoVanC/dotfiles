@@ -191,6 +191,7 @@ EOF
 
 " lsp and nvim-lspconfig related settings
 command! LspInfo checkhealth vim.lsp
+nnoremap grd vim.lsp.buf.definition()
 " use :lsp enable and :lsp disable to en/disable LSPs; replaces the old :Lsp*
 lua << EOF
 vim.diagnostic.config({ virtual_text = true })
