@@ -105,6 +105,7 @@ nnoremap <Leader>fg <Cmd>Telescope live_grep<CR>
 nnoremap <Leader>fG <Cmd>Telescope grep_string<CR>
 nnoremap <Leader>fb <Cmd>Telescope buffers<CR>
 nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
+nnoremap <Leader>fk <Cmd>Telescope keymaps<CR>
 
 
 try
