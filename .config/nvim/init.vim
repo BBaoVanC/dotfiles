@@ -87,6 +87,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 Plug 'romus204/tree-sitter-manager.nvim', { 'do': ':TSUpdate!' }
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-mini/mini.indentscope'
 
 Plug 'folke/which-key.nvim'
 call plug#end()
@@ -195,4 +196,21 @@ command! LspInfo checkhealth vim.lsp
 lua << EOF
 vim.keymap.set('n', 'grd', vim.lsp.buf.definition, { desc = "Go LSP definition" })
 vim.diagnostic.config({ virtual_text = true })
+EOF
+
+
+" mini.indentscope settings
+lua << EOF
+require('mini.indentscope').setup({
+  draw = {
+    delay = 0,
+    animation = require('mini.indentscope').gen_animation.none()
+  },
+})
+vim.g.miniindentscope_disable = true
+vim.api.nvim_create_user_command(
+  'ScopeLines',
+  function() vim.g.miniindentscope_disable = false end,
+  {}
+)
 EOF
