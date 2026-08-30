@@ -78,7 +78,7 @@ Plug 'godlygeek/tabular'
 Plug 'whiteinge/diffconflicts'
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.2.*' }
