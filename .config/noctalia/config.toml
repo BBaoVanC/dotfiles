@@ -141,6 +141,9 @@ right = "exec rfkill toggle bluetooth"
 scroll_up = "brightness-up current 1%"
 scroll_down = "brightness-down current 1%"
 
+[widget.caffeine.actions]
+right = "exec niri msg action power-off-monitors"
+
 [widget.clock]
 format = "{:%a %b %e %-I:%M:%S %p}"
 
