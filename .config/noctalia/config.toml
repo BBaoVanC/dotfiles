@@ -98,7 +98,6 @@ end = [
 	"bluetooth",
 	"network",
 	"clock",
-	"control-center",
 	"notifications",
 	"tray",
 ]
