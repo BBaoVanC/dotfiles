@@ -195,6 +195,7 @@ command! LspInfo checkhealth vim.lsp
 " use :lsp enable and :lsp disable to en/disable LSPs; replaces the old :Lsp*
 lua << EOF
 vim.keymap.set('n', 'grd', vim.lsp.buf.definition, { desc = "Go LSP definition" })
+vim.keymap.set('n', '<C-K>', vim.diagnostic.open_float, { desc = "Show diagnostics" })
 vim.diagnostic.config({ virtual_text = true })
 EOF
 
