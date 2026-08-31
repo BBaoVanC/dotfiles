@@ -134,6 +134,9 @@ warning_color = "error"
 type = "battery"
 label_content = "time"
 
+[widget.bluetooth.actions]
+right = "exec rfkill toggle bluetooth"
+
 [widget.brightness.actions]
 scroll_up = "brightness-up current 1%"
 scroll_down = "brightness-down current 1%"
