@@ -145,7 +145,7 @@ scroll_down = "brightness-down current 1%"
 right = "exec niri msg action power-off-monitors"
 
 [widget.clock]
-format = "{:%a %b %e %-I:%M:%S %p}"
+format = "{:%a %b %d %-I:%M:%S %p}"
 
 [widget.control-center]
 # https://tabler.io/icons
