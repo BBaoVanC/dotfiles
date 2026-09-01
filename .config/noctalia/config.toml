@@ -91,8 +91,8 @@ end = [
 	"clipboard", # disabled under [shell]
 	"brightness",
 	"volume",
-	#"battery",
-	"group:battery",
+	"battery",
+	#"group:battery",
 	#"battery_time",
 	"battery/trackpad",
 	"bluetooth",
