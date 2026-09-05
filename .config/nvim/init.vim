@@ -211,7 +211,7 @@ require('mini.indentscope').setup({
 vim.g.miniindentscope_disable = true
 vim.api.nvim_create_user_command(
   'ScopeLines',
-  function() vim.g.miniindentscope_disable = false end,
+  function() vim.g.miniindentscope_disable = not vim.g.miniindentscope_disable end,
   {}
 )
 EOF
