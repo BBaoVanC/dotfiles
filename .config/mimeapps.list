@@ -82,6 +82,7 @@ application/vnd.ms-powerpoint=libreoffice-impress.desktop;
 application/pdf=firefox.desktop;
 image/apng=imv.desktop;
 application/x-cdrdao-toc=nvim.desktop;cdemu-client.desktop;
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -183,3 +184,4 @@ application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop
 image/heif=org.gnome.Loupe.desktop
 application/vnd.ms-powerpoint=libreoffice-impress.desktop
 application/x-cdrdao-toc=cdemu-client.desktop
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop
