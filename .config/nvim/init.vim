@@ -9,11 +9,11 @@ set indentkeys=""
 " allow indenting of preprocessor macros
 set cinkeys-=0#
 
-" Set tabs to default to four spaces
+" default indent fallback when not set with ftplugin
 " This will be overridden by vim-sleuth and editorconfig
-"set expandtab
-"set shiftwidth=4
-"set softtabstop=4
+set noexpandtab
+set tabstop=8
+set shiftwidth=0 " follow tabstop
 set autoindent
 
 
@@ -76,7 +76,6 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
 Plug 'godlygeek/tabular'
 Plug 'whiteinge/diffconflicts'
-Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
 "Plug 'SirVer/ultisnips'
 
@@ -91,10 +90,6 @@ Plug 'nvim-mini/mini.indentscope'
 
 Plug 'folke/which-key.nvim'
 call plug#end()
-
-" https://github.com/rust-lang/rust.vim#installation
-syntax enable
-filetype plugin indent on
 
 
 nnoremap <F5> :UndotreeToggle<CR>
@@ -136,10 +131,6 @@ if (empty($TMUX))
   endif
 endif
 
-
-" ==> Tab setting keybinds
-command RealTab set shiftwidth=0 | set softtabstop=0 | set noexpandtab | set noautoindent
-command -nargs=1 SpaceTab set shiftwidth=<args> | set softtabstop=<args> | set expandtab | set autoindent
 
 " Fix `<` syntax highlighting in markdown
 " https://github.com/plasticboy/vim-markdown/issues/138
