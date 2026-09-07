@@ -70,7 +70,6 @@ vnoremap <silent> # :<C-U>
 " ==> Plugins
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'BBaoVanC/bobascheme', { 'branch': 'dist', 'rtp': 'themes/neovim' }
-Plug 'ap/vim-css-color'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-sleuth'
