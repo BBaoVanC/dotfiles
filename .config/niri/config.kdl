@@ -238,6 +238,7 @@ hotkey-overlay {
 
 // You can also set this to null to disable saving screenshots to disk.
 screenshot-path null
+//screenshot-path "~/pictures/Screenshots/niri %Y-%m-%d %H-%M-%S.png"
 
 // Animation {{{
 // The wiki explains how to configure individual animations:
