@@ -154,9 +154,7 @@ filetype indent off
 
 " F10 to see highlight group under cursor, for theme debug
 nnoremap <F10> :Inspect<CR>
-nnoremap <S-F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+nnoremap <S-F10> :InspectTree<CR>
 
 
 " snippets
