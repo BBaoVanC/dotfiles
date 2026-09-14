@@ -1,0 +1,22 @@
+#!/bin/bash
+
+mode="$1"
+case "$mode" in
+	screen)
+		mode_flags=(-o "$(niri msg -j focused-output | jq -r '.name')")
+		;;
+	# there doesn't seem to be a way to do this on niri
+	#window)
+	#	;;
+	select)
+		mode_flags=(-g "$(slurp)")
+		;;
+	*)
+		echo "Invalid mode, choose from: screen, window, select" >&2
+		;;
+esac
+
+date="$(date +%Y-%m-%d_%k-%M-%S)"
+quality_flags="--codec hevc"
+filename="$HOME/videos/screencasts/screenrec_${date}_${mode}.mkv"
+wl-screenrec "${mode_flags[@]}" $quality_flags -f "$filename"
