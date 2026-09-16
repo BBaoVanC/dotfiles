@@ -316,7 +316,7 @@ window-rule {
     open-floating true
 }
 
-window-rule {
+/-window-rule {
     match app-id=r#"^helium"#
     scroll-factor 0.35
 }
