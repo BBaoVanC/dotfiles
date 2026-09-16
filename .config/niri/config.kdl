@@ -316,6 +316,11 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id=r#"^helium"#
+    scroll-factor 0.35
+}
+
 // }}}
 
 // Gestures {{{
