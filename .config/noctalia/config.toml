@@ -84,10 +84,10 @@ start = [
 	"workspaces",
 ]
 center = [
-	"media",
 ]
 end = [
 	"caffeine",
+	"media",
 	"clipboard", # disabled under [shell]
 	"brightness",
 	"volume",
@@ -155,7 +155,7 @@ format = "{:%a %b %d %-I:%M:%S %p}"
 glyph = "adjustments"
 
 [widget.media]
-max_length = 400
+max_length = 250
 title_scroll = "on_hover"
 hide_when_no_media = true
 
