@@ -38,6 +38,9 @@ menu:
   - key: "F"
     desc: File manager (alt)
     cmd: "uwsm-app /usr/share/applications/org.gnome.Nautilus.desktop"
+  - key: "y"
+    desc: File manager (Yazi)
+    cmd: "uwsm-app /usr/share/applications/yazi.desktop"
   - key: "m"
     desc: Mail client (Thunderbird)
     cmd: "uwsm-app /usr/share/applications/org.mozilla.Thunderbird.desktop"
