@@ -84,6 +84,7 @@ start = [
 	"workspaces",
 ]
 center = [
+	"taskbar",
 ]
 end = [
 	"caffeine",
@@ -162,6 +163,13 @@ hide_when_no_media = true
 [widget.network]
 show_label = false
 vpn_status = "both"
+
+[widget.taskbar]
+group_by_workspace = true
+only_active_workspace = true
+#icon_scale = 2.0
+#show_window_title = true
+group_single_icon_per_app = true
 
 [widget.volume.actions]
 scroll_up = "volume-up 1%"
