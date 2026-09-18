@@ -30,8 +30,11 @@ auto_kbd_layout: true
 
 menu:
   - key: "b"
-    desc: Browser (Firefox)
-    cmd: "uwsm-app /usr/share/applications/firefox.desktop"
+    desc: Browser (Helium)
+    cmd: "uwsm-app helium-browser -- --profile-directory=Default"
+  - key: "B"
+    desc: Browser (School)
+    cmd: "uwsm-app helium-browser -- --profile-directory='School'"
   - key: "f"
     desc: File manager
     cmd: "uwsm-app /usr/share/applications/nemo.desktop"
