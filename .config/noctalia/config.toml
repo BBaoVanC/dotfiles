@@ -82,13 +82,13 @@ start = [
 	"session",
 	#"launcher",
 	"workspaces",
+	"taskbar",
 ]
 center = [
-	"taskbar",
+	"media",
 ]
 end = [
 	"caffeine",
-	"media",
 	"clipboard", # disabled under [shell]
 	"brightness",
 	"volume",
