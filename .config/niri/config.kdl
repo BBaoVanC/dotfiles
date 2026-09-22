@@ -321,6 +321,11 @@ window-rule {
     scroll-factor 0.35
 }
 
+window-rule {
+    match title=r#"^Picture in picture$"# // chromium
+    open-floating true
+}
+
 // }}}
 
 // Gestures {{{
