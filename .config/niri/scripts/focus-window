@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-choice="$(niri msg -j windows | jq -cr '.[] | "\(.id) \(.title)"' | sort -n | fuzzel -d -w 120)"
+choice="$(niri msg -j windows | jq -cr '.[] | "\(.id) \(.title)"' | sort -n | fuzzel -d -w 120 -l 25)"
 IFS=" " read -r id name <<EOF
 $choice
 EOF
