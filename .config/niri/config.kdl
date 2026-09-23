@@ -540,8 +540,8 @@ binds {
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
-    // Switches focus between the current and the previous workspace.
-    // Mod+Tab { focus-workspace-previous; }
+    Mod+Grave hotkey-overlay-title="Choose workspace" { spawn "~/.config/niri/scripts/focus-workspace"; }
+    Mod+Shift+Grave hotkey-overlay-title="Previous workspace" { focus-workspace-previous; }
 
     Mod+N hotkey-overlay-title="Rename workspace" { spawn "~/.config/niri/scripts/rename-workspace"; }
     Mod+Shift+N hotkey-overlay-title="Reset workspace name" { unset-workspace-name; }

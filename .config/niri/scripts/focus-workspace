@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+choice="$(niri msg -j workspaces | jq -cr '.[] | [.idx, .name]' | fuzzel --dmenu)"
+echo "Switching to workspace: $choice"
+niri msg action focus-workspace "$(echo $choice | jq '.[0]')"
