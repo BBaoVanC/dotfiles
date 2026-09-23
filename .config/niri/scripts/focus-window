@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+choice="$(niri msg -j windows | jq -cr '.[] | "\(.id) \(.title)"' | sort -n | fuzzel -d -w 120)"
+IFS=" " read -r id name <<EOF
+$choice
+EOF
+echo "Chose window: $id, $name"
+
+niri msg action focus-window --id "$id"

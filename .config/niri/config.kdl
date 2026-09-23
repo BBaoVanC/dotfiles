@@ -543,6 +543,8 @@ binds {
     Mod+Grave hotkey-overlay-title="Choose workspace" { spawn "~/.config/niri/scripts/choose-workspace" "focus"; }
     Mod+Ctrl+Grave hotkey-overlay-title="Move to chosen workspace" { spawn "~/.config/niri/scripts/choose-workspace" "move"; }
     Mod+Shift+Grave hotkey-overlay-title="Previous workspace" { focus-workspace-previous; }
+    Mod+Tab hotkey-overlay-title="Choose window" { spawn "~/.config/niri/scripts/focus-window"; }
+    Mod+Shift+Tab hotkey-overlay-title="Previous window" { focus-window-previous; }
 
     Mod+N hotkey-overlay-title="Rename workspace" { spawn "~/.config/niri/scripts/rename-workspace"; }
     Mod+Shift+N hotkey-overlay-title="Reset workspace name" { unset-workspace-name; }
