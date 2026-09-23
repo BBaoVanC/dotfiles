@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+mode="$1"
+
+choice="$(niri msg -j workspaces | jq -cr '.[] | [.idx, .name]' | fuzzel --dmenu)"
+echo "Chose workspace: $choice"
+
+case "$mode" in
+	focus)
+		niri msg action focus-workspace "$(echo $choice | jq '.[0]')"
+		;;
+	move)
+		niri msg action move-column-to-workspace "$(echo $choice | jq '.[0]')"
+		;;
+	"*")
+		notify-send -a "niri/scripts/choose-workspace" "Invalid mode"
+		;;
+esac
