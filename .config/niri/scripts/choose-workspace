@@ -2,7 +2,7 @@
 
 mode="$1"
 
-choice="$(niri msg -j workspaces | jq -cr '.[] | "\(.idx) \(.name)"' | sort -n | fuzzel --dmenu)"
+choice="$(niri msg -j workspaces | jq -cr '.[] | "\(.idx) \(.name // "")"' | sort -n | fuzzel --dmenu)"
 IFS=" " read -r id name <<EOF
 $choice
 EOF
