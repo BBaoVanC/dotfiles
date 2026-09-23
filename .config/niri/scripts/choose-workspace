@@ -2,15 +2,18 @@
 
 mode="$1"
 
-choice="$(niri msg -j workspaces | jq -cr '.[] | [.idx, .name]' | fuzzel --dmenu)"
-echo "Chose workspace: $choice"
+choice="$(niri msg -j workspaces | jq -cr '.[] | "\(.idx) \(.name)"' | sort -n | fuzzel --dmenu)"
+IFS=" " read -r id name <<EOF
+$choice
+EOF
+echo "Chose workspace: $id, $name"
 
 case "$mode" in
 	focus)
-		niri msg action focus-workspace "$(echo $choice | jq '.[0]')"
+		niri msg action focus-workspace "$id"
 		;;
 	move)
-		niri msg action move-column-to-workspace "$(echo $choice | jq '.[0]')"
+		niri msg action move-column-to-workspace "$id"
 		;;
 	"*")
 		notify-send -a "niri/scripts/choose-workspace" "Invalid mode"
