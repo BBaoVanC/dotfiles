@@ -6,6 +6,6 @@ case "$HOSTNAME" in
 		systemctl sleep
 		;;
 	*)
-		# don't sleep on my desktops; only turn off screen (which is an earlier event)
+		loginctl lock-session
 		;;
 esac
