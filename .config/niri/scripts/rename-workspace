@@ -4,7 +4,7 @@ current_name="$(niri msg -j workspaces | jq '.[] | select (.is_focused == true).
 if [ -z "$current_name" ]; then
 	new_name="$(fuzzel --dmenu --mesg 'workspace name?' -l 0)"
 else
-	new_name="$(fuzzel --dmenu --mesg 'workspace name?' --search $current_name -l 0)"
+	new_name="$(fuzzel --dmenu --mesg 'workspace name?' --search "$current_name" -l 0)"
 fi
 
 niri msg action set-workspace-name "$new_name"
