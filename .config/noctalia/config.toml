@@ -52,6 +52,7 @@ pre_action_fade_seconds = 5.0
 [idle.behavior.screen-off]
 timeout = 300
 action = "screen_off"
+locked_timeout = 30
 [idle.behavior.suspend]
 timeout = 310
 action = "command"
