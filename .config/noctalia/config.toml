@@ -56,6 +56,7 @@ action = "screen_off"
 timeout = 310
 action = "command"
 command = "~/.config/noctalia/scripts/sleep.sh"
+locked_timeout = 15
 
 # [location]
 # [nightlight]
