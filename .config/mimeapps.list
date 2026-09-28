@@ -84,6 +84,7 @@ application/pdf=firefox.desktop;
 image/apng=imv.desktop;
 application/x-cdrdao-toc=nvim.desktop;cdemu-client.desktop;
 application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -189,3 +190,4 @@ application/x-cdrdao-toc=cdemu-client.desktop
 application/vnd.oasis.opendocument.text=libreoffice-writer.desktop
 x-scheme-handler/about=helium.desktop
 x-scheme-handler/unknown=helium.desktop
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop
