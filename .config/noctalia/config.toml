@@ -191,7 +191,8 @@ empty_color = "#00000000"
 # Lockscreen {{{
 [lockscreen]
 enabled = true
-transition = ["zoom"]
+#transition = ["zoom"]
+transition = []
 transition_duration = 1000
 
 [lockscreen_widgets]
