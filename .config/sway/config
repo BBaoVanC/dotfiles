@@ -21,7 +21,7 @@ set $menu-wofi wofi --show drun
 ### Startup
 
 exec "systemctl --user import-environment {,WAYLAND_}DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
-exec swaymsg -t subscribe '["shutdown"]' && systemctl --user stop sway-session.target
+exec swaymsg -t subscribe '["shutdown"]' && systemctl --user start --job-mode=replace-irreversibly sway-shutdown.target
 
 ### Monitor layout & setup
 
