@@ -1,0 +1,24 @@
+#!/bin/sh -e
+
+mode="$1"
+
+choice="$(niri msg -j windows | jq -cr '.[] | "\(.id) \(.title)"' | sort -n | fuzzel -d -w 120 -l 25)"
+IFS=" " read -r id name <<EOF
+$choice
+EOF
+echo "Chose window: $id, $name"
+
+case "$mode" in
+	focus)
+		niri msg action focus-window --id "$id"
+		;;
+	summon)
+		ws="$(niri msg -j workspaces | jq '.[] | select(.is_focused) | .idx')"
+		niri msg action move-window-to-workspace --focus true --window-id "$id" "$ws"
+		niri msg action focus-window --id "$id"
+		;;
+	"*")
+		notify-send -a "niri/scripts/choose-window" "Invalid mode"
+		;;
+esac
+
