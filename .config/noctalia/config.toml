@@ -35,6 +35,31 @@ clipboard_enabled = false
 time_format = "{:%-I:%M %p}"
 date_format = "%A, %Y-%m-%d"
 
+# https://docs.noctalia.dev/noctalia/configuration/shell/?section=session-panel#session-panel
+# override the lock_and_suspend command (have to redefine all the actions though)
+[[shell.session.actions]]
+action = "lock"
+shortcut = "1"
+[[shell.session.actions]]
+action = "logout"
+shortcut = "2"
+# the one I care about
+[[shell.session.actions]]
+action = "lock_and_suspend"
+shortcut = "3"
+command = "~/.config/noctalia/scripts/sleep.sh"
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 5.0
+shortcut = "4"
+variant = "destructive"
+[[shell.session.actions]]
+action = "shutdown"
+countdown_seconds = 5.0
+enabled = true
+shortcut = "5"
+variant = "destructive"
+
 [osd.kinds]
 caffeine = false
 media = false
@@ -55,8 +80,7 @@ action = "screen_off"
 locked_timeout = 30
 [idle.behavior.suspend]
 timeout = 310
-action = "command"
-command = "~/.config/noctalia/scripts/sleep.sh"
+action = "lock_and_suspend"
 locked_timeout = 15
 
 # [location]
