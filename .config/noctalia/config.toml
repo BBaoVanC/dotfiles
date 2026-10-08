@@ -43,6 +43,7 @@ shortcut = "1"
 [[shell.session.actions]]
 action = "logout"
 shortcut = "2"
+countdown_seconds = 5.0
 # the one I care about
 [[shell.session.actions]]
 action = "lock_and_suspend"
