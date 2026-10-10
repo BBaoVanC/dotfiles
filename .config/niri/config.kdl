@@ -318,7 +318,7 @@ window-rule {
 
 /-window-rule {
     match app-id=r#"^helium"#
-    scroll-factor 0.35
+    scroll-factor 0.33
 }
 
 window-rule {
