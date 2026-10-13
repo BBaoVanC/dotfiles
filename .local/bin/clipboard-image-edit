@@ -5,7 +5,7 @@ filename="$(mktemp /tmp/$edit_program-edit.XXXXXXXX.png)"
 
 wl-paste -t image/png > "$filename" 2>&1
 if [ "$?" -ne 0 ]; then
-    notify-send "Error grabbing image from clipboard" "$(cat $filename)"
+    notify-send -e "Error grabbing image from clipboard" "$(cat $filename)"
     rm "$filename"
     exit 1
 fi
