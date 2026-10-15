@@ -1,6 +1,9 @@
 #!/bin/zsh
 # vim: foldmethod=marker
 
+# Commands that I forget
+rssi() { iw dev $1 link }
+
 # Colorful commands {{{
 
 alias grep="grep --color=auto"
