@@ -326,6 +326,11 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match is-floating=true is-active=false
+    opacity 0.85
+}
+
 // }}}
 
 // Gestures {{{
