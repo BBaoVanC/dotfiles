@@ -69,6 +69,9 @@ lock_keys = false
 
 # Services {{{
 
+[audio]
+enable_overdrive = true
+
 [battery]
 warning_threshold = 15
 
