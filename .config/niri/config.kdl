@@ -560,6 +560,10 @@ binds {
     Alt+Print { spawn-sh "grim -g \"$(slurp)\" - | tesseract - - | wl-copy"; }
     Mod+G { spawn "clipboard-image-edit" "swappy"; }
 
+    Mod+A { spawn "noctalia" "msg" "annotate"; }
+    // --no-show-cursor because it complains about cursor capture not being supported on compositor
+    Mod+Shift+A { spawn "noctalia" "msg" "screenshot-annotate" "--no-show-cursor"; }
+
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
     // so they may, for example, forward the key presses as-is to a remote machine.
