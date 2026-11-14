@@ -1,0 +1,13 @@
+# Based on /usr/share/applications/foot.desktop
+[Desktop Entry]
+Type=Application
+Exec=foot -D %U
+Icon=foot
+Terminal=false
+Categories=System;TerminalEmulator;
+Keywords=shell;prompt;command;commandline;
+
+Name=Foot (open directory)
+GenericName=Terminal
+Comment=A wayland native terminal emulator
+MimeType=inode/directory;
