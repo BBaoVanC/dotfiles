@@ -26,3 +26,6 @@ show-hidden-files = true
 show-image-thumbnails = "local-only"
 size-prefixes = "base-2"
 thumbnail-limit = 20971520
+
+[set."org.cinnamon.desktop.default-applications.terminal"]
+exec = "xdg-terminal-exec"
