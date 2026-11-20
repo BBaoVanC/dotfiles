@@ -199,6 +199,8 @@ only_active_workspace = true
 #show_window_title = true
 group_single_icon_per_app = true
 
+[widget.volume]
+hide_label_when_muted = true
 [widget.volume.actions]
 scroll_up = "volume-up 1%"
 scroll_down = "volume-down 1%"
