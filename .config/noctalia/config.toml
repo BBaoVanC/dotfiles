@@ -20,6 +20,7 @@ name = "community"
 mode = "dark"
 source = "custom"
 custom_palette = "bobascheme"
+sync_color_scheme = false
 
 [wallpaper]
 enabled = true
