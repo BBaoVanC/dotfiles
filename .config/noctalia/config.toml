@@ -91,7 +91,8 @@ locked_timeout = 15
 # [location]
 # [nightlight]
 
-# [notification]
+[notification]
+keep_dismissed_in_history = false
 # enable_daemon = true
 # show_app_name = true
 # show_actions = true
