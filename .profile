@@ -54,9 +54,11 @@ export SSH_AUTH_SOCK=/run/user/$(id -u)/gcr/ssh
 # ==> Qt
 # Originally was set to just qt5ct; should work to use qt5ct and qt6ct for their respective versions; see:
 # https://github.com/trialuser02/qt6ct/issues/12#issuecomment-1048942657
-#
-# But Arch Wiki suggests setting to `qt5ct:qt6ct`, so I will do that.
-[ "$XDG_CURRENT_DESKTOP" != "KDE" ] && export QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
+# Arch Wiki suggests setting to `qt5ct:qt6ct`, so I did that for some time.
+# But now, I see qt5ct-kde AUR comments say it's deprecated and to use only qt6ct instead.
+# I'm interpreting that to mean I should also set this variable to qt6ct
+# It still requires qt5ct-kde to be installed for qt5 apps to work though.
+[ "$XDG_CURRENT_DESKTOP" != "KDE" ] && export QT_QPA_PLATFORMTHEME=qt6ct
 
 # wlroots debug
 #export WLR_SCENE_DEBUG_DAMAGE=rerender
