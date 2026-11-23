@@ -79,7 +79,7 @@ seat seat0 xcursor_theme Vimix-white-cursors 24
 # Wallpaper
 #
 # TODO: find a new one instead of recycling the same one from last year
-output * bg ~/wallpaper fill
+output * bg /home/bbaovanc/wallpapers/evgeny-matveev-f4hR4QdFP04-unsplash.jpg fill
 
 #
 # Status Bar
