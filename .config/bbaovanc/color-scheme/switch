@@ -1,0 +1,12 @@
+#!/bin/sh -x
+
+niri msg action do-screen-transition --delay-ms 750
+# See sync-colorscheme.service and the .config/bbaovanc/sync-colorscheme script,
+# which listens for gsettings, which is changed by noctalia:
+noctalia msg theme-mode-toggle
+
+#if [ "$(gsettings get org.gnome.desktop.interface color-scheme)" = "prefer-dark" ]; then
+#	gsettings set org.gnome.desktop.interface color-scheme prefer-light
+#else
+#	gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+#fi

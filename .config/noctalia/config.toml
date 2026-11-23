@@ -20,7 +20,8 @@ name = "community"
 mode = "dark"
 source = "custom"
 custom_palette = "bobascheme"
-sync_color_scheme = false
+# syncs to gsettings org.gnome.desktop.interface color-scheme
+sync_color_scheme = true
 
 [wallpaper]
 enabled = true
@@ -109,7 +110,7 @@ enabled = false
 [bar.default]
 widget_spacing = 10
 start = [
-	"session",
+	"theme_mode",
 	#"launcher",
 	"workspaces",
 	"taskbar",
@@ -200,6 +201,9 @@ only_active_workspace = true
 #icon_scale = 2.0
 #show_window_title = true
 group_single_icon_per_app = true
+
+[widget.theme_mode.actions]
+left = "exec ~/.config/bbaovanc/color-scheme/switch"
 
 [widget.volume]
 hide_label_when_muted = true

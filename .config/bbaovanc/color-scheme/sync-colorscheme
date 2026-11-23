@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+from gi.repository import Gio, GLib
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+
+def qt_set(scheme_path):
+    for qt in ["qt5ct", "qt6ct"]:
+        new = "color_scheme_path=" + scheme_path + "\n"
+        filename = (Path.home() / ".config" / qt / qt).with_suffix(".conf")
+        with open(filename, "r") as f:
+            lines = f.readlines();
+        new_lines = [new if line.startswith("color_scheme_path=") else line for line in lines]
+        with open(filename, "w") as f:
+            f.writelines(new_lines)
+        # touch the file so it gets picked up by qt5/6ct
+        os.utime(filename, None)
+
+def on_theme_changed(settings, key):
+    scheme = settings.get_string("color-scheme")
+    if scheme == "prefer-dark":
+        qt_set("/usr/share/color-schemes/BreezeDark.colors")
+        eprint("Switched to dark")
+    elif scheme == "prefer-light":
+        qt_set("/usr/share/color-schemes/BreezeLight.colors")
+        eprint("Switched to light")
+    else:
+        subprocess.run(["notify-send", "-e", f"Invalid color-scheme picked: {scheme}"], capture_output=False)
+
+interface = Gio.Settings.new("org.gnome.desktop.interface")
+# run once on startup
+on_theme_changed(interface, "color-scheme")
+interface.connect("changed::color-scheme", on_theme_changed)
+GLib.MainLoop().run()

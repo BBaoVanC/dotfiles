@@ -16,7 +16,6 @@ font-rgba-order = "rgb"
 text-scaling-factor = 1
 toolbar-style = "both-horiz"
 toolbar-icons-size = "large"
-color-scheme = "prefer-dark"
 [set."org.gnome.desktop.sound"]
 event-sounds = true
 input-feedback-sounds = false
